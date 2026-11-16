@@ -1,0 +1,6022 @@
+[
+ {
+  "file": "assemblies/lyskamm.FCStd",
+  "sketches": [],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": null,
+    "recomputed": null
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": [
+   "b_lower_fuselage_v1_001_: Python proxy not loaded (Part::FeaturePython)",
+   "b_lower_fins_001_: Python proxy not loaded (Part::FeaturePython)",
+   "planesParallel_001: Python proxy not loaded (App::FeaturePython)",
+   "planesParallel_001_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_001: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_001_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_lower_fins_001_001: Python proxy not loaded (Part::FeaturePython)",
+   "planeCoincident_002: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_002_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_lower_fins_001_002: Python proxy not loaded (Part::FeaturePython)",
+   "planeCoincident_003: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_003_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_lower_fins_001_003: Python proxy not loaded (Part::FeaturePython)",
+   "b_upper_retainer_001_: Python proxy not loaded (Part::FeaturePython)",
+   "b_mid_fuselage_001_: Python proxy not loaded (Part::FeaturePython)",
+   "planeCoincident_006: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_006_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_007: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_007_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_upper_fin_001_: Python proxy not loaded (Part::FeaturePython)",
+   "planeCoincident_009: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_009_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_010: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_010_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_011: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_011_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_upper_fin_001_001: Python proxy not loaded (Part::FeaturePython)",
+   "planeCoincident_012: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_012_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_013: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_013_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_014: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_014_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_upper_fin_001_002: Python proxy not loaded (Part::FeaturePython)",
+   "planeCoincident_016: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_016_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_015: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_015_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_017: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_017_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_upper_fin_001_003: Python proxy not loaded (Part::FeaturePython)",
+   "planeCoincident_018: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_018_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_019: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_019_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_020: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_020_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_rear_transition_001_: Python proxy not loaded (Part::FeaturePython)",
+   "b_carbon_rod_001_: Python proxy not loaded (Part::FeaturePython)",
+   "b_carbon_rod_001_001: Python proxy not loaded (Part::FeaturePython)",
+   "centerOfMass_001: Python proxy not loaded (App::FeaturePython)",
+   "centerOfMass_001_mirror: Python proxy not loaded (App::FeaturePython)",
+   "centerOfMass_002: Python proxy not loaded (App::FeaturePython)",
+   "centerOfMass_002_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_carbon_rod_001_002: Python proxy not loaded (Part::FeaturePython)",
+   "centerOfMass_003: Python proxy not loaded (App::FeaturePython)",
+   "centerOfMass_003_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_carbon_rod_001_003: Python proxy not loaded (Part::FeaturePython)",
+   "centerOfMass_004: Python proxy not loaded (App::FeaturePython)",
+   "centerOfMass_004_mirror: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_001: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_001_mirror: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_002: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_002_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_004: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_004_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_005: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_005_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_008: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_008_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_021: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_021_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_022: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_022_mirror: Python proxy not loaded (App::FeaturePython)",
+   "centerOfMass_005: Python proxy not loaded (App::FeaturePython)",
+   "centerOfMass_005_mirror: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_003: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_003_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_low_chute_ret_001_: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_004: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_004_mirror: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_005: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_005_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_023: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_023_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_parachute_fuselage_seat_v2_001_: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_006: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_006_mirror: Python proxy not loaded (App::FeaturePython)",
+   "centerOfMass_006: Python proxy not loaded (App::FeaturePython)",
+   "centerOfMass_006_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_sede_presa_elettrica_sup_001_: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_007: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_007_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_024: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_024_mirror: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_008: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_008_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_lower_closure_v2_001_: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_009: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_009_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_025: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_025_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_alluminium_rod_001_: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_010: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_010_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_026: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_026_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_alluminium_rod_001_001: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_011: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_011_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_mid_closure_001_: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_012: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_012_mirror: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_013: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_013_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_027: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_027_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_alluminium_rod_001_002: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_014: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_014_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_028: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_028_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_alluminium_rod_001_003: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_015: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_015_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_upper_closure_001_: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_016: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_016_mirror: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_017: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_017_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_029: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_029_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_nose_cone_001_: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_018: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_018_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_030: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_030_mirror: Python proxy not loaded (App::FeaturePython)",
+   "axisParallel_001: Python proxy not loaded (App::FeaturePython)",
+   "axisParallel_001_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_fuselage_001_: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_019: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_019_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_031: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_031_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planesParallel_002: Python proxy not loaded (App::FeaturePython)",
+   "planesParallel_002_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_fuselage_001_001: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_020: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_020_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planesParallel_003: Python proxy not loaded (App::FeaturePython)",
+   "planesParallel_003_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_032: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_032_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_fuselage_001_002: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_021: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_021_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planesParallel_004: Python proxy not loaded (App::FeaturePython)",
+   "planesParallel_004_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_033: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_033_mirror: Python proxy not loaded (App::FeaturePython)",
+   "b_fuselage_001_003: Python proxy not loaded (Part::FeaturePython)",
+   "axisCoincident_022: Python proxy not loaded (App::FeaturePython)",
+   "axisCoincident_022_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planesParallel_005: Python proxy not loaded (App::FeaturePython)",
+   "planesParallel_005_mirror: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_034: Python proxy not loaded (App::FeaturePython)",
+   "planeCoincident_034_mirror: Python proxy not loaded (App::FeaturePython)"
+  ]
+ },
+ {
+  "file": "components/carbon_rod/carbon_rod.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 5654.87,
+     "bbox": [
+      -2.5,
+      -2.5,
+      0.0,
+      2.5,
+      2.5,
+      450.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      -0.0,
+      225.0
+     ],
+     "cyl_diameters": [
+      3.0,
+      5.0
+     ]
+    },
+    "recomputed": {
+     "volume": 5654.87,
+     "bbox": [
+      -2.5,
+      -2.5,
+      0.0,
+      2.5,
+      2.5,
+      450.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      -0.0,
+      225.0
+     ],
+     "cyl_diameters": [
+      3.0,
+      5.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/e-bay/alluminium_rod.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 1256.64,
+     "bbox": [
+      -2.5,
+      -2.5,
+      0.0,
+      2.5,
+      2.5,
+      100.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      -0.0,
+      50.0
+     ],
+     "cyl_diameters": [
+      3.0,
+      5.0
+     ]
+    },
+    "recomputed": {
+     "volume": 1256.64,
+     "bbox": [
+      -2.5,
+      -2.5,
+      0.0,
+      2.5,
+      2.5,
+      100.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      -0.0,
+      50.0
+     ],
+     "cyl_diameters": [
+      3.0,
+      5.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/e-bay/fuselage.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 4,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 6
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 18786.31,
+     "bbox": [
+      -30.0,
+      -0.0,
+      -0.0,
+      30.0,
+      30.0,
+      105.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.001,
+      18.662,
+      52.5
+     ],
+     "cyl_diameters": [
+      2.2,
+      56.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 18786.31,
+     "bbox": [
+      -30.0,
+      -0.0,
+      -0.0,
+      30.0,
+      30.0,
+      105.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.001,
+      18.662,
+      52.5
+     ],
+     "cyl_diameters": [
+      2.2,
+      56.0,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [
+   "Chamfer (Chamfer): Invalid"
+  ],
+  "load_errors": []
+ },
+ {
+  "file": "components/e-bay/fuselage_w_logo.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 4,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 6
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 11
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 7
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch013",
+    "label": "Sketch013",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch014",
+    "label": "Sketch014",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch015",
+    "label": "Sketch015",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch016",
+    "label": "Sketch016",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch017",
+    "label": "Sketch017",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 17545.31,
+     "bbox": [
+      -30.0,
+      -52.5,
+      -0.0,
+      30.0,
+      52.5,
+      30.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.001,
+      0.219,
+      11.944
+     ],
+     "cyl_diameters": [
+      2.2,
+      56.0,
+      59.0,
+      60.0,
+      61.389
+     ]
+    },
+    "recomputed": {
+     "volume": 17545.31,
+     "bbox": [
+      -30.0,
+      -52.5,
+      -0.0,
+      30.0,
+      52.5,
+      30.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.001,
+      0.219,
+      11.944
+     ],
+     "cyl_diameters": [
+      2.2,
+      56.0,
+      59.0,
+      60.0,
+      61.389
+     ]
+    }
+   },
+   {
+    "name": "Body001",
+    "label": "main_body",
+    "stored": {
+     "volume": 484.36,
+     "bbox": [
+      -4.5,
+      28.655,
+      28.5,
+      4.5,
+      30.0,
+      88.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      29.396,
+      56.585
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0,
+      61.389
+     ]
+    },
+    "recomputed": {
+     "volume": 484.36,
+     "bbox": [
+      -4.5,
+      28.655,
+      28.5,
+      4.5,
+      30.0,
+      88.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      29.396,
+      56.585
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0,
+      61.389
+     ]
+    }
+   },
+   {
+    "name": "Body002",
+    "label": "lower_right_wing",
+    "stored": {
+     "volume": 125.73,
+     "bbox": [
+      6.5,
+      24.902,
+      22.5,
+      15.0,
+      29.287,
+      48.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.62,
+      27.415,
+      34.805
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 125.73,
+     "bbox": [
+      6.5,
+      24.902,
+      22.5,
+      15.0,
+      29.287,
+      48.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.62,
+      27.415,
+      34.805
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body003",
+    "label": "mid_right_wing",
+    "stored": {
+     "volume": 124.48,
+     "bbox": [
+      6.5,
+      20.0,
+      28.31,
+      22.361,
+      29.287,
+      61.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.389,
+      25.287,
+      44.72
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 124.48,
+     "bbox": [
+      6.5,
+      20.0,
+      28.31,
+      22.361,
+      29.287,
+      61.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.389,
+      25.287,
+      44.72
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body004",
+    "label": "upper_right_wing",
+    "stored": {
+     "volume": 127.92,
+     "bbox": [
+      6.5,
+      20.0,
+      37.81,
+      22.361,
+      29.287,
+      72.495
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.164,
+      24.837,
+      54.722
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 127.92,
+     "bbox": [
+      6.5,
+      20.0,
+      37.81,
+      22.361,
+      29.287,
+      72.495
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.164,
+      24.837,
+      54.722
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body005",
+    "label": "Body005",
+    "stored": {
+     "volume": 125.73,
+     "bbox": [
+      6.5,
+      -30.0,
+      0.713,
+      15.0,
+      -4.0,
+      5.098
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.62,
+      -17.695,
+      2.585
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 125.73,
+     "bbox": [
+      6.5,
+      -30.0,
+      0.713,
+      15.0,
+      -4.0,
+      5.098
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.62,
+      -17.695,
+      2.585
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body006",
+    "label": "Body006",
+    "stored": {
+     "volume": 124.48,
+     "bbox": [
+      6.5,
+      -24.19,
+      0.713,
+      22.361,
+      8.5,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.389,
+      -7.78,
+      4.713
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 124.48,
+     "bbox": [
+      6.5,
+      -24.19,
+      0.713,
+      22.361,
+      8.5,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.389,
+      -7.78,
+      4.713
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body007",
+    "label": "Body007",
+    "stored": {
+     "volume": 127.92,
+     "bbox": [
+      6.5,
+      -14.69,
+      0.713,
+      22.361,
+      19.995,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.164,
+      2.222,
+      5.163
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 127.92,
+     "bbox": [
+      6.5,
+      -14.69,
+      0.713,
+      22.361,
+      19.995,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.164,
+      2.222,
+      5.163
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [
+   "Chamfer (Chamfer): Invalid"
+  ],
+  "load_errors": []
+ },
+ {
+  "file": "components/e-bay/fuselage_w_logo_v2.FCStd",
+  "sketches": [],
+  "bodies": [
+   {
+    "name": "Open_CASCADE_STEP_translator_7_8_2",
+    "label": "Open CASCADE STEP translator 7.8 013",
+    "stored": {
+     "volume": 19161.78,
+     "bbox": [
+      -30.0,
+      -52.5,
+      -0.0,
+      30.0,
+      52.5,
+      30.0
+     ],
+     "valid": true,
+     "solids": 11,
+     "com": null,
+     "cyl_diameters": [
+      2.2,
+      56.0,
+      59.0,
+      60.0,
+      61.389
+     ]
+    },
+    "recomputed": {
+     "volume": 19161.78,
+     "bbox": [
+      -30.0,
+      -52.5,
+      -0.0,
+      30.0,
+      52.5,
+      30.0
+     ],
+     "valid": true,
+     "solids": 11,
+     "com": null,
+     "cyl_diameters": [
+      2.2,
+      56.0,
+      59.0,
+      60.0,
+      61.389
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/e-bay/lower_closure.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 0
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 7,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 10
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 3,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch013",
+    "label": "Sketch013",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch014",
+    "label": "Sketch014",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch015",
+    "label": "Sketch015",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 61473.34,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -20.0,
+      30.0,
+      30.0,
+      15.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.26,
+      0.0,
+      0.467
+     ],
+     "cyl_diameters": [
+      2.0,
+      3.1,
+      3.2,
+      4.8,
+      5.25,
+      6.0,
+      7.0,
+      39.56,
+      55.8,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 61473.34,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -20.0,
+      30.0,
+      30.0,
+      15.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.26,
+      0.0,
+      0.467
+     ],
+     "cyl_diameters": [
+      2.0,
+      3.1,
+      3.2,
+      4.8,
+      5.25,
+      6.0,
+      7.0,
+      39.56,
+      55.8,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/e-bay/lower_closure_v2.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 0
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 7,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 10
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 3,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch013",
+    "label": "Sketch013",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch014",
+    "label": "Sketch014",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch015",
+    "label": "Sketch015",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch016",
+    "label": "Sketch016",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 96053.41,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -25.0,
+      30.0,
+      30.0,
+      15.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.229,
+      0.0,
+      -4.662
+     ],
+     "cyl_diameters": [
+      2.0,
+      2.6,
+      3.5,
+      3.9,
+      5.25,
+      6.0,
+      7.0,
+      55.8,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 96053.41,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -25.0,
+      30.0,
+      30.0,
+      15.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.229,
+      0.0,
+      -4.662
+     ],
+     "cyl_diameters": [
+      2.0,
+      2.6,
+      3.5,
+      3.9,
+      5.25,
+      6.0,
+      7.0,
+      55.8,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/e-bay/mid_closure.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 6
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 10
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 15251.99,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -8.724,
+      30.0,
+      30.0,
+      13.724
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      0.0,
+      2.501
+     ],
+     "cyl_diameters": [
+      2.6,
+      5.25,
+      7.25,
+      47.8,
+      55.8,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 15251.99,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -8.724,
+      30.0,
+      30.0,
+      13.724
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      0.0,
+      2.501
+     ],
+     "cyl_diameters": [
+      2.6,
+      5.25,
+      7.25,
+      47.8,
+      55.8,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/e-bay/presa_elettrica.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 0
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 14
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 498.7,
+     "bbox": [
+      -4.75,
+      -3.025,
+      0.0,
+      4.75,
+      3.025,
+      14.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      0.0,
+      7.184
+     ],
+     "cyl_diameters": [
+      2.0,
+      6.0
+     ]
+    },
+    "recomputed": {
+     "volume": 498.7,
+     "bbox": [
+      -4.75,
+      -3.025,
+      0.0,
+      4.75,
+      3.025,
+      14.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      0.0,
+      7.184
+     ],
+     "cyl_diameters": [
+      2.0,
+      6.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/e-bay/upper_closure.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 14879.84,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -8.54,
+      30.0,
+      30.0,
+      13.02
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      0.001,
+      2.337
+     ],
+     "cyl_diameters": [
+      2.6,
+      3.2,
+      5.25,
+      7.25,
+      48.1,
+      55.8,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 14879.84,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -8.54,
+      30.0,
+      30.0,
+      13.02
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      0.001,
+      2.337
+     ],
+     "cyl_diameters": [
+      2.6,
+      3.2,
+      5.25,
+      7.25,
+      48.1,
+      55.8,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/logo/logo.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 11
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 7
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "main_body",
+    "stored": {
+     "volume": 484.36,
+     "bbox": [
+      -4.5,
+      -24.0,
+      0.0,
+      4.5,
+      36.0,
+      1.345
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      4.085,
+      0.604
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0,
+      61.389
+     ]
+    },
+    "recomputed": {
+     "volume": 484.36,
+     "bbox": [
+      -4.5,
+      -24.0,
+      0.0,
+      4.5,
+      36.0,
+      1.345
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      4.085,
+      0.604
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0,
+      61.389
+     ]
+    }
+   },
+   {
+    "name": "Body001",
+    "label": "lower_right_wing",
+    "stored": {
+     "volume": 125.73,
+     "bbox": [
+      6.5,
+      -30.0,
+      0.713,
+      15.0,
+      -4.0,
+      5.098
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.62,
+      -17.695,
+      2.585
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 125.73,
+     "bbox": [
+      6.5,
+      -30.0,
+      0.713,
+      15.0,
+      -4.0,
+      5.098
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.62,
+      -17.695,
+      2.585
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body002",
+    "label": "mid_right_wing",
+    "stored": {
+     "volume": 124.48,
+     "bbox": [
+      6.5,
+      -24.19,
+      0.713,
+      22.361,
+      8.5,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.389,
+      -7.78,
+      4.713
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 124.48,
+     "bbox": [
+      6.5,
+      -24.19,
+      0.713,
+      22.361,
+      8.5,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.389,
+      -7.78,
+      4.713
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body003",
+    "label": "upper_right_wing",
+    "stored": {
+     "volume": 127.92,
+     "bbox": [
+      6.5,
+      -14.69,
+      0.713,
+      22.361,
+      19.995,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.164,
+      2.222,
+      5.163
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 127.92,
+     "bbox": [
+      6.5,
+      -14.69,
+      0.713,
+      22.361,
+      19.995,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.164,
+      2.222,
+      5.163
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body004",
+    "label": "Body004",
+    "stored": {
+     "volume": 125.73,
+     "bbox": [
+      6.5,
+      -30.0,
+      0.713,
+      15.0,
+      -4.0,
+      5.098
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.62,
+      -17.695,
+      2.585
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 125.73,
+     "bbox": [
+      6.5,
+      -30.0,
+      0.713,
+      15.0,
+      -4.0,
+      5.098
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.62,
+      -17.695,
+      2.585
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body005",
+    "label": "Body005",
+    "stored": {
+     "volume": 124.48,
+     "bbox": [
+      6.5,
+      -24.19,
+      0.713,
+      22.361,
+      8.5,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.389,
+      -7.78,
+      4.713
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 124.48,
+     "bbox": [
+      6.5,
+      -24.19,
+      0.713,
+      22.361,
+      8.5,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.389,
+      -7.78,
+      4.713
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body006",
+    "label": "Body006",
+    "stored": {
+     "volume": 127.92,
+     "bbox": [
+      6.5,
+      -14.69,
+      0.713,
+      22.361,
+      19.995,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.164,
+      2.222,
+      5.163
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 127.92,
+     "bbox": [
+      6.5,
+      -14.69,
+      0.713,
+      22.361,
+      19.995,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.164,
+      2.222,
+      5.163
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/logo/logo_red.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 7,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 23
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 10
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 10
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 3,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 16
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch013",
+    "label": "Sketch013",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch014",
+    "label": "Sketch014",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "main_body",
+    "stored": {
+     "volume": 450.44,
+     "bbox": [
+      -4.25,
+      -23.75,
+      0.0,
+      4.25,
+      35.246,
+      1.308
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.01,
+      3.887,
+      0.593
+     ],
+     "cyl_diameters": [
+      56.986,
+      59.0,
+      60.0,
+      64.677
+     ]
+    },
+    "recomputed": {
+     "volume": 450.44,
+     "bbox": [
+      -4.25,
+      -23.75,
+      0.0,
+      4.25,
+      35.246,
+      1.308
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.01,
+      3.887,
+      0.593
+     ],
+     "cyl_diameters": [
+      56.986,
+      59.0,
+      60.0,
+      64.677
+     ]
+    }
+   },
+   {
+    "name": "Body001",
+    "label": "lower_right_wing",
+    "stored": {
+     "volume": 111.0,
+     "bbox": [
+      6.75,
+      -29.32,
+      0.713,
+      14.75,
+      -4.866,
+      4.81
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.624,
+      -17.742,
+      2.477
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 111.0,
+     "bbox": [
+      6.75,
+      -29.32,
+      0.713,
+      14.75,
+      -4.866,
+      4.81
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.624,
+      -17.742,
+      2.477
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body002",
+    "label": "mid_right_wing",
+    "stored": {
+     "volume": 105.96,
+     "bbox": [
+      6.75,
+      -24.429,
+      0.713,
+      22.611,
+      7.301,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.7,
+      -8.518,
+      4.747
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 105.96,
+     "bbox": [
+      6.75,
+      -24.429,
+      0.713,
+      22.611,
+      7.301,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.7,
+      -8.518,
+      4.747
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body003",
+    "label": "upper_right_wing",
+    "stored": {
+     "volume": 112.33,
+     "bbox": [
+      6.75,
+      -14.618,
+      0.713,
+      22.611,
+      19.129,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.521,
+      1.632,
+      5.226
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 112.33,
+     "bbox": [
+      6.75,
+      -14.618,
+      0.713,
+      22.611,
+      19.129,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.521,
+      1.632,
+      5.226
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body004",
+    "label": "Body004",
+    "stored": {
+     "volume": 111.0,
+     "bbox": [
+      6.75,
+      -29.32,
+      0.713,
+      14.75,
+      -4.866,
+      4.81
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.624,
+      -17.742,
+      2.477
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 111.0,
+     "bbox": [
+      6.75,
+      -29.32,
+      0.713,
+      14.75,
+      -4.866,
+      4.81
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.624,
+      -17.742,
+      2.477
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body005",
+    "label": "Body005",
+    "stored": {
+     "volume": 105.96,
+     "bbox": [
+      6.75,
+      -24.429,
+      0.713,
+      22.611,
+      7.301,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.7,
+      -8.518,
+      4.747
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 105.96,
+     "bbox": [
+      6.75,
+      -24.429,
+      0.713,
+      22.611,
+      7.301,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.7,
+      -8.518,
+      4.747
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body006",
+    "label": "Body006",
+    "stored": {
+     "volume": 112.33,
+     "bbox": [
+      6.75,
+      -14.618,
+      0.713,
+      22.611,
+      19.129,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.521,
+      1.632,
+      5.226
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 112.33,
+     "bbox": [
+      6.75,
+      -14.618,
+      0.713,
+      22.611,
+      19.129,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.521,
+      1.632,
+      5.226
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/logo.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 9
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 9
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 7
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 8
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 14
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 468040.59,
+     "bbox": [
+      -100.996,
+      -103.512,
+      -10.0,
+      100.996,
+      103.512,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      1.689,
+      -3.934
+     ],
+     "cyl_diameters": [
+      122.778
+     ]
+    },
+    "recomputed": {
+     "volume": 468040.59,
+     "bbox": [
+      -100.996,
+      -103.512,
+      -10.0,
+      100.996,
+      103.512,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      1.689,
+      -3.934
+     ],
+     "cyl_diameters": [
+      122.778
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/lower_chute_retainer/low_chute_ret.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 6
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 7,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 9
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 6,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 14
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 37169.79,
+     "bbox": [
+      -30.0,
+      -30.0,
+      0.0,
+      30.0,
+      30.0,
+      20.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.462,
+      0.0,
+      8.205
+     ],
+     "cyl_diameters": [
+      2.0,
+      3.1,
+      3.5,
+      5.2,
+      6.0,
+      41.9,
+      55.8,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 37169.79,
+     "bbox": [
+      -30.0,
+      -30.0,
+      0.0,
+      30.0,
+      30.0,
+      20.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.462,
+      0.0,
+      8.205
+     ],
+     "cyl_diameters": [
+      2.0,
+      3.1,
+      3.5,
+      5.2,
+      6.0,
+      41.9,
+      55.8,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/lower_fins/lower_fins.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 8
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 6787.13,
+     "bbox": [
+      -0.0,
+      -3.0,
+      -11.0,
+      63.5,
+      3.0,
+      50.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      30.702,
+      0.0,
+      12.807
+     ],
+     "cyl_diameters": [
+      1.0
+     ]
+    },
+    "recomputed": {
+     "volume": 6787.13,
+     "bbox": [
+      -0.0,
+      -3.0,
+      -11.0,
+      63.5,
+      3.0,
+      50.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      30.702,
+      0.0,
+      12.807
+     ],
+     "cyl_diameters": [
+      1.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": [
+   "Fin: Python proxy not loaded (Part::FeaturePython)"
+  ]
+ },
+ {
+  "file": "components/lower_fuselage_w_motor_mount/lower_fuselage_v1.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch005",
+    "label": "disegno_di_costruzione",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 5
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 10
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch013",
+    "label": "Sketch013",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 9
+   },
+   {
+    "name": "Sketch014",
+    "label": "Sketch014",
+    "solve": 0,
+    "dof": 3,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch015",
+    "label": "Sketch015",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch016",
+    "label": "disegno_di_costruzione_2",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch017",
+    "label": "Sketch017",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch018",
+    "label": "Sketch018",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch019",
+    "label": "Sketch019",
+    "solve": 0,
+    "dof": 7,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 16
+   },
+   {
+    "name": "Sketch020",
+    "label": "Sketch020",
+    "solve": -2,
+    "dof": 11,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [
+     16
+    ],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 16
+   },
+   {
+    "name": "Sketch021",
+    "label": "Sketch021",
+    "solve": 0,
+    "dof": 11,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 16
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 63877.26,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -20.0,
+      30.0,
+      30.0,
+      93.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      0.002,
+      34.992
+     ],
+     "cyl_diameters": [
+      2.0,
+      2.2,
+      5.2,
+      35.2,
+      37.0,
+      54.0,
+      56.0,
+      56.065,
+      58.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 63877.26,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -20.0,
+      30.0,
+      30.0,
+      93.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      0.002,
+      34.992
+     ],
+     "cyl_diameters": [
+      2.0,
+      2.2,
+      5.2,
+      35.2,
+      37.0,
+      54.0,
+      56.0,
+      56.065,
+      58.0,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [
+   "Sketch014 (Sketch014): Invalid"
+  ],
+  "load_errors": []
+ },
+ {
+  "file": "components/mid_fuselage/mid_fuselage.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 13
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 5,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 10
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 5
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch013",
+    "label": "Sketch013",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch014",
+    "label": "Sketch014",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch015",
+    "label": "Sketch015",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 5
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 67597.08,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -7.5,
+      30.0,
+      30.0,
+      97.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      0.0,
+      46.301
+     ],
+     "cyl_diameters": [
+      2.2,
+      5.15,
+      5.504,
+      7.0,
+      56.0,
+      58.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 67597.08,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -7.5,
+      30.0,
+      30.0,
+      97.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      0.0,
+      46.301
+     ],
+     "cyl_diameters": [
+      2.2,
+      5.15,
+      5.504,
+      7.0,
+      56.0,
+      58.0,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [
+   "Sketch011 (Sketch011): Invalid"
+  ],
+  "load_errors": []
+ },
+ {
+  "file": "components/nose_cone/nose_cone.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 193091.83,
+     "bbox": [
+      0.0,
+      -30.0,
+      -30.0,
+      127.5,
+      30.0,
+      30.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      77.353,
+      0.01,
+      -0.0
+     ],
+     "cyl_diameters": [
+      2.1,
+      56.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 193091.84,
+     "bbox": [
+      0.0,
+      -30.0,
+      -30.0,
+      127.5,
+      30.0,
+      30.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      77.353,
+      0.01,
+      -0.0
+     ],
+     "cyl_diameters": [
+      2.1,
+      56.0,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": [
+   "NoseCone: Python proxy not loaded (Part::FeaturePython)"
+  ]
+ },
+ {
+  "file": "components/parachute_fuselage_seat/parachute_fuselage_seat.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 11,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 12
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 8,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 6
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 7,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 8
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch013",
+    "label": "Sketch013",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch014",
+    "label": "Sketch014",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch015",
+    "label": "sede_viti_sup_2",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 138565.83,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -0.0,
+      30.0,
+      30.0,
+      242.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.132,
+      -0.121,
+      134.075
+     ],
+     "cyl_diameters": [
+      2.0,
+      2.1,
+      2.9,
+      5.2,
+      6.0,
+      7.0,
+      8.612,
+      39.856,
+      41.656,
+      56.0,
+      58.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 138565.83,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -0.0,
+      30.0,
+      30.0,
+      242.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.132,
+      -0.121,
+      134.075
+     ],
+     "cyl_diameters": [
+      2.0,
+      2.1,
+      2.9,
+      5.2,
+      6.0,
+      7.0,
+      8.612,
+      39.856,
+      41.656,
+      56.0,
+      58.0,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [
+   "Chamfer001 (Chamfer001): Invalid"
+  ],
+  "load_errors": []
+ },
+ {
+  "file": "components/parachute_fuselage_seat/parachute_fuselage_seat_v2.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 8,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 11
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 8,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 6
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 9,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 10
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 7,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 9
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 133082.89,
+     "bbox": [
+      -30.0,
+      -30.0,
+      0.0,
+      30.0,
+      30.0,
+      242.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      -1.559,
+      117.099
+     ],
+     "cyl_diameters": [
+      2.0,
+      2.2,
+      2.9,
+      5.2,
+      6.0,
+      7.031,
+      7.2,
+      39.656,
+      41.82,
+      46.014,
+      52.15,
+      56.0,
+      56.039,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 133082.89,
+     "bbox": [
+      -30.0,
+      -30.0,
+      0.0,
+      30.0,
+      30.0,
+      242.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      -1.559,
+      117.099
+     ],
+     "cyl_diameters": [
+      2.0,
+      2.2,
+      2.9,
+      5.2,
+      6.0,
+      7.031,
+      7.2,
+      39.656,
+      41.82,
+      46.014,
+      52.15,
+      56.0,
+      56.039,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/parachute_fuselage_seat/pistone.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 15,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 25
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 9
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 28426.67,
+     "bbox": [
+      -27.75,
+      -19.728,
+      -2.142,
+      27.75,
+      27.75,
+      40.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.011,
+      3.237,
+      24.289
+     ],
+     "cyl_diameters": [
+      3.5,
+      6.598,
+      6.986,
+      7.079,
+      7.4,
+      13.4,
+      33.456,
+      39.456,
+      49.5,
+      55.5
+     ]
+    },
+    "recomputed": {
+     "volume": 28426.67,
+     "bbox": [
+      -27.75,
+      -19.728,
+      -2.142,
+      27.75,
+      27.75,
+      40.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.011,
+      3.237,
+      24.289
+     ],
+     "cyl_diameters": [
+      3.5,
+      6.598,
+      6.986,
+      7.079,
+      7.4,
+      13.4,
+      33.456,
+      39.456,
+      49.5,
+      55.5
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/parachute_fuselage_seat/sede_presa_elettrica_sup.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 5,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 10
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 3,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 11
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 14
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 8
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 18
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 3769.28,
+     "bbox": [
+      3.183,
+      3.183,
+      -1.224,
+      26.943,
+      26.943,
+      21.224
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      16.315,
+      16.315,
+      9.646
+     ],
+     "cyl_diameters": [
+      2.0,
+      6.0,
+      7.031,
+      7.2,
+      42.1,
+      56.0
+     ]
+    },
+    "recomputed": {
+     "volume": 3769.28,
+     "bbox": [
+      3.183,
+      3.183,
+      -1.224,
+      26.943,
+      26.943,
+      21.224
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      16.315,
+      16.315,
+      9.646
+     ],
+     "cyl_diameters": [
+      2.0,
+      6.0,
+      7.031,
+      7.2,
+      42.1,
+      56.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/parachute_fuselage_seat/upper_closure.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 7,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 8
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 7,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 8
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 5,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 17
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 25315.41,
+     "bbox": [
+      -27.448,
+      -27.9,
+      0.0,
+      27.448,
+      27.9,
+      26.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      -1.205,
+      12.744
+     ],
+     "cyl_diameters": [
+      2.0,
+      3.1,
+      6.0,
+      41.7,
+      55.8
+     ]
+    },
+    "recomputed": {
+     "volume": 25315.41,
+     "bbox": [
+      -27.448,
+      -27.9,
+      0.0,
+      27.448,
+      27.9,
+      26.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      -1.205,
+      12.744
+     ],
+     "cyl_diameters": [
+      2.0,
+      3.1,
+      6.0,
+      41.7,
+      55.8
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [
+   "Sketch004 (Sketch004): Invalid"
+  ],
+  "load_errors": []
+ },
+ {
+  "file": "components/rear_transition/rear_transition.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 3,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 8
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 5
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch013",
+    "label": "Sketch013",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch014",
+    "label": "Sketch014",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 0
+   },
+   {
+    "name": "Sketch015",
+    "label": "Sketch015",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch016",
+    "label": "Sketch016",
+    "solve": 0,
+    "dof": 2,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [
+     9
+    ],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch017",
+    "label": "Sketch017",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 41084.28,
+     "bbox": [
+      -20.0,
+      -30.0,
+      -30.0,
+      45.0,
+      30.0,
+      30.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.057,
+      0.0,
+      0.0
+     ],
+     "cyl_diameters": [
+      2.0,
+      2.5,
+      2.6,
+      3.1,
+      4.158,
+      5.2,
+      7.0,
+      29.1,
+      35.2,
+      37.0,
+      51.8,
+      55.8
+     ]
+    },
+    "recomputed": {
+     "volume": 41084.28,
+     "bbox": [
+      -20.0,
+      -30.0,
+      -30.0,
+      45.0,
+      30.0,
+      30.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.057,
+      0.0,
+      0.0
+     ],
+     "cyl_diameters": [
+      2.0,
+      2.5,
+      2.6,
+      3.1,
+      4.158,
+      5.2,
+      7.0,
+      29.1,
+      35.2,
+      37.0,
+      51.8,
+      55.8
+     ]
+    }
+   },
+   {
+    "name": "Body001",
+    "label": "Body001",
+    "stored": null,
+    "recomputed": null
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": [
+   "Transition: Python proxy not loaded (Part::FeaturePython)"
+  ]
+ },
+ {
+  "file": "components/upper_fins/upper_fin.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 8
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 9797.74,
+     "bbox": [
+      -0.354,
+      -3.0,
+      -12.0,
+      95.0,
+      3.0,
+      50.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      51.3,
+      -0.0,
+      11.744
+     ],
+     "cyl_diameters": [
+      1.0
+     ]
+    },
+    "recomputed": {
+     "volume": 9797.74,
+     "bbox": [
+      -0.354,
+      -3.0,
+      -12.0,
+      95.0,
+      3.0,
+      50.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      51.3,
+      0.0,
+      11.744
+     ],
+     "cyl_diameters": [
+      1.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": [
+   "Fin: Python proxy not loaded (Part::FeaturePython)"
+  ]
+ },
+ {
+  "file": "components/upper_motor_retainer/upper_retainer.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 18
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 18
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 4,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 9
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 0
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 0
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch013",
+    "label": "Sketch013",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 22375.57,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -7.5,
+      30.0,
+      30.0,
+      12.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      0.0,
+      2.83
+     ],
+     "cyl_diameters": [
+      2.0,
+      2.242,
+      3.1,
+      5.15,
+      7.0,
+      15.0,
+      50.0,
+      55.8,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 22375.56,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -7.5,
+      30.0,
+      30.0,
+      12.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      0.0,
+      2.83
+     ],
+     "cyl_diameters": [
+      2.0,
+      2.242,
+      3.1,
+      5.15,
+      7.0,
+      15.0,
+      50.0,
+      55.8,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [],
+  "load_errors": []
+ },
+ {
+  "file": "components/wall.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch003",
+    "label": "Sketch003",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch004",
+    "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
+    "solve": 0,
+    "dof": 3,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 4
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 8
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 12064.0,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -7.5,
+      30.0,
+      0.0,
+      102.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      -18.971,
+      47.5
+     ],
+     "cyl_diameters": [
+      56.0,
+      58.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 12064.0,
+     "bbox": [
+      -30.0,
+      -30.0,
+      -7.5,
+      30.0,
+      0.0,
+      102.5
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      -18.971,
+      47.5
+     ],
+     "cyl_diameters": [
+      56.0,
+      58.0,
+      60.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [
+   "Sketch005 (Sketch005): Invalid"
+  ],
+  "load_errors": []
+ },
+ {
+  "file": "launch_pad/Unnamed.FCStd",
+  "sketches": [
+   {
+    "name": "Sketch",
+    "label": "Sketch",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 14
+   },
+   {
+    "name": "Sketch001",
+    "label": "Sketch001",
+    "solve": -2,
+    "dof": 3,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [
+     22,
+     26
+    ],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 14
+   },
+   {
+    "name": "Sketch002",
+    "label": "Sketch002",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   }
+  ],
+  "bodies": [
+   {
+    "name": "Body",
+    "label": "Body",
+    "stored": {
+     "volume": 150696.61,
+     "bbox": [
+      -102.5,
+      -102.5,
+      -20.0,
+      102.5,
+      102.5,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      -0.0,
+      4.66
+     ],
+     "cyl_diameters": [
+      7.5,
+      10.0,
+      165.0,
+      205.0
+     ]
+    },
+    "recomputed": {
+     "volume": 150696.61,
+     "bbox": [
+      -102.5,
+      -102.5,
+      -20.0,
+      102.5,
+      102.5,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      -0.0,
+      -0.0,
+      4.66
+     ],
+     "cyl_diameters": [
+      7.5,
+      10.0,
+      165.0,
+      205.0
+     ]
+    }
+   }
+  ],
+  "recompute_errors": [
+   "Sketch001 (Sketch001): Invalid"
+  ],
+  "load_errors": []
+ }
+]

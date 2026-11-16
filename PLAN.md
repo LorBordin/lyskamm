@@ -49,12 +49,12 @@ The 5 mm tubes look like the screw-joint rings between printed sections.
 - [x] 0.3 Commit `PLAN.md` + `CLAUDE.md`.
 
 ## Phase 1 — Inventory (read-only)
-- [ ] 1.1 Write `scripts/cad_inventory.py` (stdlib only; parses `Document.xml` of every `.FCStd`): bodies, features (type, label, key props), sketches (geometry/constraint counts, driving dimensions, named?, label default?), spreadsheets/aliases, expressions. Output → `docs/inventory/<part>.md` + `docs/inventory/summary.md`. Files: `scripts/cad_inventory.py`, `docs/inventory/`
-- [ ] 1.2 Sketch DoF check: open each file in FreeCAD via MCP (headless where possible), `solve()` each sketch, record DoF / malformed / conflicting; **close without saving**. Append to inventory. Flag: unconstrained (DoF>0), empty, default-labelled.
-- [ ] 1.3 Measured geometry per active part: bounding box, volume (→ mass estimate at ASA-CF/PETG-CF density), key Ø/lengths (outer Ø, coupler Ø, wall, screw-hole PCD/Ø). Files: `docs/inventory/geometry.md`
-- [ ] 1.4 `.ork` inventory: components, lengths, radii, fins, positions → `docs/inventory/openrocket.md` (script: `scripts/ork_inventory.py`).
-- [ ] 1.5 Shared-dimension analysis: cluster equal values across parts at interfaces (body Ø, coupler fit, M2 insert holes, rod holes, fin slots) → table "value · where used · likely meaning". Files: `docs/inventory/shared_dims.md`
-- [ ] 1.6 Real masses: Lorenzo weighs the printed v1 parts (+ hardware) → `docs/inventory/masses.md`.
+- [x] 1.1 Write `scripts/cad_inventory.py` (stdlib only; parses `Document.xml` of every `.FCStd`): bodies, features (type, label, key props), sketches (geometry/constraint counts, driving dimensions, named?, label default?), spreadsheets/aliases, expressions. Output → `docs/inventory/<part>.md` + `docs/inventory/summary.md`. Files: `scripts/cad_inventory.py`, `docs/inventory/`
+- [x] 1.2 *(done with `scripts/cad_inventory_fc.py`, run by `freecadcmd` from the AppImage on temp copies → `docs/inventory/sketch_dof.md`)* Sketch DoF check: open each file in FreeCAD via MCP (headless where possible), `solve()` each sketch, record DoF / malformed / conflicting; **close without saving**. Append to inventory. Flag: unconstrained (DoF>0), empty, default-labelled.
+- [x] 1.3 *(→ `docs/inventory/geometry.md`, `fc_data.json`; mass estimate deferred to 1.6 — needs infill/density)* Measured geometry per active part: bounding box, volume (→ mass estimate at ASA-CF/PETG-CF density), key Ø/lengths (outer Ø, coupler Ø, wall, screw-hole PCD/Ø). Files: `docs/inventory/geometry.md`
+- [x] 1.4 `.ork` inventory: components, lengths, radii, fins, positions → `docs/inventory/openrocket.md` (script: `scripts/ork_inventory.py`).
+- [x] 1.5 *(→ `scripts/shared_dims.py`; "meaning" column left blank for review)* Shared-dimension analysis: cluster equal values across parts at interfaces (body Ø, coupler fit, M2 insert holes, rod holes, fin slots) → table "value · where used · likely meaning". Files: `docs/inventory/shared_dims.md`
+- [x] 1.6 *(done — known total ≈ 575.5 g without screws/electronics; no volume-based estimate, use Bambu Studio for new parts; template: `docs/inventory/masses.md`, print params pre-filled from 3MF by `scripts/print_settings.py`)* Real masses: Lorenzo weighs the printed v1 parts (+ hardware) → `docs/inventory/masses.md`.
 - [ ] 1.7 ⏸ **Review with Lorenzo**: confirm active vs legacy files, meaning of shared dims. Commit inventory.
 
 ## Phase 2 — Proposal (documents only, no CAD changes)
@@ -81,7 +81,7 @@ For each part (one checklist block per part, added to this file when the part st
 
 ## Phase 4 — CLAUDE.md (full)
 - [ ] 4.1 Expand `CLAUDE.md`: project goal & constraints (no structural glue, M2 + heat-set inserts, ~0.15 mm sliding fit, P1S 0.4 mm hardened nozzle, PETG-CF fins / ASA-CF rest, mm), conventions (from 2.2), repo map, working rules, CAD change protocol.
-- [ ] 4.2 Workflow sections: FreeCAD MCP (FreeCAD 1.1.3 must be open; read-only vs write tools; never save without approval; A2plus update), OpenRocket (where params come from, how to sync with `parameters.FCStd`), simulator, how to use PLAN.md (Status + Session log).
+- [ ] 4.2 Workflow sections: Bambu Studio (mass estimates of new parts from the slicer), FreeCAD MCP (FreeCAD 1.1.3 must be open; read-only vs write tools; never save without approval; A2plus update), OpenRocket (where params come from, how to sync with `parameters.FCStd`), simulator, how to use PLAN.md (Status + Session log).
 - [ ] 4.3 ⏸ Review with Lorenzo → commit.
 
 ## Phase 5 — Redesign backlog (list only; plan in detail later)
@@ -93,24 +93,40 @@ For each part (one checklist block per part, added to this file when the part st
 - [ ] Simulator fix: include motor casing mass; read params from `parameters.FCStd`/`.ork`.
 - [ ] Fin attachment strength / flutter check with PETG-CF.
 - [ ] Logo parts: keep, archive or integrate.
+- [ ] Assembly is incomplete: small/inner flying parts (`pistone`, `fuselage_w_logo`, connectors, screw eyes, …) are not in `assemblies/lyskamm.FCStd` — add them (needed for fit checks and CG).
+- [ ] Update `.ork` and `rocket_simulator.py` with weighed masses (`docs/inventory/masses.md`) and measured length 871 mm.
 - [ ] [others — Lorenzo to fill in]
 
 ---
 
 ## Status
-- **Current phase:** 0 — Bootstrap ✅ done → 1 — Inventory
-- **Next step:** 1.1 write `scripts/cad_inventory.py` (paused, waiting for Lorenzo)
+- **Current phase:** 1 — Inventory (1.1–1.6 done, outputs in `docs/inventory/`, not yet committed)
+- **Next step (new session):** 1.7 review of the inventory with Lorenzo — start by answering open question 1 (which logo-fuselage file was printed; are the PLA logo inserts on the rocket?), then add it to `EXTRA_ACTIVE` in `scripts/shared_dims.py`, regenerate `docs/inventory/`, and go through shared-dimension meanings and legacy files.
+- **Pause point:** session 2 ended after 1.6 (2026-11-16). Phase 1 outputs committed as a pre-review checkpoint.
 - **Open questions:**
-  1. Which files are legacy vs still needed (list under "Not in the assembly")?
+  1. Which files are legacy vs still needed (see "In assembly = no" in `docs/inventory/summary.md`)? Known so far: `fuselage_w_logo` (4th fuselage) and `pistone` fly although not in the assembly. Which file is the printed logo fuselage: `fuselage_w_logo.FCStd` or `fuselage_w_logo_v2.FCStd`?
   2. Other known v1 issues besides e-bay and pad interface?
   3. Master parameters mechanism: single `parameters.FCStd` with cross-document expressions (recommended) or per-part spreadsheets?
   4. Keep A2plus, or migrate the assembly to FreeCAD's built-in Assembly workbench (later, separate decision)?
   5. Git LFS: install and fix `.gitattributes`, or drop LFS?
   6. `.ork` vs CAD: which is the source of truth for outer dimensions?
   7. Delete or ignore the untracked `init` file; commit `.mcp.json`?
+  8. **Rocket workbench and A2plus are not installed in FreeCAD 1.1.3** (only FreeCADMCP is). Without Rocket, `nose_cone`, `lower_fins`, `upper_fin`, `rear_transition` cannot recompute their base feature; without A2plus the assembly cannot be solved/updated. Install both, or replace those features (blocks Phase 3)?
+  9. The MCP `execute_code_headless` cannot find `freecadcmd` (FreeCAD is an AppImage). Configure `--freecadcmd` in `.mcp.json`, or keep running the AppImage's `freecadcmd` via shell?
+  10. Meaning of shared dimensions (`docs/inventory/shared_dims.md`), e.g. 3.75, 23.428, 7.5, 6.15/9.6, and the fits 55.8↔56 (Δ0.2), 41.9↔42.1, 37↔37.2.
+  11. Features already failing in FreeCAD 1.1.3 recompute (copies only): `e-bay/fuselage` Chamfer, `lower_fuselage_v1` Sketch014, `mid_fuselage` Sketch011, `wall` Sketch005, `launch_pad` Sketch001 … — fix during Phase 3.0?
+  12. ~~Mass estimate~~ — resolved: weighed masses only; Bambu Studio for new parts.
 
 ## Session log
 ### 2026-11-16 — Session 1
 - **Done:** read-only inspection of repo, `.ork`, all 27 `.FCStd` (Document.xml), A2plus assembly, simulator. Wrote PLAN.md.
 - **Decisions:** Phase 0 bootstrap added so CLAUDE.md exists from session 2; parametrization order = interfaces outward from body tube; one commit per approved CAD change.
 - **Left:** Phase 1 (inventory). Open questions saved in Status, to be discussed at the related steps.
+
+### 2026-11-16 — Session 2 (Phase 1)
+- **Done:** 1.1 `scripts/cad_inventory.py` → `docs/inventory/summary.md` + `parts/*.md` (29 files). 1.2/1.3 `scripts/cad_inventory_fc.py` (headless FreeCAD 1.1.3 on temp copies, nothing saved) → `sketch_dof.md`, `geometry.md`. 1.4 `scripts/ork_inventory.py` → `openrocket.md`. 1.5 `scripts/shared_dims.py` → `shared_dims.md`.
+- **Findings:** 87/257 sketches with issues (DoF>0, 6 empty, 2 solve failures with redundant constraints); 0 named dimensions, 0 spreadsheets; 16 active parts; Rocket WB + A2plus missing in FreeCAD 1.1.3; several features already Invalid on 1.1.3 recompute; `.ork` lacks motor mount, motor, recovery, masses, rail buttons, simulations; nose cone 120 (CAD) vs 125 (.ork); fin geometry differs (see `parts/*fins*.md` vs `openrocket.md`).
+- **Decisions:** baseline geometry = shape *stored* in the files (saved by FreeCAD 1.0); added `__pycache__/` to `.gitignore`.
+- **Left:** 1.6 weigh parts, 1.7 review + commit inventory; open questions 8–12 added.
+- **Later same session:** 1.6 done. `scripts/print_settings.py` extracts Bambu Studio settings from `.3mf`. Lorenzo filled `masses.md`: all printed parts ASA-CF 15% (fins PETG-CF); masses as weighed incl. inserts/screw eyes/connectors; known total ≈ 575.5 g (no screws, electronics, cord, battery); length 871 mm (est.). `fuselage_w_logo` is the 4th fuselage and `pistone` flies — both missing from the assembly (added to backlog; `pistone` added to `EXTRA_ACTIVE` in `shared_dims.py`). Decision: no volume-based mass estimate; use Bambu Studio for new parts. Q12 resolved.
+- **Session end:** paused after 1.6 at Lorenzo's request; 1.7 in a new session. Checkpoint commit of scripts + `docs/inventory/` (pre-review; `.mcp.json` and `init` left untracked).

@@ -29,4 +29,8 @@ TSP F35 (primary, `scripts/motor_data/TSP_F35.eng`), EXP G115 (later, `scripts/m
 - Assembly `assemblies/lyskamm.FCStd` uses the **A2plus** workbench (imported parts are static
   copies — update from source after part edits).
 - Printer: Bambu Lab P1S, 0.4 mm hardened-steel nozzle. PETG-CF for fins, ASA-CF for the rest.
+- Print settings: all printed parts ASA-CF, 15% infill; fins PETG-CF. Settings live in the `.3mf`
+  files (Bambu Studio); `scripts/print_settings.py` extracts them.
+- Mass estimates for new parts: use Bambu Studio's slicer estimate (no volume-based estimates).
+  Measured masses: `docs/inventory/masses.md`.
 - Fasteners: M2 + heat-set inserts. Sliding fit clearance ~0.15 mm. Units: mm.
