@@ -101,10 +101,10 @@ For each part (one checklist block per part, added to this file when the part st
 
 ## Status
 - **Current phase:** 1 — Inventory (1.1–1.6 done, outputs in `docs/inventory/`, not yet committed)
-- **Next step (new session):** 1.7 review of the inventory with Lorenzo — start by answering open question 1 (which logo-fuselage file was printed; are the PLA logo inserts on the rocket?), then add it to `EXTRA_ACTIVE` in `scripts/shared_dims.py`, regenerate `docs/inventory/`, and go through shared-dimension meanings and legacy files.
+- **Next step (new session):** 1.7 review of the inventory with Lorenzo — start by verifying which `.FCStd` matches `fuselage_w_logo.3mf` (open question 1), then add it to `EXTRA_ACTIVE` in `scripts/shared_dims.py`, regenerate `docs/inventory/`, and go through shared-dimension meanings and legacy files.
 - **Pause point:** session 2 ended after 1.6 (2026-11-16). Phase 1 outputs committed as a pre-review checkpoint.
 - **Open questions:**
-  1. Which files are legacy vs still needed (see "In assembly = no" in `docs/inventory/summary.md`)? Known so far: `fuselage_w_logo` (4th fuselage) and `pistone` fly although not in the assembly. Which file is the printed logo fuselage: `fuselage_w_logo.FCStd` or `fuselage_w_logo_v2.FCStd`?
+  1. Which files are legacy vs still needed (see "In assembly = no" in `docs/inventory/summary.md`)? Known so far: `fuselage_w_logo` (4th fuselage) and `pistone` fly although not in the assembly. Answered: the printed logo fuselage is exactly `components/e-bay/fuselage_w_logo.3mf` (ASA-CF fuselage + small PLA logo inserts, PLA only for colour, non-structural). Its objects are named `fuselage_w_logo.step` + `logo_*.step` → in 1.7 verify which `.FCStd` matches (likely `fuselage_w_logo.FCStd`, by export name; check by comparing mesh volume/bbox) before adding it to `EXTRA_ACTIVE`.
   2. Other known v1 issues besides e-bay and pad interface?
   3. Master parameters mechanism: single `parameters.FCStd` with cross-document expressions (recommended) or per-part spreadsheets?
   4. Keep A2plus, or migrate the assembly to FreeCAD's built-in Assembly workbench (later, separate decision)?
