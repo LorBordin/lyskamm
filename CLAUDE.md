@@ -21,6 +21,10 @@ TSP F35 (primary, `scripts/motor_data/TSP_F35.eng`), EXP G115 (later, `scripts/m
   3. Apply the change, recompute, describe the result.
   4. Wait for Lorenzo to check it in FreeCAD before moving on.
   5. Commit to git (one commit per approved, verified change).
+- **Saving from headless `freecadcmd` drops all GUI data** (`GuiDocument.xml`, colours, appearance,
+  thumbnail): FreeCAD then shows default visibility and parts can look wrong. Prefer saving through the
+  open FreeCAD GUI (MCP); if saved headless, restore the GUI entries from the previous git version of the
+  file (object names unchanged) before Lorenzo checks it.
 - Reading and inspecting files (including parsing `Document.xml` with Python, or opening a
   document in FreeCAD **without saving**) is always allowed.
 
