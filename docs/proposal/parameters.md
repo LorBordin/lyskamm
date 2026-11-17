@@ -82,8 +82,8 @@ Values that must agree between CAD and `.ork`. Mismatches are only listed here; 
 | `transition_t` | 3 | 2 | ⚠ mismatch |
 | `fin_count` | 4 | 4 ✔ | 4 + 4 single-fin parts in the assembly (the Rocket `FinCount = 3` property is unused, `FinSet = false`). |
 | `fin_t` | 3 | 3 ✔ | Root and tip. |
-| `lower_fin_root` / `tip` / `sweep` / `height` | 63.5 / 32 / 21 / 50 | 60 / 30 / 20 / 50 | ⚠ mismatch |
-| `upper_fin_root` / `tip` / `sweep` / `height` | 95 / 41 / 50 / 50 | 90 / 40 / 50 / 50 (freeform) | ⚠ mismatch |
+| `lower_fin_root` / `tip` / `sweep` / `height` | 63.5 / 32 / 21 / 50 | 60 / 30 / 20 / 50 | Not a mismatch: `.ork` = design; CAD is enlarged on purpose to make up for what slicing removes from the airfoil. |
+| `upper_fin_root` / `tip` / `sweep` / `height` | 95 / 41 / 50 / 50 | 90 / 40 / 50 / 50 (freeform) | Same: `.ork` = design, CAD enlarged for slicing loss. |
 | total length | 871 (measured) | 864 | |
 
 Note: nose, fins and transition are Rocket-workbench features. Linking their properties to `Params` only works once the Rocket workbench is installed (open question 8).

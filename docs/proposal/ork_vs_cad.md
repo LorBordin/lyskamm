@@ -84,10 +84,42 @@ in Phase 3.
 | X6 | Simulations | — | F35 and G115 flights; check stability margin ≥ 1 cal |
 | X7 | Materials | — | not needed if every component has a mass override |
 
-## Questions for review (2.5)
+## Review answers (2026-11-17)
 
-1. Source of truth: CAD for geometry, weighed masses for mass, `.ork` follows? (open question 6)
-2. Lower fins: on the real rocket, do they stick out ~19 mm past the end of the lower fuselage (onto the transition)?
-3. Can you measure each section's visible length on the real rocket (nose, rings, tubes, transition)?
-4. Parachute: diameter / model?
-5. Apply all `.ork` fixes above in one go (after 2.5), or one by one?
+1. **Source of truth depends on the quantity.** Lengths and body shape: CAD (to be confirmed by the physical
+   measurement, `docs/inventory/section_lengths.md`). **Fin dimensions: `.ork` is the design value.** The CAD fins
+   are drawn larger on purpose, because Bambu Studio loses material when slicing the thin airfoil profile, so the
+   printed fins come out close to the `.ork` size. F2 and F5 are therefore *not* mismatches.
+2. **The 19 mm fin overhang (F4) came from the assembly, which is wrong.** On the real rocket the lower fins end
+   5 mm before the end of the lower fuselage, as in the `.ork`. No change. Same for F6: `.ork` kept.
+3. Lorenzo will measure the sections → `docs/inventory/section_lengths.md`.
+4. Parachute: Ø 1 m with a spill hole (hole size to be measured).
+5. Apply all `.ork` fixes in one go and report.
+
+## Applied to `lyskamm.ork` (2026-11-17)
+
+Checked by loading the file in OpenRocket 23.09 (headless): loads with only the version warnings the
+original already had; dry mass without motor **575.5 g** (was 226 g), CG **518 mm** from the tip.
+
+| Change | Before | After |
+|---|---|---|
+| Nose length (G1) | 125 | 120 |
+| Transition aft Ø (G10) | 42 | 40 |
+| Transition wall (G11) | 2 | 3 |
+| Rear fins cross-section (F3) | square | airfoil |
+| Component names | 10 × "Body Tube" | Upper closure ring, E-bay tube (upper), … Rear transition |
+| Mass overrides (M1–M12) | none (cardboard/balsa densities) | weighed values on every component; aluminium bars added to the e-bay tubes (2 × 3.67 g each) |
+| Parachute (X3) | — | Ø1000, 43 g, Cd auto (0.8), in the parachute bay, 20 mm from its top |
+| Piston | — | mass 28 g at the aft end of the parachute bay ⚠ position guessed |
+| Carbon rods | — | one 28 g mass, 450 long, centred ≈ 604 mm from the tip ⚠ position approximate |
+| Motor tube (X1) | — | inner tube Ø37/35.2 × 93 at the aft end of the lower fuselage, motor mount, mass 0 (included in the weighed lower fuselage) |
+
+**Not done yet:**
+- Section lengths: waiting for the measurement (total is now 859 because only the nose changed).
+- Parachute bay length 241 vs CAD 242.5: waiting for the measurement.
+- Motors (X2): OpenRocket needs the `.eng` files in its motor library; then pick G115 in the GUI. The F35 needs the
+  adapter first.
+- Simulations (X6): after the motor is set.
+- Spill hole: OpenRocket has no spill-hole field; it is approximated with the drag coefficient (Cd) once the hole size is known.
+- Note: OpenRocket installed here is **23.09**, but the file was saved by **24.12**. It loads, with a warning. Saving
+  from 23.09 would downgrade the file format: better to install 24.12.
