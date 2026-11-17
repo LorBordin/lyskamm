@@ -58,8 +58,13 @@ adapter in the 35.2 tube: run without it and with a guessed 25 g adapter around 
 | 250 | 25 | 969 | 1.3–1.4 | 12.2 | 173–175 | 4.8 | 9 / 12 | 5.1 |
 
 **Verdict for the F35 with +200 g:** flyable. Stability ≈ 1.1–1.3 cal (≥ 1 cal), rail-exit ≈ 13 m/s on 2 m,
-apogee ≈ 190–205 m, descent ≈ 5 m/s. **Use the 6 s delay** (best ≈ 5.1–5.2 s; 6 s → deploy at ≈ 9–10 m/s; the 8 s delay
-deploys at 27–28 m/s: don't use it).
+apogee ≈ 190–205 m, descent ≈ 5 m/s.
+
+**Deployment (Lorenzo, 2026-11-17): no motor delay charge — the altimeter opens the parachute.** Model changed to
+*deploy at apogee* with a plugged motor; result: speed at deployment ≈ 5 m/s in every configuration above
+(+200 g: 5.0 m/s without adapter, 5.3 m/s with 25 g adapter). The "deploy speed with 4 / 6 s delay" column and
+"Best delay" are kept only for reference (fallback if a motor ejection charge were ever used). Apogee is reached
+≈ 7.2–7.4 s after ignition.
 
 Margins are modest, so:
 - Put the extra mass **as far forward as possible** (e-bay or nose): the run assumes it in the lower e-bay tube;

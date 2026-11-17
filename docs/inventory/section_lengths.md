@@ -15,13 +15,13 @@ you can see from outside). Couplings hidden inside the neighbouring part don't c
 | 4 | Mid closure ring | `e-bay/mid_closure` | 5 | 5 | 5 | |
 | 5 | E-bay tube, lower (2 half-shells, one with logo) | `e-bay/fuselage` + `fuselage_w_logo` | 105 | 105 | 104 | |
 | 6 | Lower closure ring | `e-bay/lower_closure_v2` | 5 | 5 | 5 | |
-| 7 | Parachute bay | `parachute_fuselage_seat_v2` | 242.5 | 241 | | CAD 242.5 is the full part; visible may be shorter |
+| 7 | Parachute bay | `parachute_fuselage_seat_v2` | 242.5 | 241 | 241 | visible length; CAD 242.5 is the full part |
 | 8 | Lower chute retainer ring | `low_chute_ret` | 5 | 5 | 5 | |
 | 9 | Mid fuselage (upper fins) | `mid_fuselage` | 105 | 105 |104.5 | |
 | 10 | Upper motor retainer ring | `upper_retainer` | 5 | 5 | 5 | |
 | 11 | Lower fuselage (lower fins) | `lower_fuselage_v1` | 113 | 113 | 112 | |
 | 12 | Rear transition | `rear_transition` | 45 | 45 | 44.5 | |
-| — | **Sum of the above** | | **860.5** | **860** (updated) | 619 + parachute bay | |
+| — | **Sum of the above** | | **860.5** | **860** (updated) | **860** | |
 | — | **Total length, tip → tail, one measure** | | | | | earlier estimate 871 |
 
 ## Fin positions
