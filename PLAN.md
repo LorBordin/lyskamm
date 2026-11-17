@@ -55,12 +55,12 @@ The 5 mm tubes look like the screw-joint rings between printed sections.
 - [x] 1.4 `.ork` inventory: components, lengths, radii, fins, positions → `docs/inventory/openrocket.md` (script: `scripts/ork_inventory.py`).
 - [x] 1.5 *(→ `scripts/shared_dims.py`; "meaning" column left blank for review)* Shared-dimension analysis: cluster equal values across parts at interfaces (body Ø, coupler fit, M2 insert holes, rod holes, fin slots) → table "value · where used · likely meaning". Files: `docs/inventory/shared_dims.md`
 - [x] 1.6 *(done — known total ≈ 575.5 g without screws/electronics; no volume-based estimate, use Bambu Studio for new parts; template: `docs/inventory/masses.md`, print params pre-filled from 3MF by `scripts/print_settings.py`)* Real masses: Lorenzo weighs the printed v1 parts (+ hardware) → `docs/inventory/masses.md`.
-- [ ] 1.7 ⏸ **Review with Lorenzo**: confirm active vs legacy files, meaning of shared dims. Commit inventory.
+- [ ] 1.7 ⏸ **Review with Lorenzo**: confirm active vs legacy files, meaning of shared dims. Commit inventory. *(mostly done 2026-11-17 → `docs/inventory/file_status.md`, `MEANINGS` in `scripts/shared_dims.py`; open: Ø2.6, Ø3.5, `parachute_fuselage_seat/upper_closure`)*
 
 ## Phase 2 — Proposal (documents only, no CAD changes)
 - [ ] 2.1 Master parameters: list of aliases (e.g. `body_od`, `body_wall`, `coupler_od`, `fit_slide=0.15`, `m2_insert_hole`, `m2_clear`, `rod_d`, `fin_t`, `motor_d`…), units, source part, ork counterpart. Decide mechanism: (a) single `parameters.FCStd` spreadsheet referenced by cross-document expressions vs (b) per-part sheet synced by script. Recommendation: (a). Files: `docs/proposal/parameters.md`
 - [ ] 2.2 Naming conventions: files (`snake_case`, English, no version suffix — git holds versions), bodies, features (`Pad_body`, `Pocket_m2_holes`…), sketches (`SK_<purpose>`), constraints (`<alias-like name>`). Files: `docs/proposal/conventions.md`
-- [ ] 2.3 Repo structure proposal: per-part folders, `exports/` for STEP/3MF, `archive/` for legacy, `parameters.FCStd` location, LFS fix (`*.FCStd`, install git-lfs or drop LFS). File moves/renames listed as a checklist (each a separate, approved step; A2plus `sourceFile` paths must be updated). Files: `docs/proposal/repo_structure.md`
+- [ ] 2.3 Repo structure proposal: per-part folders, `exports/` for STEP/3MF, `archive/` for legacy, `parameters.FCStd` location, LFS fix (`*.FCStd`, install git-lfs or drop LFS). File moves/renames listed as a checklist (known so far: `components/logo.FCStd` → `components/logo/`; misnamed `parachute_fuselage_seat_v2.3mf` actually holds `lower_closure_v2`, and `parachute_fuselage_seat.3mf` holds the v2 seat — see `docs/inventory/file_status.md`) (each a separate, approved step; A2plus `sourceFile` paths must be updated). Files: `docs/proposal/repo_structure.md`
 - [ ] 2.4 `.ork` ↔ CAD mismatch table: lengths, Ø, fin geometry & thickness (ork 3 mm), transition, materials, missing motor mount/motor/recovery/mass overrides, motor Ø 29 vs 35 mm. Files: `docs/proposal/ork_vs_cad.md`
 - [ ] 2.5 ⏸ **Review with Lorenzo**: approve parameter list, conventions, structure, which .ork fixes to apply. Commit.
 
@@ -86,25 +86,27 @@ For each part (one checklist block per part, added to this file when the part st
 
 ## Phase 5 — Redesign backlog (list only; plan in detail later)
 - [ ] Electronics bay (e-bay: closures, aluminium rods, access, wiring, connector `presa_elettrica`).
-- [ ] Launch rail / pad interface (rail buttons or guides; `launch_pad/Unnamed.FCStd`).
-- [ ] Motor mount compatible with both F35 (Ø29) and G115 (Ø35) — adapter or two mounts; motor retention.
+- [ ] Launch rail / pad interface on the rocket (rail buttons or guides). The pad itself: see *Launch pad* section.
+- [ ] Motor mount: current tube is Ø35.2 inner / Ø37 outer (`lower_fuselage_v1`, `rear_transition`; `upper_retainer` bore 37.2), sized for EXP G115 (Ø35). TSP F35 (Ø29) needs an **adapter** (Lorenzo, 2026-11-17). Motor retention.
 - [ ] Recovery: chute size, ejection/deployment (`pistone`, chute retainers), shock cord attachment.
 - [ ] OpenRocket model completion: real materials, motor mount, motor, masses/overrides, recovery, simulations (F35, G115), stability margin.
 - [ ] Simulator fix: include motor casing mass; read params from `parameters.FCStd`/`.ork`.
 - [ ] Fin attachment strength / flutter check with PETG-CF.
-- [ ] Logo parts: keep, archive or integrate.
+- [ ] Logo parts: all kept (flat logo, projected logo, `logo_red` = printed undersized PLA inserts); clean up names/location in Phase 2.3.
 - [ ] Assembly is incomplete: small/inner flying parts (`pistone`, `fuselage_w_logo`, connectors, screw eyes, …) are not in `assemblies/lyskamm.FCStd` — add them (needed for fit checks and CG).
 - [ ] Update `.ork` and `rocket_simulator.py` with weighed masses (`docs/inventory/masses.md`) and measured length 871 mm.
 - [ ] [others — Lorenzo to fill in]
 
+## Launch pad (separate project, deferred)
+- `launch_pad/Unnamed.FCStd` is an early concept only. How to build the pad is still to be decided; ignore it in Phases 1–4 (no inventory review, no parametrization). Plan it here when Lorenzo is ready.
+
 ---
 
 ## Status
-- **Current phase:** 1 — Inventory (1.1–1.6 done, outputs in `docs/inventory/`, not yet committed)
-- **Next step (new session):** 1.7 review of the inventory with Lorenzo — start by verifying which `.FCStd` matches `fuselage_w_logo.3mf` (open question 1), then add it to `EXTRA_ACTIVE` in `scripts/shared_dims.py`, regenerate `docs/inventory/`, and go through shared-dimension meanings and legacy files.
-- **Pause point:** session 2 ended after 1.6 (2026-11-16). Phase 1 outputs committed as a pre-review checkpoint.
+- **Current phase:** 1 — Inventory, step 1.7 (review) mostly done.
+- **Next step:** Lorenzo answers the last 1.7 items (Ø2.6, Ø3.5, `parachute_fuselage_seat/upper_closure` — see open question 10) → tick 1.7 → start Phase 2.1 (master parameter list).
 - **Open questions:**
-  1. Which files are legacy vs still needed (see "In assembly = no" in `docs/inventory/summary.md`)? Known so far: `fuselage_w_logo` (4th fuselage) and `pistone` fly although not in the assembly. Answered: the printed logo fuselage is exactly `components/e-bay/fuselage_w_logo.3mf` (ASA-CF fuselage + small PLA logo inserts, PLA only for colour, non-structural). Its objects are named `fuselage_w_logo.step` + `logo_*.step` → in 1.7 verify which `.FCStd` matches (likely `fuselage_w_logo.FCStd`, by export name; check by comparing mesh volume/bbox) before adding it to `EXTRA_ACTIVE`.
+  1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
   3. Master parameters mechanism: single `parameters.FCStd` with cross-document expressions (recommended) or per-part spreadsheets?
   4. Keep A2plus, or migrate the assembly to FreeCAD's built-in Assembly workbench (later, separate decision)?
@@ -113,7 +115,7 @@ For each part (one checklist block per part, added to this file when the part st
   7. Delete or ignore the untracked `init` file; commit `.mcp.json`?
   8. **Rocket workbench and A2plus are not installed in FreeCAD 1.1.3** (only FreeCADMCP is). Without Rocket, `nose_cone`, `lower_fins`, `upper_fin`, `rear_transition` cannot recompute their base feature; without A2plus the assembly cannot be solved/updated. Install both, or replace those features (blocks Phase 3)?
   9. The MCP `execute_code_headless` cannot find `freecadcmd` (FreeCAD is an AppImage). Configure `--freecadcmd` in `.mcp.json`, or keep running the AppImage's `freecadcmd` via shell?
-  10. Meaning of shared dimensions (`docs/inventory/shared_dims.md`), e.g. 3.75, 23.428, 7.5, 6.15/9.6, and the fits 55.8↔56 (Δ0.2), 41.9↔42.1, 37↔37.2.
+  10. Shared dims (mostly resolved, see `MEANINGS` in `scripts/shared_dims.py`). Still open: **Ø2.6** radial M2 holes in `lower_closure_v2` (Pocket007/008), `mid_closure` and `upper_closure` (`sede_viti_1/2`), `rear_transition` (`sede_vite_fusoliera_1/2`) — mistake (should be 2.2)? **Ø3.5** through holes in `lower_closure_v2` (`sede_vite_1`, with Ø7×3 counterbore `sede_vite_2`, ×2), `low_chute_ret` Pocket003, `pistone` Pocket001 — what goes through them (screw eyes?). Inferred, to confirm: 6.15×9.6 = connector slot `sede_presa_elettrica`; Ø7/7.2 = bosses around the carbon tubes. Also: is `parachute_fuselage_seat/upper_closure.FCStd` legacy?
   11. Features already failing in FreeCAD 1.1.3 recompute (copies only): `e-bay/fuselage` Chamfer, `lower_fuselage_v1` Sketch014, `mid_fuselage` Sketch011, `wall` Sketch005, `launch_pad` Sketch001 … — fix during Phase 3.0?
   12. ~~Mass estimate~~ — resolved: weighed masses only; Bambu Studio for new parts.
 
@@ -130,3 +132,8 @@ For each part (one checklist block per part, added to this file when the part st
 - **Left:** 1.6 weigh parts, 1.7 review + commit inventory; open questions 8–12 added.
 - **Later same session:** 1.6 done. `scripts/print_settings.py` extracts Bambu Studio settings from `.3mf`. Lorenzo filled `masses.md`: all printed parts ASA-CF 15% (fins PETG-CF); masses as weighed incl. inserts/screw eyes/connectors; known total ≈ 575.5 g (no screws, electronics, cord, battery); length 871 mm (est.). `fuselage_w_logo` is the 4th fuselage and `pistone` flies — both missing from the assembly (added to backlog; `pistone` added to `EXTRA_ACTIVE` in `shared_dims.py`). Decision: no volume-based mass estimate; use Bambu Studio for new parts. Q12 resolved.
 - **Session end:** paused after 1.6 at Lorenzo's request; 1.7 in a new session. Checkpoint commit of scripts + `docs/inventory/` (pre-review; `.mcp.json` and `init` left untracked).
+
+### 2026-11-17 — Session 3 (Phase 1.7 review)
+- **Done:** matched the printed `fuselage_w_logo.3mf` to `e-bay/fuselage_w_logo.FCStd` by mesh volume → added to `EXTRA_ACTIVE`. Reviewed non-assembly files with Lorenzo → `docs/inventory/file_status.md`. Found `logo/logo_red.FCStd` = the printed PLA logo inserts (≈0.5 mm undersized) and that `parachute_fuselage_seat.3mf` holds the v2 seat while `parachute_fuselage_seat_v2.3mf` holds `lower_closure_v2`. Shared-dim meanings stored in `MEANINGS` (`scripts/shared_dims.py`), table regenerated.
+- **Decisions:** carbon tubes and aluminium bar are 5/3 mm tubes; tube centres at r = 23.4279; M2 holes 2.2, insert holes 3.1; motor tube 35.2/37 sized for EXP G115, TSP F35 will need an adapter; launch pad split into its own deferred section; `logo.FCStd` to move into `logo/` (Phase 2.3).
+- **Left:** Ø2.6, Ø3.5 and `parachute_fuselage_seat/upper_closure` (open question 10) → close 1.7 → Phase 2.
