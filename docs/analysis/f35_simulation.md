@@ -42,7 +42,32 @@ wrong one gives 17–35 m/s (OpenRocket warns "deployment at high speed").
 - Motor position (O2): where the motor's aft end sits.
 - Simple field check: the swing test (rocket swung on a string tied at the CG must fly nose-first).
 
+## Update — planned configuration (2026-11-17, second run)
+
+Lorenzo's plan: **+200 g** on top of the weighed parts (electronics/battery etc., final value known when the
+e-bay and deployment system are designed), **2 m rail** (always the plan). Model updated: motor aft end 3 mm
+inside the rear transition (overhang 41.5 mm), fin positions confirmed by measurement. The 29 mm F35 needs an
+adapter in the 35.2 tube: run without it and with a guessed 25 g adapter around the motor.
+
+| Extra (g) | Adapter (g) | Lift-off (g) | Stability (cal) | Rail-exit speed, 2 m (m/s) | Apogee (m) | Best delay (s) | Deploy speed with 4 / 6 s delay (m/s) | Descent (m/s) |
+|---|---|---|---|---|---|---|---|---|
+| 150 | 0 | 844 | 1.0–1.1 | 13.6 | 221–229 | 5.5 | 15 / 7 | 4.7 |
+| **200** | **0** | **894** | **1.24–1.29** | **13.2** | **200–205** | **5.2** | **13 / 9** | **5.0** |
+| **200** | **25** | **919** | **1.06–1.14** | **12.8** | **191–194** | **5.1** | **11 / 10** | **5.0** |
+| 250 | 0 | 944 | 1.5 | 12.6 | 181–184 | 4.9 | 10 / 11 | 5.1 |
+| 250 | 25 | 969 | 1.3–1.4 | 12.2 | 173–175 | 4.8 | 9 / 12 | 5.1 |
+
+**Verdict for the F35 with +200 g:** flyable. Stability ≈ 1.1–1.3 cal (≥ 1 cal), rail-exit ≈ 13 m/s on 2 m,
+apogee ≈ 190–205 m, descent ≈ 5 m/s. **Use the 6 s delay** (best ≈ 5.1–5.2 s; 6 s → deploy at ≈ 9–10 m/s; the 8 s delay
+deploys at 27–28 m/s: don't use it).
+
+Margins are modest, so:
+- Put the extra mass **as far forward as possible** (e-bay or nose): the run assumes it in the lower e-bay tube;
+  in the nose it would give more margin.
+- Keep the adapter light; each 25 g at the tail costs ≈ 0.15 cal.
+- Before flight: weigh the rocket and check the balance point **with the F35 installed** — CG ≤ ≈ 511 mm from the
+  tip for 1 cal (≈ 481 mm for 1.5 cal) — and do a swing test. Re-run `scripts/openrocket/Sim.java` with the real mass.
+
 ## Model assumptions to keep in mind
 
-Piston and carbon-rod positions are approximate; the motor is placed at the aft end of the lower fuselage with no
-overhang; the F35 adapter is not modelled; the parachute bay length (241) and fin positions are not yet measured.
+Piston and carbon-rod positions are approximate; motor overhang 41.5 mm (measured); F35 adapter guessed (0 / 25 g); parachute bay length 241 not yet measured; the extra mass is lumped in the lower e-bay tube.

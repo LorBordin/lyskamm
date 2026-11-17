@@ -28,16 +28,16 @@ you can see from outside). Couplings hidden inside the neighbouring part don't c
 
 | # | Measure | Guess (mm) | `.ork` now (mm) | Measured (mm) |
 |---|---|---|---|---|
-| F1 | Upper fins: trailing edge (aft end of fin root) → aft end of mid fuselage | 7.5 | 7.5 | |
-| F2 | Upper fins: root length along the body | 90 | 90 | |
-| F3 | Lower fins: trailing edge → aft end of lower fuselage | 5 | 5 | |
-| F4 | Lower fins: root length along the body | 60 | 60 | |
+| F1 | Upper fins: trailing edge (aft end of fin root) → aft end of mid fuselage | 7.5 | 7.5 | 7.5 |
+| F2 | Upper fins: root length along the body | 90 | 90 | 90 |
+| F3 | Lower fins: trailing edge → aft end of lower fuselage | 5 | 5 | 5 |
+| F4 | Lower fins: root length along the body | 60 | 60 | 60 |
 
 ## Other
 
 | # | Measure | Guess | Measured |
 |---|---|---|---|
 | O1 | Parachute spill-hole diameter (mm) | ? | ≈ 65 |
-| O2 | Motor (G115 or F35 + adapter): how far the motor's aft end is from the aft end of the rear transition (mm; + = sticks out) | 0 | |
+| O2 | Motor (G115 or F35 + adapter): how far the motor's aft end is from the aft end of the rear transition (mm; + = sticks out) | 0 | −3 (3 mm inside the transition) |
 | O3 | Ready-to-fly mass without motor (g) | ≈ 575 + screws, electronics, cord | |
 | O4 | Balance point (CG) without motor, from nose tip (mm) | ≈ 518 (from `.ork`, incomplete masses) | |
