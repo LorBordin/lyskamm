@@ -9,19 +9,19 @@ you can see from outside). Couplings hidden inside the neighbouring part don't c
 
 | # | Section (nose → tail) | Part file | Guess (mm) | `.ork` now (mm) | Measured (mm) | Notes |
 |---|---|---|---|---|---|---|
-| 1 | Nose cone (tip → base) | `nose_cone` | 120 | 120 | | |
-| 2 | Upper closure ring | `e-bay/upper_closure` | 5 | 5 | | |
-| 3 | E-bay tube, upper (2 half-shells) | `e-bay/fuselage` ×2 | 105 | 105 | | |
-| 4 | Mid closure ring | `e-bay/mid_closure` | 5 | 5 | | |
-| 5 | E-bay tube, lower (2 half-shells, one with logo) | `e-bay/fuselage` + `fuselage_w_logo` | 105 | 105 | | |
-| 6 | Lower closure ring | `e-bay/lower_closure_v2` | 5 | 5 | | |
+| 1 | Nose cone (tip → base) | `nose_cone` | 120 | 120 | 125 | |
+| 2 | Upper closure ring | `e-bay/upper_closure` | 5 | 5 | 5 | |
+| 3 | E-bay tube, upper (2 half-shells) | `e-bay/fuselage` ×2 | 105 | 105 | 104 | |
+| 4 | Mid closure ring | `e-bay/mid_closure` | 5 | 5 | 5 | |
+| 5 | E-bay tube, lower (2 half-shells, one with logo) | `e-bay/fuselage` + `fuselage_w_logo` | 105 | 105 | 104 | |
+| 6 | Lower closure ring | `e-bay/lower_closure_v2` | 5 | 5 | 5 | |
 | 7 | Parachute bay | `parachute_fuselage_seat_v2` | 242.5 | 241 | | CAD 242.5 is the full part; visible may be shorter |
-| 8 | Lower chute retainer ring | `low_chute_ret` | 5 | 5 | | |
-| 9 | Mid fuselage (upper fins) | `mid_fuselage` | 105 | 105 | | |
-| 10 | Upper motor retainer ring | `upper_retainer` | 5 | 5 | | |
-| 11 | Lower fuselage (lower fins) | `lower_fuselage_v1` | 113 | 113 | | |
-| 12 | Rear transition | `rear_transition` | 45 | 45 | | |
-| — | **Sum of the above** | | **860.5** | **859** | | |
+| 8 | Lower chute retainer ring | `low_chute_ret` | 5 | 5 | 5 | |
+| 9 | Mid fuselage (upper fins) | `mid_fuselage` | 105 | 105 |104.5 | |
+| 10 | Upper motor retainer ring | `upper_retainer` | 5 | 5 | 5 | |
+| 11 | Lower fuselage (lower fins) | `lower_fuselage_v1` | 113 | 113 | 112 | |
+| 12 | Rear transition | `rear_transition` | 45 | 45 | 44.5 | |
+| — | **Sum of the above** | | **860.5** | **860** (updated) | 619 + parachute bay | |
 | — | **Total length, tip → tail, one measure** | | | | | earlier estimate 871 |
 
 ## Fin positions
@@ -37,7 +37,7 @@ you can see from outside). Couplings hidden inside the neighbouring part don't c
 
 | # | Measure | Guess | Measured |
 |---|---|---|---|
-| O1 | Parachute spill-hole diameter (mm) | ? | |
+| O1 | Parachute spill-hole diameter (mm) | ? | ≈ 65 |
 | O2 | Motor (G115 or F35 + adapter): how far the motor's aft end is from the aft end of the rear transition (mm; + = sticks out) | 0 | |
 | O3 | Ready-to-fly mass without motor (g) | ≈ 575 + screws, electronics, cord | |
 | O4 | Balance point (CG) without motor, from nose tip (mm) | ≈ 518 (from `.ork`, incomplete masses) | |

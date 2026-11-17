@@ -93,6 +93,8 @@ For each part (one checklist block per part, added to this file when the part st
 - [ ] Simulator fix: include motor casing mass; read params from `parameters.FCStd`/`.ork`.
 - [ ] Lower motor retainer: design it; fixed with an M2 screw + heat-set insert → `rear_transition` Pocket002 Ø3.1 becomes Ø2.6.
 - [ ] Fix oversized M2 insert holes Ø3.1 → Ø2.6 (`low_chute_ret` Pocket004–007, `upper_retainer` `sede_viti_*`) — v1 mistake (Lorenzo, 2026-11-17). Not in Phase 3 (geometry must not change there).
+- [ ] **Stability with F35 and G115** (see `docs/analysis/f35_simulation.md`): if the measured CG is too far aft, options are nose weight, moving mass forward, or larger/further-aft fins. G115 needs its own check (heavier motor → less stable).
+- [ ] Launch rail length ≥ 1.5–2 m (rod-exit speed only 9–12 m/s with 1 m).
 - [ ] Fin attachment strength / flutter check with PETG-CF.
 - [ ] Logo parts: all kept (flat logo, projected logo, `logo_red` = printed undersized PLA inserts); clean up names/location in Phase 2.3.
 - [ ] Assembly is incomplete: small/inner flying parts (`pistone`, `fuselage_w_logo`, connectors, screw eyes, …) are not in `assemblies/lyskamm.FCStd` — add them (needed for fit checks and CG).
@@ -106,7 +108,7 @@ For each part (one checklist block per part, added to this file when the part st
 
 ## Status
 - **Current phase:** 2 — Proposal. 2.1–2.4 done.
-- **Next step:** Lorenzo measures the rocket (`docs/inventory/section_lengths.md`) → update `.ork` lengths. Then 2.5 final review of Phase 2. Suggest installing OpenRocket 24.12 (installed: 23.09; file saved by 24.12).
+- **Next step:** ⚠ F35 stability: with weighed parts only, margin ≈ 0.1 cal (`docs/analysis/f35_simulation.md`). Lorenzo weighs the ready-to-fly rocket and finds its balance point with the F35 (+adapter) installed (target CG ≤ ≈ 511 mm from tip for 1 cal); also parachute bay length, fin positions, motor position (`section_lengths.md`). Then 2.5 final review of Phase 2.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -146,4 +148,5 @@ For each part (one checklist block per part, added to this file when the part st
 - **2.3 review:** legacy files will be **deleted** (no `archive/`); exports stay next to source; LFS explained to Lorenzo, recommendation drop (awaiting OK); Lorenzo will install A2plus + Rocket WB (unblocks group B renames and Phase 3).
 - **Later:** LFS dropped (`.gitattributes` → binary markers; commit 051414f). Lorenzo installed A2plus + Rocket WB → verified (see open question 8). 2.4 drafted: `docs/proposal/ork_vs_cad.md`. Findings: fin count is 4+4 in CAD (Rocket `FinCount=3` unused — corrected in `parameters.md`); lower fins overhang ≈19 mm past the lower fuselage onto the transition vs 5 mm forward in `.ork` (CP!); `.ork` has no mass overrides; assembly has overlapping outer surfaces (parachute bay vs mid fuselage ≈15 mm) so it is not reliable for positions; lengths disagree (nominal 860.5 / assembly 875.5 / measured 871 / `.ork` 864).
 - **2.4 review:** fin dims in `.ork` are the design (CAD fins enlarged for slicer loss on the airfoil); the 19 mm fin overhang was an assembly error — real lower fins end 5 mm before the fuselage end, as in `.ork`; parachute Ø1 m with spill hole. Applied all agreed `.ork` fixes in one go (nose 120, transition aft Ø40 / wall 3, rear fins airfoil, component names, weighed mass overrides, parachute, piston, carbon rods, motor tube 37/35.2×93). Verified in OpenRocket 23.09 headless: loads, dry mass 575.5 g, CG 518 mm. Created `docs/inventory/section_lengths.md` for Lorenzo to measure.
-- **Left:** measurements → `.ork` lengths; motors + simulations in the OpenRocket GUI; 2.5.
+- **Later:** Lorenzo measured sections (nose 125, e-bay tubes 104, mid 104.5, lower 112, transition 44.5, rings 5; spill hole ≈65 mm) and installed OpenRocket 24.12 (works with its bundled Java 17; system Java 25 makes the GUI quit silently). Applied lengths to `.ork` (nose = cone 120 + 5 mm base tube), fixed a material group; loads clean in 24.12. F35 simulated headless (`scripts/openrocket/Sim.java`): with weighed parts only, stability ≈ 0.1 cal ⚠; ≥ 1 cal needs ≈ 200 g more forward (electronics etc.) or CG with motor ≤ ≈ 511 mm. Apogee 150–316 m, descent 4.4–5.4 m/s, rod-exit 9–12 m/s (1 m rod). G115 not automatically safe (heavier tail). Results: `docs/analysis/f35_simulation.md`.
+- **Left:** CG/mass measurement with F35, parachute bay length, fin & motor positions → re-run; 2.5.

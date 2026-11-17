@@ -114,6 +114,11 @@ original already had; dry mass without motor **575.5 g** (was 226 g), CG **518 m
 | Carbon rods | — | one 28 g mass, 450 long, centred ≈ 604 mm from the tip ⚠ position approximate |
 | Motor tube (X1) | — | inner tube Ø37/35.2 × 93 at the aft end of the lower fuselage, motor mount, mass 0 (included in the weighed lower fuselage) |
 
+**Second pass (measured lengths, 2026-11-17):** e-bay tubes 105 → 104, mid fuselage 105 → 104.5, lower
+fuselage 113 → 112, transition 45 → 44.5; nose measured 125 = cone 120 + a new 5 mm "Nose cone base" tube (mass 0);
+shroud-line material group fixed (`Lines` → `Fibers`). Total 860 mm. Loads in OpenRocket 24.12 with no warnings.
+Spill hole 65 mm: < 0.5 % of canopy area → Cd unchanged. F35 results: `docs/analysis/f35_simulation.md`.
+
 **Not done yet:**
 - Section lengths: waiting for the measurement (total is now 859 because only the nose changed).
 - Parachute bay length 241 vs CAD 242.5: waiting for the measurement.
