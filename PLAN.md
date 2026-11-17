@@ -55,7 +55,7 @@ The 5 mm tubes look like the screw-joint rings between printed sections.
 - [x] 1.4 `.ork` inventory: components, lengths, radii, fins, positions → `docs/inventory/openrocket.md` (script: `scripts/ork_inventory.py`).
 - [x] 1.5 *(→ `scripts/shared_dims.py`; "meaning" column left blank for review)* Shared-dimension analysis: cluster equal values across parts at interfaces (body Ø, coupler fit, M2 insert holes, rod holes, fin slots) → table "value · where used · likely meaning". Files: `docs/inventory/shared_dims.md`
 - [x] 1.6 *(done — known total ≈ 575.5 g without screws/electronics; no volume-based estimate, use Bambu Studio for new parts; template: `docs/inventory/masses.md`, print params pre-filled from 3MF by `scripts/print_settings.py`)* Real masses: Lorenzo weighs the printed v1 parts (+ hardware) → `docs/inventory/masses.md`.
-- [ ] 1.7 ⏸ **Review with Lorenzo**: confirm active vs legacy files, meaning of shared dims. Commit inventory. *(mostly done 2026-11-17 → `docs/inventory/file_status.md`, `MEANINGS` in `scripts/shared_dims.py`; open: Ø2.6, Ø3.5, `parachute_fuselage_seat/upper_closure`)*
+- [x] 1.7 *(done 2026-11-17 → `docs/inventory/file_status.md`, `MEANINGS` in `scripts/shared_dims.py`)* **Review with Lorenzo**: confirm active vs legacy files, meaning of shared dims. Commit inventory.
 
 ## Phase 2 — Proposal (documents only, no CAD changes)
 - [ ] 2.1 Master parameters: list of aliases (e.g. `body_od`, `body_wall`, `coupler_od`, `fit_slide=0.15`, `m2_insert_hole`, `m2_clear`, `rod_d`, `fin_t`, `motor_d`…), units, source part, ork counterpart. Decide mechanism: (a) single `parameters.FCStd` spreadsheet referenced by cross-document expressions vs (b) per-part sheet synced by script. Recommendation: (a). Files: `docs/proposal/parameters.md`
@@ -91,6 +91,7 @@ For each part (one checklist block per part, added to this file when the part st
 - [ ] Recovery: chute size, ejection/deployment (`pistone`, chute retainers), shock cord attachment.
 - [ ] OpenRocket model completion: real materials, motor mount, motor, masses/overrides, recovery, simulations (F35, G115), stability margin.
 - [ ] Simulator fix: include motor casing mass; read params from `parameters.FCStd`/`.ork`.
+- [ ] Fix oversized M2 insert holes Ø3.1 → Ø2.6 (`low_chute_ret` Pocket004–007, `upper_retainer` `sede_viti_*`) — v1 mistake (Lorenzo, 2026-11-17). Not in Phase 3 (geometry must not change there).
 - [ ] Fin attachment strength / flutter check with PETG-CF.
 - [ ] Logo parts: all kept (flat logo, projected logo, `logo_red` = printed undersized PLA inserts); clean up names/location in Phase 2.3.
 - [ ] Assembly is incomplete: small/inner flying parts (`pistone`, `fuselage_w_logo`, connectors, screw eyes, …) are not in `assemblies/lyskamm.FCStd` — add them (needed for fit checks and CG).
@@ -103,8 +104,8 @@ For each part (one checklist block per part, added to this file when the part st
 ---
 
 ## Status
-- **Current phase:** 1 — Inventory, step 1.7 (review) mostly done.
-- **Next step:** Lorenzo answers the last 1.7 items (Ø2.6, Ø3.5, `parachute_fuselage_seat/upper_closure` — see open question 10) → tick 1.7 → start Phase 2.1 (master parameter list).
+- **Current phase:** 1 done → 2 — Proposal.
+- **Next step:** 2.1 master parameter list (`docs/proposal/parameters.md`); decide mechanism (open question 3).
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -115,7 +116,7 @@ For each part (one checklist block per part, added to this file when the part st
   7. Delete or ignore the untracked `init` file; commit `.mcp.json`?
   8. **Rocket workbench and A2plus are not installed in FreeCAD 1.1.3** (only FreeCADMCP is). Without Rocket, `nose_cone`, `lower_fins`, `upper_fin`, `rear_transition` cannot recompute their base feature; without A2plus the assembly cannot be solved/updated. Install both, or replace those features (blocks Phase 3)?
   9. The MCP `execute_code_headless` cannot find `freecadcmd` (FreeCAD is an AppImage). Configure `--freecadcmd` in `.mcp.json`, or keep running the AppImage's `freecadcmd` via shell?
-  10. Shared dims (mostly resolved, see `MEANINGS` in `scripts/shared_dims.py`). Still open: **Ø2.6** radial M2 holes in `lower_closure_v2` (Pocket007/008), `mid_closure` and `upper_closure` (`sede_viti_1/2`), `rear_transition` (`sede_vite_fusoliera_1/2`) — mistake (should be 2.2)? **Ø3.5** through holes in `lower_closure_v2` (`sede_vite_1`, with Ø7×3 counterbore `sede_vite_2`, ×2), `low_chute_ret` Pocket003, `pistone` Pocket001 — what goes through them (screw eyes?). Inferred, to confirm: 6.15×9.6 = connector slot `sede_presa_elettrica`; Ø7/7.2 = bosses around the carbon tubes. Also: is `parachute_fuselage_seat/upper_closure.FCStd` legacy?
+  10. ~~Shared dims~~ — resolved (`MEANINGS` in `scripts/shared_dims.py`). Remaining detail: purpose of through-holes `rear_transition` Pocket002 (Ø3.1) and `upper_closure` Pocket002 (Ø3.2).
   11. Features already failing in FreeCAD 1.1.3 recompute (copies only): `e-bay/fuselage` Chamfer, `lower_fuselage_v1` Sketch014, `mid_fuselage` Sketch011, `wall` Sketch005, `launch_pad` Sketch001 … — fix during Phase 3.0?
   12. ~~Mass estimate~~ — resolved: weighed masses only; Bambu Studio for new parts.
 
@@ -136,4 +137,5 @@ For each part (one checklist block per part, added to this file when the part st
 ### 2026-11-17 — Session 3 (Phase 1.7 review)
 - **Done:** matched the printed `fuselage_w_logo.3mf` to `e-bay/fuselage_w_logo.FCStd` by mesh volume → added to `EXTRA_ACTIVE`. Reviewed non-assembly files with Lorenzo → `docs/inventory/file_status.md`. Found `logo/logo_red.FCStd` = the printed PLA logo inserts (≈0.5 mm undersized) and that `parachute_fuselage_seat.3mf` holds the v2 seat while `parachute_fuselage_seat_v2.3mf` holds `lower_closure_v2`. Shared-dim meanings stored in `MEANINGS` (`scripts/shared_dims.py`), table regenerated.
 - **Decisions:** carbon tubes and aluminium bar are 5/3 mm tubes; tube centres at r = 23.4279; M2 holes 2.2, insert holes 3.1; motor tube 35.2/37 sized for EXP G115, TSP F35 will need an adapter; launch pad split into its own deferred section; `logo.FCStd` to move into `logo/` (Phase 2.3).
-- **Left:** Ø2.6, Ø3.5 and `parachute_fuselage_seat/upper_closure` (open question 10) → close 1.7 → Phase 2.
+- **Later same session:** Lorenzo confirmed Ø2.6 = M2 insert hole (Ø3.1 holes are a mistake → backlog), Ø3.5 = M3 clearance (screw securing the aluminium bar in `lower_closure_v2`), 6.15×9.6 = rounded slot for `presa_elettrica` (deployment system, to be redesigned later), Ø7/7.2 bosses, `parachute_fuselage_seat/upper_closure` legacy. **1.7 closed.** Fastener sizes added to CLAUDE.md.
+- **Left:** Phase 2, starting with 2.1.

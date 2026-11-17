@@ -14,7 +14,7 @@ Only files whose status is not obvious from the assembly are listed. All 16 part
 | `components/e-bay/presa_elettrica.FCStd` | **active** | PLA insert (electrical connector) for `lower_closure_v2`. |
 | `components/parachute_fuselage_seat/parachute_fuselage_seat.FCStd` | legacy | Replaced by `_v2`. |
 | `components/parachute_fuselage_seat/pistone.FCStd` | **active** (flies) | Missing from the assembly. |
-| `components/parachute_fuselage_seat/upper_closure.FCStd` | legacy? | Not discussed yet; looks like an older copy of `e-bay/upper_closure`. |
+| `components/parachute_fuselage_seat/upper_closure.FCStd` | legacy | Old widget used in `parachute_fuselage_seat` (v1). |
 | `components/logo.FCStd` | **active** (reference) | Flat logo. Should move to `components/logo/` (Phase 2.3). |
 | `components/logo/logo.FCStd` | **active** | Logo projected onto the curved fuselage surface (full size: main body 9.0×60.0). |
 | `components/logo/logo_red.FCStd` | **active** | The **printed PLA inserts**: same logo, ≈0.5 mm smaller (main body 8.5×59.0). Its shapes match the `logo_*.step` objects in `fuselage_w_logo.3mf` exactly (450.4 / 111.0 / 106.0 / 112.3 mm³). |

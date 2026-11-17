@@ -25,7 +25,7 @@ EXTRA_ACTIVE = [
     "components/parachute_fuselage_seat/pistone.FCStd",
 ]
 
-# Meanings reviewed with Lorenzo in step 1.7 (2026-11-17). "(inferred)" = from feature names, not yet confirmed.
+# Meanings reviewed with Lorenzo in step 1.7 (2026-11-17). All confirmed unless marked open.
 MEANINGS = {
     60: "Body tube outer Ø",
     56: "Body tube inner Ø",
@@ -34,21 +34,21 @@ MEANINGS = {
     5: "Outer Ø of carbon tubes and aluminium bar (5/3 tubes); many Pad/Pocket lengths are coincidental",
     3: "Inner Ø of carbon tubes / aluminium bar; also fin root thickness; other uses coincidental",
     23.428: "Radius from rocket axis to carbon-tube centres (23.4279)",
-    3.1: "M2 heat-set insert hole Ø",
-    2.2: "M2 screw hole Ø",
-    2.6: "? M2-hole Ø in closures and rear_transition (2.2 is the usual value; possibly a mistake — to check)",
+    3.1: "MISTAKE: oversized M2 insert holes (should be 2.6): low_chute_ret Pocket004–007, upper_retainer sede_viti_*. Through-holes rear_transition Pocket002 (and upper_closure Pocket002 Ø3.2): purpose open",
+    2.2: "M2 screw clearance hole Ø (outer part, e.g. fuselages)",
+    2.6: "M2 heat-set insert hole Ø (correct value)",
     3.75: "Axial distance of radial M2 holes from the part's end face",
     7.5: "Overlap length of joints (coupling / reinforcement ring)",
-    6.15: "Electrical-connector slot, short side (`sede_presa_elettrica`, with 9.6) (inferred)",
-    9.6: "Electrical-connector slot, long side (`sede_presa_elettrica`, with 6.15) (inferred)",
-    7: "Outer Ø of round bosses around carbon tubes (`sede_tondo*`, `inserto_tondo`); also counterbore in lower_closure_v2 (inferred)",
-    7.2: "Outer Ø of round bosses around carbon tubes in parachute seat parts (inferred)",
+    6.15: "Electrical-connector slot, short side (`sede_presa_elettrica`, rounded corners; for `presa_elettrica`; deployment system, will be redesigned)",
+    9.6: "Electrical-connector slot, long side (`sede_presa_elettrica`, with 6.15)",
+    7: "Outer Ø of round bosses around carbon tubes (`sede_tondo*`, `inserto_tondo`); also M3 counterbore in lower_closure_v2",
+    7.2: "Outer Ø of round bosses around carbon tubes in parachute seat parts",
     5.15: "Hole for 5 mm tube (+0.15)",
     5.2: "Hole for 5 mm tube (+0.2)",
     5.25: "Seat for 5 mm aluminium bar in closures (`sede_tondo_alluminio`, +0.25)",
     35.2: "Motor tube inner Ø (EXP G115, 35 mm; TSP F35 29 mm needs an adapter)",
     37: "Motor tube outer Ø",
-    3.5: "? Through hole (lower_closure_v2 `sede_vite_1` + Ø7×3 counterbore, low_chute_ret Pocket003, pistone Pocket001) — to check",
+    3.5: "M3 clearance hole; in lower_closure_v2 (`sede_vite_1` + Ø7×3 counterbore) an M3 screw secures the aluminium bar to the closure. Also low_chute_ret Pocket003, pistone Pocket001",
 }
 
 
