@@ -67,6 +67,16 @@ The 5 mm tubes look like the screw-joint rings between printed sections.
 ## Phase 3 — Parametrization (part by part, geometry must not change)
 Pre-step:
 - [ ] 3.0 FreeCAD 1.0 → 1.1.3 migration check: open each active part in 1.1.3, recompute, compare volume/bbox against Phase 1 baseline. 🔧 Save only with approval (one commit "resave in 1.1.3" per part if needed). Check A2plus works in 1.1.3 (else plan migration to built-in Assembly — separate decision).
+  - **3.0 diagnosis (2026-11-17, copies only; test script `scripts/fc_migration_fix_test.py`).** All active parts load; Rocket WB + A2plus OK. 6 parts have features that fail on recompute; every fix below was tested on copies and gives a valid model:
+
+    | Part | Cause | Fix | Result vs stored |
+    |---|---|---|---|
+    | `lower_fins`, `upper_fin` | Rocket WB now measures the through-the-wall tab offset from the other end → tab moves 3.5 / 5 mm aft, `Sketch` loses `Face10` | `Fin.TtwOffset` 3.5 → 0 / 5 → 0 | **identical** (= printed tab 0–60 / 0–90 mm) |
+    | `e-bay/fuselage`, `fuselage_w_logo` | `Chamfer` (24 edges, 1.2 mm) has stale 1.0 edge names | clear and re-select the same 24 edges | **identical** |
+    | `mid_fuselage` | `Sketch011` support `Face37` renumbered | support → `PolarPattern004.Face36`; `Chamfer` (32 edges) re-selected on the rebuilt edges (48 pieces) | valid; vol −2.45 mm³ (0.004 %), CoM 0.003 mm |
+    | `lower_fuselage_v1` | chain: `Sketch014`/`Sketch015` supports renumbered; `Chamfer002` (44), `Chamfer` (13), `Chamfer004` (8) stale edges; `Sketch020` support renumbered + constraint 16 redundant in the 1.1 solver | supports → `Face1`, `Face1`, `Chamfer003.Face26`; re-select chamfer edges; delete redundant constraint 16 (PointOnObject, duplicate of 15) | valid; vol −1.93 mm³ (0.003 %), CoM 0.0002 mm |
+
+    The ≈2 mm³ differences are FreeCAD 1.0 → 1.1 kernel drift (upstream features already differ by up to 0.7 mm³ before any fix). Proposed tolerance for 3.0 only: volume ≤ 0.01 %, CoM ≤ 0.01 mm, plus Lorenzo's visual check. Apply one part at a time (save = resave in 1.1.3), each approved, checked in FreeCAD, committed.
 - [ ] 3.1 🔧 Create `parameters.FCStd` with the approved aliases. ⏸ Review with Lorenzo → check in FreeCAD → commit.
 
 Per part, in this order (interfaces outward from the body tube): `e-bay/fuselage` → `mid_fuselage` → `lower_fuselage_v1` → `rear_transition` → `upper_retainer` → `low_chute_ret` → `parachute_fuselage_seat_v2` → `sede_presa_elettrica_sup` → `e-bay/lower_closure_v2` → `mid_closure` → `e-bay/upper_closure` → `nose_cone` → `upper_fin` → `lower_fins` → `carbon_rod` → `alluminium_rod`.
@@ -109,7 +119,7 @@ For each part (one checklist block per part, added to this file when the part st
 
 ## Status
 - **Current phase:** 2 done (approved 2026-11-17); group A file moves done → next: Phase 3.
-- **Next step:** Phase 3 — read its steps, propose the first one (3.0: fix the features that fail on FreeCAD 1.1.3 recompute, incl. fins `Sketch` on `Face10`; create `parameters.FCStd`). Every CAD change follows the protocol in CLAUDE.md.
+- **Next step:** Lorenzo approves applying the 3.0 fixes (table under 3.0), part by part: fins → e-bay fuselages → mid_fuselage → lower_fuselage_v1.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -154,3 +164,4 @@ For each part (one checklist block per part, added to this file when the part st
 - **Later:** parachute bay measured 241 (= `.ork`; section total 860 confirmed). No motor delay on the F35: the altimeter opens the parachute → `.ork` parachute set to deploy at apogee; `Sim.java` defaults to a plugged motor. Re-run: deploy speed ≈5 m/s in all configs.
 - **2.5 approved.** Group A of `repo_structure.md` executed, one commit each (A2–A13): legacy files deleted (`wall`, `e-bay/lower_closure` v1, `parachute_fuselage_seat` v1, `parachute_fuselage_seat/upper_closure`, `low_chute_ret_test.3mf`, extensionless `upper_retainer`, `.keep`); parachute seat `.3mf` names fixed; logo files moved/renamed (`logo_flat`, `logo_projected`, `logo_inserts`). Checked first that no file links to them (only the assembly links parts, none in group A). Inventory regenerated (with add-ons installed, Rocket parts now recompute; fins still fail as known).
 - **Left:** Phase 3.
+- **3.0 diagnosis done** (copies only): causes and tested fixes for the 6 failing parts in the 3.0 table; `.mcp.json` committed.
