@@ -58,7 +58,7 @@ The 5 mm tubes look like the screw-joint rings between printed sections.
 - [x] 1.7 *(done 2026-11-17 → `docs/inventory/file_status.md`, `MEANINGS` in `scripts/shared_dims.py`)* **Review with Lorenzo**: confirm active vs legacy files, meaning of shared dims. Commit inventory.
 
 ## Phase 2 — Proposal (documents only, no CAD changes)
-- [ ] 2.1 *(draft written 2026-11-17 → `docs/proposal/parameters.md`; mechanism (a) chosen; review in 2.5)* Master parameters: list of aliases (e.g. `body_od`, `body_wall`, `coupler_od`, `fit_slide=0.15`, `m2_insert_hole`, `m2_clear`, `rod_d`, `fin_t`, `motor_d`…), units, source part, ork counterpart. Decide mechanism: (a) single `parameters.FCStd` spreadsheet referenced by cross-document expressions vs (b) per-part sheet synced by script. Recommendation: (a). Files: `docs/proposal/parameters.md`
+- [x] 2.1 *(done 2026-11-17 → `docs/proposal/parameters.md`, reviewed with Lorenzo; mechanism (a); final approval in 2.5)* Master parameters: list of aliases (e.g. `body_od`, `body_wall`, `coupler_od`, `fit_slide_d=0.2`, `m2_insert_hole`, `m2_clear`, `rod_d`, `fin_t`, `motor_d`…), units, source part, ork counterpart. Decide mechanism: (a) single `parameters.FCStd` spreadsheet referenced by cross-document expressions vs (b) per-part sheet synced by script. Recommendation: (a). Files: `docs/proposal/parameters.md`
 - [ ] 2.2 Naming conventions: files (`snake_case`, English, no version suffix — git holds versions), bodies, features (`Pad_body`, `Pocket_m2_holes`…), sketches (`SK_<purpose>`), constraints (`<alias-like name>`). Files: `docs/proposal/conventions.md`
 - [ ] 2.3 Repo structure proposal: per-part folders, `exports/` for STEP/3MF, `archive/` for legacy, `parameters.FCStd` location, LFS fix (`*.FCStd`, install git-lfs or drop LFS). File moves/renames listed as a checklist (known so far: `components/logo.FCStd` → `components/logo/`; misnamed `parachute_fuselage_seat_v2.3mf` actually holds `lower_closure_v2`, and `parachute_fuselage_seat.3mf` holds the v2 seat — see `docs/inventory/file_status.md`) (each a separate, approved step; A2plus `sourceFile` paths must be updated). Files: `docs/proposal/repo_structure.md`
 - [ ] 2.4 `.ork` ↔ CAD mismatch table: lengths, Ø, fin geometry & thickness (ork 3 mm), transition, materials, missing motor mount/motor/recovery/mass overrides, motor Ø 29 vs 35 mm. Files: `docs/proposal/ork_vs_cad.md`
@@ -91,6 +91,7 @@ For each part (one checklist block per part, added to this file when the part st
 - [ ] Recovery: chute size, ejection/deployment (`pistone`, chute retainers), shock cord attachment.
 - [ ] OpenRocket model completion: real materials, motor mount, motor, masses/overrides, recovery, simulations (F35, G115), stability margin.
 - [ ] Simulator fix: include motor casing mass; read params from `parameters.FCStd`/`.ork`.
+- [ ] Lower motor retainer: design it; fixed with an M2 screw + heat-set insert → `rear_transition` Pocket002 Ø3.1 becomes Ø2.6.
 - [ ] Fix oversized M2 insert holes Ø3.1 → Ø2.6 (`low_chute_ret` Pocket004–007, `upper_retainer` `sede_viti_*`) — v1 mistake (Lorenzo, 2026-11-17). Not in Phase 3 (geometry must not change there).
 - [ ] Fin attachment strength / flutter check with PETG-CF.
 - [ ] Logo parts: all kept (flat logo, projected logo, `logo_red` = printed undersized PLA inserts); clean up names/location in Phase 2.3.
@@ -104,8 +105,8 @@ For each part (one checklist block per part, added to this file when the part st
 ---
 
 ## Status
-- **Current phase:** 2 — Proposal. 2.1 drafted.
-- **Next step:** Lorenzo reviews `docs/proposal/parameters.md` (questions at the end of the file), then 2.2 naming conventions.
+- **Current phase:** 2 — Proposal. 2.1 done.
+- **Next step:** 2.2 naming conventions (`docs/proposal/conventions.md`).
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -139,4 +140,5 @@ For each part (one checklist block per part, added to this file when the part st
 - **Decisions:** carbon tubes and aluminium bar are 5/3 mm tubes; tube centres at r = 23.4279; M2 holes 2.2, insert holes 3.1; motor tube 35.2/37 sized for EXP G115, TSP F35 will need an adapter; launch pad split into its own deferred section; `logo.FCStd` to move into `logo/` (Phase 2.3).
 - **Later same session:** Lorenzo confirmed Ø2.6 = M2 insert hole (Ø3.1 holes are a mistake → backlog), Ø3.5 = M3 clearance (screw securing the aluminium bar in `lower_closure_v2`), 6.15×9.6 = rounded slot for `presa_elettrica` (deployment system, to be redesigned later), Ø7/7.2 bosses, `parachute_fuselage_seat/upper_closure` legacy. **1.7 closed.** Fastener sizes added to CLAUDE.md.
 - **Later same session:** `rear_transition` Pocket002 = screw hole for the lower motor retainer; `upper_closure` Pocket002 (Ø3.2) = M3 for the aluminium bar (other end). Open question 3 → option (a). 2.1 drafted: `docs/proposal/parameters.md` (aliases for body, fits, fasteners, tubes, motor mount; CAD vs `.ork` outer-shape table; v1 deviations kept as literals/separate aliases so Phase 3 does not change geometry).
-- **Left:** review of 2.1 (4 questions at the end of the file), then 2.2–2.5.
+- **2.1 review:** sliding fit = 0.2 on Ø (CLAUDE.md updated); lower motor retainer will use M2 + insert; aluminium bar 100 = commercial stock (may change with e-bay redesign); 8 screws per joint every 45° (v1: 2 holes × 4), coupler ring 5, coupling 7.5, screws at 7.5/2; parachute bay length open until deployment redesign.
+- **Left:** 2.2–2.5.

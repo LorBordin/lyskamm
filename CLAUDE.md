@@ -33,4 +33,4 @@ TSP F35 (primary, `scripts/motor_data/TSP_F35.eng`), EXP G115 (later, `scripts/m
   files (Bambu Studio); `scripts/print_settings.py` extracts them.
 - Mass estimates for new parts: use Bambu Studio's slicer estimate (no volume-based estimates).
   Measured masses: `docs/inventory/masses.md`.
-- Fasteners: M2 + heat-set inserts (insert hole Ø2.6, screw clearance Ø2.2; Ø3.1 holes in v1 are a mistake); M3 (clearance Ø3.5) to secure the aluminium bar. Sliding fit clearance ~0.15 mm. Units: mm.
+- Fasteners: M2 + heat-set inserts (insert hole Ø2.6, screw clearance Ø2.2; Ø3.1 holes in v1 are a mistake); M3 (clearance Ø3.5) to secure the aluminium bar. Sliding fit clearance 0.2 mm on Ø (e.g. 56 ↔ 55.8). Joints: 8 radial M2 screws (every 45°), halfway along the 7.5 mm coupling; coupler ring 5 mm. Units: mm.
