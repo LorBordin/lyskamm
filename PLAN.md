@@ -76,6 +76,7 @@ Pre-step:
     | `mid_fuselage` | `Sketch011` support `Face37` renumbered | support → `PolarPattern004.Face36`; `Chamfer` (32 edges) re-selected on the rebuilt edges (48 pieces) | valid; vol −2.45 mm³ (0.004 %), CoM 0.003 mm |
     | `lower_fuselage_v1` | chain: `Sketch014`/`Sketch015` supports renumbered; `Chamfer002` (44), `Chamfer` (13), `Chamfer004` (8) stale edges; `Sketch020` support renumbered + constraint 16 redundant in the 1.1 solver | supports → `Face1`, `Face1`, `Chamfer003.Face26`; re-select chamfer edges; delete redundant constraint 16 (PointOnObject, duplicate of 15) | valid; vol −1.93 mm³ (0.003 %), CoM 0.0002 mm |
 
+    Progress: ✅ fins applied 2026-11-17 (checked by Lorenzo).
     The ≈2 mm³ differences are FreeCAD 1.0 → 1.1 kernel drift (upstream features already differ by up to 0.7 mm³ before any fix). Proposed tolerance for 3.0 only: volume ≤ 0.01 %, CoM ≤ 0.01 mm, plus Lorenzo's visual check. Apply one part at a time (save = resave in 1.1.3), each approved, checked in FreeCAD, committed.
 - [ ] 3.1 🔧 Create `parameters.FCStd` with the approved aliases. ⏸ Review with Lorenzo → check in FreeCAD → commit.
 
@@ -119,7 +120,7 @@ For each part (one checklist block per part, added to this file when the part st
 
 ## Status
 - **Current phase:** 2 done (approved 2026-11-17); group A file moves done → next: Phase 3.
-- **Next step:** Lorenzo approves applying the 3.0 fixes (table under 3.0), part by part: fins → e-bay fuselages → mid_fuselage → lower_fuselage_v1.
+- **Next step:** 3.0 fix 2/4: `e-bay/fuselage` + `fuselage_w_logo` chamfer re-link (awaiting Lorenzo OK); then mid_fuselage, lower_fuselage_v1.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
