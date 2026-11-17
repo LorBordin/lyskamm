@@ -1,4 +1,4 @@
-# `components/logo.FCStd`
+# `components/logo/logo_flat.FCStd`
 
 - FreeCAD version: 1.0R39319 (Git)
 - Object counts: Body×1, Pad×5, SketchObject×5

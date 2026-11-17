@@ -62,7 +62,7 @@ The 5 mm tubes look like the screw-joint rings between printed sections.
 - [x] 2.2 *(approved 2026-11-17 → `docs/proposal/conventions.md`; English everywhere)* Naming conventions: files (`snake_case`, English, no version suffix — git holds versions), bodies, features (`Pad_body`, `Pocket_m2_holes`…), sketches (`SK_<purpose>`), constraints (`<alias-like name>`). Files: `docs/proposal/conventions.md`
 - [x] 2.3 *(approved 2026-11-17 → `docs/proposal/repo_structure.md`; LFS dropped — A1 done; legacy files deleted, not archived)* Repo structure proposal: per-part folders, `exports/` for STEP/3MF, `archive/` for legacy, `parameters.FCStd` location, LFS fix (`*.FCStd`, install git-lfs or drop LFS). File moves/renames listed as a checklist (known so far: `components/logo.FCStd` → `components/logo/`; misnamed `parachute_fuselage_seat_v2.3mf` actually holds `lower_closure_v2`, and `parachute_fuselage_seat.3mf` holds the v2 seat — see `docs/inventory/file_status.md`) (each a separate, approved step; A2plus `sourceFile` paths must be updated). Files: `docs/proposal/repo_structure.md`
 - [x] 2.4 *(done 2026-11-17 → `docs/proposal/ork_vs_cad.md`; fixes applied to `lyskamm.ork`; lengths wait for `docs/inventory/section_lengths.md`)* `.ork` ↔ CAD mismatch table: lengths, Ø, fin geometry & thickness (ork 3 mm), transition, materials, missing motor mount/motor/recovery/mass overrides, motor Ø 29 vs 35 mm. Files: `docs/proposal/ork_vs_cad.md`
-- [ ] 2.5 ⏸ **Review with Lorenzo**: approve parameter list, conventions, structure, which .ork fixes to apply. Commit.
+- [x] 2.5 *(approved 2026-11-17)* ⏸ **Review with Lorenzo**: approve parameter list, conventions, structure, which .ork fixes to apply. Commit.
 
 ## Phase 3 — Parametrization (part by part, geometry must not change)
 Pre-step:
@@ -108,8 +108,8 @@ For each part (one checklist block per part, added to this file when the part st
 ---
 
 ## Status
-- **Current phase:** 2 — Proposal. 2.1–2.4 done.
-- **Next step:** Lorenzo approves 2.5 (final review of Phase 2) → group A moves of `repo_structure.md` (each approved) → Phase 3 (start: fix fins after Rocket WB update, create `parameters.FCStd`). F35 OK for planned config (+200 g, 2 m rail, altimeter deployment at apogee ≈5 m/s).
+- **Current phase:** 2 done (approved 2026-11-17); group A file moves done → next: Phase 3.
+- **Next step:** Phase 3 — read its steps, propose the first one (3.0: fix the features that fail on FreeCAD 1.1.3 recompute, incl. fins `Sketch` on `Face10`; create `parameters.FCStd`). Every CAD change follows the protocol in CLAUDE.md.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -152,4 +152,5 @@ For each part (one checklist block per part, added to this file when the part st
 - **Later:** Lorenzo measured sections (nose 125, e-bay tubes 104, mid 104.5, lower 112, transition 44.5, rings 5; spill hole ≈65 mm) and installed OpenRocket 24.12 (works with its bundled Java 17; system Java 25 makes the GUI quit silently). Applied lengths to `.ork` (nose = cone 120 + 5 mm base tube), fixed a material group; loads clean in 24.12. F35 simulated headless (`scripts/openrocket/Sim.java`): with weighed parts only, stability ≈ 0.1 cal ⚠; ≥ 1 cal needs ≈ 200 g more forward (electronics etc.) or CG with motor ≤ ≈ 511 mm. Apogee 150–316 m, descent 4.4–5.4 m/s, rod-exit 9–12 m/s (1 m rod). G115 not automatically safe (heavier tail). Results: `docs/analysis/f35_simulation.md`.
 - **Later:** Lorenzo: plan is +200 g extra (final mass after electronics/deployment design), 2 m rail always planned, G115 CG to be tuned later with nose weight; fins measured = `.ork`; motor aft end 3 mm inside the transition → `.ork` motor overhang 41.5 mm. Re-ran F35 (2 m rail, +150/200/250 g, adapter 0/25 g): with +200 g stability 1.1–1.3 cal, rail exit ≈13 m/s, apogee ≈190–205 m, 6 s delay best. `Sim.java` now takes rail length and adapter mass.
 - **Later:** parachute bay measured 241 (= `.ork`; section total 860 confirmed). No motor delay on the F35: the altimeter opens the parachute → `.ork` parachute set to deploy at apogee; `Sim.java` defaults to a plugged motor. Re-run: deploy speed ≈5 m/s in all configs.
-- **Left:** 2.5 approval.
+- **2.5 approved.** Group A of `repo_structure.md` executed, one commit each (A2–A13): legacy files deleted (`wall`, `e-bay/lower_closure` v1, `parachute_fuselage_seat` v1, `parachute_fuselage_seat/upper_closure`, `low_chute_ret_test.3mf`, extensionless `upper_retainer`, `.keep`); parachute seat `.3mf` names fixed; logo files moved/renamed (`logo_flat`, `logo_projected`, `logo_inserts`). Checked first that no file links to them (only the assembly links parts, none in group A). Inventory regenerated (with add-ons installed, Rocket parts now recompute; fins still fail as known).
+- **Left:** Phase 3.

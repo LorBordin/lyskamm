@@ -1,4 +1,4 @@
-# `components/logo/logo_red.FCStd`
+# `components/logo/logo_inserts.FCStd`
 
 - FreeCAD version: 1.0R39319 (Git)
 - Object counts: Mirroring×3, Body×7, FeatureBase×3, Pad×4, Plane×4, Pocket×8, SketchObject×13

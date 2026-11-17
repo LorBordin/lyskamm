@@ -19,41 +19,37 @@ FreeCAD on a temporary copy (preview of PLAN step 3.0). Units: mm, mm³.
 | `components/e-bay/fuselage_w_logo.FCStd` | Body006 | 124.48 | [6.5, -24.19, 0.713, 22.361, 8.5, 10.0] | [14.389, -7.78, 4.713] | identical ⚠ but features fail to recompute (see list below): shape is the last valid one |
 | `components/e-bay/fuselage_w_logo.FCStd` | Body007 | 127.92 | [6.5, -14.69, 0.713, 22.361, 19.995, 10.0] | [15.164, 2.222, 5.163] | identical ⚠ but features fail to recompute (see list below): shape is the last valid one |
 | `components/e-bay/fuselage_w_logo_v2.FCStd` | Open CASCADE STEP translator 7.8 013 | 19161.78 | [-30.0, -52.5, -0.0, 30.0, 52.5, 30.0] | None | identical |
-| `components/e-bay/lower_closure.FCStd` | Body | 61473.34 | [-30.0, -30.0, -20.0, 30.0, 30.0, 15.0] | [-0.26, 0.0, 0.467] | identical |
 | `components/e-bay/lower_closure_v2.FCStd` | Body | 96053.41 | [-30.0, -30.0, -25.0, 30.0, 30.0, 15.0] | [-0.229, 0.0, -4.662] | identical |
 | `components/e-bay/mid_closure.FCStd` | Body | 15251.99 | [-30.0, -30.0, -8.724, 30.0, 30.0, 13.724] | [-0.0, 0.0, 2.501] | identical |
 | `components/e-bay/presa_elettrica.FCStd` | Body | 498.7 | [-4.75, -3.025, 0.0, 4.75, 3.025, 14.5] | [-0.0, 0.0, 7.184] | identical |
 | `components/e-bay/upper_closure.FCStd` | Body | 14879.84 | [-30.0, -30.0, -8.54, 30.0, 30.0, 13.02] | [-0.0, 0.001, 2.337] | identical |
-| `components/logo/logo.FCStd` | main_body | 484.36 | [-4.5, -24.0, 0.0, 4.5, 36.0, 1.345] | [0.0, 4.085, 0.604] | identical |
-| `components/logo/logo.FCStd` | lower_right_wing | 125.73 | [6.5, -30.0, 0.713, 15.0, -4.0, 5.098] | [10.62, -17.695, 2.585] | identical |
-| `components/logo/logo.FCStd` | mid_right_wing | 124.48 | [6.5, -24.19, 0.713, 22.361, 8.5, 10.0] | [14.389, -7.78, 4.713] | identical |
-| `components/logo/logo.FCStd` | upper_right_wing | 127.92 | [6.5, -14.69, 0.713, 22.361, 19.995, 10.0] | [15.164, 2.222, 5.163] | identical |
-| `components/logo/logo.FCStd` | Body004 | 125.73 | [6.5, -30.0, 0.713, 15.0, -4.0, 5.098] | [10.62, -17.695, 2.585] | identical |
-| `components/logo/logo.FCStd` | Body005 | 124.48 | [6.5, -24.19, 0.713, 22.361, 8.5, 10.0] | [14.389, -7.78, 4.713] | identical |
-| `components/logo/logo.FCStd` | Body006 | 127.92 | [6.5, -14.69, 0.713, 22.361, 19.995, 10.0] | [15.164, 2.222, 5.163] | identical |
-| `components/logo/logo_red.FCStd` | main_body | 450.44 | [-4.25, -23.75, 0.0, 4.25, 35.246, 1.308] | [0.01, 3.887, 0.593] | identical |
-| `components/logo/logo_red.FCStd` | lower_right_wing | 111.0 | [6.75, -29.32, 0.713, 14.75, -4.866, 4.81] | [10.624, -17.742, 2.477] | identical |
-| `components/logo/logo_red.FCStd` | mid_right_wing | 105.96 | [6.75, -24.429, 0.713, 22.611, 7.301, 10.0] | [14.7, -8.518, 4.747] | identical |
-| `components/logo/logo_red.FCStd` | upper_right_wing | 112.33 | [6.75, -14.618, 0.713, 22.611, 19.129, 10.0] | [15.521, 1.632, 5.226] | identical |
-| `components/logo/logo_red.FCStd` | Body004 | 111.0 | [6.75, -29.32, 0.713, 14.75, -4.866, 4.81] | [10.624, -17.742, 2.477] | identical |
-| `components/logo/logo_red.FCStd` | Body005 | 105.96 | [6.75, -24.429, 0.713, 22.611, 7.301, 10.0] | [14.7, -8.518, 4.747] | identical |
-| `components/logo/logo_red.FCStd` | Body006 | 112.33 | [6.75, -14.618, 0.713, 22.611, 19.129, 10.0] | [15.521, 1.632, 5.226] | identical |
-| `components/logo.FCStd` | Body | 468040.59 | [-100.996, -103.512, -10.0, 100.996, 103.512, 10.0] | [-0.0, 1.689, -3.934] | identical |
+| `components/logo/logo_flat.FCStd` | Body | 468040.59 | [-100.996, -103.512, -10.0, 100.996, 103.512, 10.0] | [-0.0, 1.689, -3.934] | identical |
+| `components/logo/logo_inserts.FCStd` | main_body | 450.44 | [-4.25, -23.75, 0.0, 4.25, 35.246, 1.308] | [0.01, 3.887, 0.593] | identical |
+| `components/logo/logo_inserts.FCStd` | lower_right_wing | 111.0 | [6.75, -29.32, 0.713, 14.75, -4.866, 4.81] | [10.624, -17.742, 2.477] | identical |
+| `components/logo/logo_inserts.FCStd` | mid_right_wing | 105.96 | [6.75, -24.429, 0.713, 22.611, 7.301, 10.0] | [14.7, -8.518, 4.747] | identical |
+| `components/logo/logo_inserts.FCStd` | upper_right_wing | 112.33 | [6.75, -14.618, 0.713, 22.611, 19.129, 10.0] | [15.521, 1.632, 5.226] | identical |
+| `components/logo/logo_inserts.FCStd` | Body004 | 111.0 | [6.75, -29.32, 0.713, 14.75, -4.866, 4.81] | [10.624, -17.742, 2.477] | identical |
+| `components/logo/logo_inserts.FCStd` | Body005 | 105.96 | [6.75, -24.429, 0.713, 22.611, 7.301, 10.0] | [14.7, -8.518, 4.747] | identical |
+| `components/logo/logo_inserts.FCStd` | Body006 | 112.33 | [6.75, -14.618, 0.713, 22.611, 19.129, 10.0] | [15.521, 1.632, 5.226] | identical |
+| `components/logo/logo_projected.FCStd` | main_body | 484.36 | [-4.5, -24.0, 0.0, 4.5, 36.0, 1.345] | [0.0, 4.085, 0.604] | identical |
+| `components/logo/logo_projected.FCStd` | lower_right_wing | 125.73 | [6.5, -30.0, 0.713, 15.0, -4.0, 5.098] | [10.62, -17.695, 2.585] | identical |
+| `components/logo/logo_projected.FCStd` | mid_right_wing | 124.48 | [6.5, -24.19, 0.713, 22.361, 8.5, 10.0] | [14.389, -7.78, 4.713] | identical |
+| `components/logo/logo_projected.FCStd` | upper_right_wing | 127.92 | [6.5, -14.69, 0.713, 22.361, 19.995, 10.0] | [15.164, 2.222, 5.163] | identical |
+| `components/logo/logo_projected.FCStd` | Body004 | 125.73 | [6.5, -30.0, 0.713, 15.0, -4.0, 5.098] | [10.62, -17.695, 2.585] | identical |
+| `components/logo/logo_projected.FCStd` | Body005 | 124.48 | [6.5, -24.19, 0.713, 22.361, 8.5, 10.0] | [14.389, -7.78, 4.713] | identical |
+| `components/logo/logo_projected.FCStd` | Body006 | 127.92 | [6.5, -14.69, 0.713, 22.361, 19.995, 10.0] | [15.164, 2.222, 5.163] | identical |
 | `components/lower_chute_retainer/low_chute_ret.FCStd` | Body | 37169.79 | [-30.0, -30.0, 0.0, 30.0, 30.0, 20.0] | [-0.462, 0.0, 8.205] | identical |
-| `components/lower_fins/lower_fins.FCStd` | Body | 6787.13 | [-0.0, -3.0, -11.0, 63.5, 3.0, 50.0] | [30.702, 0.0, 12.807] | identical ⚠ not meaningful: Python features not loaded (addon missing), so not re-executed |
+| `components/lower_fins/lower_fins.FCStd` | Body | 6787.13 | [-0.0, -3.0, -11.0, 63.5, 3.0, 50.0] | [30.702, 0.0, 12.807] | identical ⚠ but features fail to recompute (see list below): shape is the last valid one |
 | `components/lower_fuselage_w_motor_mount/lower_fuselage_v1.FCStd` | Body | 63877.26 | [-30.0, -30.0, -20.0, 30.0, 30.0, 93.0] | [-0.0, 0.002, 34.992] | identical ⚠ but features fail to recompute (see list below): shape is the last valid one |
 | `components/mid_fuselage/mid_fuselage.FCStd` | Body | 67597.08 | [-30.0, -30.0, -7.5, 30.0, 30.0, 97.5] | [-0.0, 0.0, 46.301] | identical ⚠ but features fail to recompute (see list below): shape is the last valid one |
-| `components/nose_cone/nose_cone.FCStd` | Body | 193091.83 | [0.0, -30.0, -30.0, 127.5, 30.0, 30.0] | [77.353, 0.01, -0.0] | identical ⚠ not meaningful: Python features not loaded (addon missing), so not re-executed |
-| `components/parachute_fuselage_seat/parachute_fuselage_seat.FCStd` | Body | 138565.83 | [-30.0, -30.0, -0.0, 30.0, 30.0, 242.5] | [-0.132, -0.121, 134.075] | identical ⚠ but features fail to recompute (see list below): shape is the last valid one |
+| `components/nose_cone/nose_cone.FCStd` | Body | 193091.83 | [0.0, -30.0, -30.0, 127.5, 30.0, 30.0] | [77.353, 0.01, -0.0] | identical |
 | `components/parachute_fuselage_seat/parachute_fuselage_seat_v2.FCStd` | Body | 133082.89 | [-30.0, -30.0, 0.0, 30.0, 30.0, 242.5] | [0.0, -1.559, 117.099] | identical |
 | `components/parachute_fuselage_seat/pistone.FCStd` | Body | 28426.67 | [-27.75, -19.728, -2.142, 27.75, 27.75, 40.0] | [0.011, 3.237, 24.289] | identical |
 | `components/parachute_fuselage_seat/sede_presa_elettrica_sup.FCStd` | Body | 3769.28 | [3.183, 3.183, -1.224, 26.943, 26.943, 21.224] | [16.315, 16.315, 9.646] | identical |
-| `components/parachute_fuselage_seat/upper_closure.FCStd` | Body | 25315.41 | [-27.448, -27.9, 0.0, 27.448, 27.9, 26.0] | [0.0, -1.205, 12.744] | identical ⚠ but features fail to recompute (see list below): shape is the last valid one |
-| `components/rear_transition/rear_transition.FCStd` | Body | 41084.28 | [-20.0, -30.0, -30.0, 45.0, 30.0, 30.0] | [15.057, 0.0, 0.0] | identical ⚠ not meaningful: Python features not loaded (addon missing), so not re-executed |
+| `components/rear_transition/rear_transition.FCStd` | Body | 41084.28 | [-20.0, -30.0, -30.0, 45.0, 30.0, 30.0] | [15.057, 0.0, 0.0] | identical |
 | `components/rear_transition/rear_transition.FCStd` | Body001 | — | — | — | no shape |
-| `components/upper_fins/upper_fin.FCStd` | Body | 9797.74 | [-0.354, -3.0, -12.0, 95.0, 3.0, 50.0] | [51.3, -0.0, 11.744] | identical ⚠ not meaningful: Python features not loaded (addon missing), so not re-executed |
+| `components/upper_fins/upper_fin.FCStd` | Body | 9797.74 | [-0.354, -3.0, -12.0, 95.0, 3.0, 50.0] | [51.3, -0.0, 11.744] | identical ⚠ but features fail to recompute (see list below): shape is the last valid one |
 | `components/upper_motor_retainer/upper_retainer.FCStd` | Body | 22375.57 | [-30.0, -30.0, -7.5, 30.0, 30.0, 12.5] | [0.0, 0.0, 2.83] | identical |
-| `components/wall.FCStd` | Body | 12064.0 | [-30.0, -30.0, -7.5, 30.0, 0.0, 102.5] | [-0.0, -18.971, 47.5] | identical ⚠ but features fail to recompute (see list below): shape is the last valid one |
 | `launch_pad/Unnamed.FCStd` | Body | 150696.61 | [-102.5, -102.5, -20.0, 102.5, 102.5, 10.0] | [-0.0, -0.0, 4.66] | identical ⚠ but features fail to recompute (see list below): shape is the last valid one |
 
 ## Cylindrical-face diameters (stored shape)
@@ -72,54 +68,44 @@ Raw list of diameters of cylindrical faces — input for the shared-dimension an
 - `components/e-bay/fuselage_w_logo.FCStd` / Body006: 59.0, 60.0
 - `components/e-bay/fuselage_w_logo.FCStd` / Body007: 59.0, 60.0
 - `components/e-bay/fuselage_w_logo_v2.FCStd` / Open CASCADE STEP translator 7.8 013: 2.2, 56.0, 59.0, 60.0, 61.389
-- `components/e-bay/lower_closure.FCStd` / Body: 2.0, 3.1, 3.2, 4.8, 5.25, 6.0, 7.0, 39.56, 55.8, 60.0
 - `components/e-bay/lower_closure_v2.FCStd` / Body: 2.0, 2.6, 3.5, 3.9, 5.25, 6.0, 7.0, 55.8, 60.0
 - `components/e-bay/mid_closure.FCStd` / Body: 2.6, 5.25, 7.25, 47.8, 55.8, 60.0
 - `components/e-bay/presa_elettrica.FCStd` / Body: 2.0, 6.0
 - `components/e-bay/upper_closure.FCStd` / Body: 2.6, 3.2, 5.25, 7.25, 48.1, 55.8, 60.0
-- `components/logo/logo.FCStd` / main_body: 59.0, 60.0, 61.389
-- `components/logo/logo.FCStd` / lower_right_wing: 59.0, 60.0
-- `components/logo/logo.FCStd` / mid_right_wing: 59.0, 60.0
-- `components/logo/logo.FCStd` / upper_right_wing: 59.0, 60.0
-- `components/logo/logo.FCStd` / Body004: 59.0, 60.0
-- `components/logo/logo.FCStd` / Body005: 59.0, 60.0
-- `components/logo/logo.FCStd` / Body006: 59.0, 60.0
-- `components/logo/logo_red.FCStd` / main_body: 56.986, 59.0, 60.0, 64.677
-- `components/logo/logo_red.FCStd` / lower_right_wing: 59.0, 60.0
-- `components/logo/logo_red.FCStd` / mid_right_wing: 59.0, 60.0
-- `components/logo/logo_red.FCStd` / upper_right_wing: 59.0, 60.0
-- `components/logo/logo_red.FCStd` / Body004: 59.0, 60.0
-- `components/logo/logo_red.FCStd` / Body005: 59.0, 60.0
-- `components/logo/logo_red.FCStd` / Body006: 59.0, 60.0
-- `components/logo.FCStd` / Body: 122.778
+- `components/logo/logo_flat.FCStd` / Body: 122.778
+- `components/logo/logo_inserts.FCStd` / main_body: 56.986, 59.0, 60.0, 64.677
+- `components/logo/logo_inserts.FCStd` / lower_right_wing: 59.0, 60.0
+- `components/logo/logo_inserts.FCStd` / mid_right_wing: 59.0, 60.0
+- `components/logo/logo_inserts.FCStd` / upper_right_wing: 59.0, 60.0
+- `components/logo/logo_inserts.FCStd` / Body004: 59.0, 60.0
+- `components/logo/logo_inserts.FCStd` / Body005: 59.0, 60.0
+- `components/logo/logo_inserts.FCStd` / Body006: 59.0, 60.0
+- `components/logo/logo_projected.FCStd` / main_body: 59.0, 60.0, 61.389
+- `components/logo/logo_projected.FCStd` / lower_right_wing: 59.0, 60.0
+- `components/logo/logo_projected.FCStd` / mid_right_wing: 59.0, 60.0
+- `components/logo/logo_projected.FCStd` / upper_right_wing: 59.0, 60.0
+- `components/logo/logo_projected.FCStd` / Body004: 59.0, 60.0
+- `components/logo/logo_projected.FCStd` / Body005: 59.0, 60.0
+- `components/logo/logo_projected.FCStd` / Body006: 59.0, 60.0
 - `components/lower_chute_retainer/low_chute_ret.FCStd` / Body: 2.0, 3.1, 3.5, 5.2, 6.0, 41.9, 55.8, 60.0
 - `components/lower_fins/lower_fins.FCStd` / Body: 1.0
 - `components/lower_fuselage_w_motor_mount/lower_fuselage_v1.FCStd` / Body: 2.0, 2.2, 5.2, 35.2, 37.0, 54.0, 56.0, 56.065, 58.0, 60.0
 - `components/mid_fuselage/mid_fuselage.FCStd` / Body: 2.2, 5.15, 5.504, 7.0, 56.0, 58.0, 60.0
 - `components/nose_cone/nose_cone.FCStd` / Body: 2.1, 56.0, 60.0
-- `components/parachute_fuselage_seat/parachute_fuselage_seat.FCStd` / Body: 2.0, 2.1, 2.9, 5.2, 6.0, 7.0, 8.612, 39.856, 41.656, 56.0, 58.0, 60.0
 - `components/parachute_fuselage_seat/parachute_fuselage_seat_v2.FCStd` / Body: 2.0, 2.2, 2.9, 5.2, 6.0, 7.031, 7.2, 39.656, 41.82, 46.014, 52.15, 56.0, 56.039, 60.0
 - `components/parachute_fuselage_seat/pistone.FCStd` / Body: 3.5, 6.598, 6.986, 7.079, 7.4, 13.4, 33.456, 39.456, 49.5, 55.5
 - `components/parachute_fuselage_seat/sede_presa_elettrica_sup.FCStd` / Body: 2.0, 6.0, 7.031, 7.2, 42.1, 56.0
-- `components/parachute_fuselage_seat/upper_closure.FCStd` / Body: 2.0, 3.1, 6.0, 41.7, 55.8
 - `components/rear_transition/rear_transition.FCStd` / Body: 2.0, 2.5, 2.6, 3.1, 4.158, 5.2, 7.0, 29.1, 35.2, 37.0, 51.8, 55.8
 - `components/upper_fins/upper_fin.FCStd` / Body: 1.0
 - `components/upper_motor_retainer/upper_retainer.FCStd` / Body: 2.0, 2.242, 3.1, 5.15, 7.0, 15.0, 50.0, 55.8, 60.0
-- `components/wall.FCStd` / Body: 56.0, 58.0, 60.0
 - `launch_pad/Unnamed.FCStd` / Body: 7.5, 10.0, 165.0, 205.0
 
 ## Load / recompute problems in current FreeCAD (copies)
 
-- `assemblies/lyskamm.FCStd`: 167 Python objects not loaded (addon missing): b_lower_fuselage_v1_001_, b_lower_fins_001_, planesParallel_001, planesParallel_001_mirror, planeCoincident_001, planeCoincident_001_mirror …
 - `components/e-bay/fuselage.FCStd`: Chamfer (Chamfer): Invalid
 - `components/e-bay/fuselage_w_logo.FCStd`: Chamfer (Chamfer): Invalid
-- `components/lower_fins/lower_fins.FCStd`: 1 Python objects not loaded (addon missing): Fin
+- `components/lower_fins/lower_fins.FCStd`: Sketch (Sketch): Invalid
 - `components/lower_fuselage_w_motor_mount/lower_fuselage_v1.FCStd`: Sketch014 (Sketch014): Invalid
 - `components/mid_fuselage/mid_fuselage.FCStd`: Sketch011 (Sketch011): Invalid
-- `components/nose_cone/nose_cone.FCStd`: 1 Python objects not loaded (addon missing): NoseCone
-- `components/parachute_fuselage_seat/parachute_fuselage_seat.FCStd`: Chamfer001 (Chamfer001): Invalid
-- `components/parachute_fuselage_seat/upper_closure.FCStd`: Sketch004 (Sketch004): Invalid
-- `components/rear_transition/rear_transition.FCStd`: 1 Python objects not loaded (addon missing): Transition
-- `components/upper_fins/upper_fin.FCStd`: 1 Python objects not loaded (addon missing): Fin
-- `components/wall.FCStd`: Sketch005 (Sketch005): Invalid
+- `components/upper_fins/upper_fin.FCStd`: Sketch (Sketch): Invalid
 - `launch_pad/Unnamed.FCStd`: Sketch001 (Sketch001): Invalid

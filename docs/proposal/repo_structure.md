@@ -66,7 +66,7 @@ reintroduced with `git lfs migrate`.
 Each line is one approved step (one commit). After every step: regenerate `docs/inventory/` and fix paths in
 `scripts/shared_dims.py` (`EXTRA_ACTIVE`) and docs.
 
-### A. Safe now — files not referenced by the assembly
+### A. Safe now — files not referenced by the assembly — ✅ done 2026-11-17 (A1–A11, A13; A12 moves with group B)
 
 | # | From | To | Why |
 |---|---|---|---|

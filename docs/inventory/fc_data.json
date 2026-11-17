@@ -11,175 +11,7 @@
    }
   ],
   "recompute_errors": [],
-  "load_errors": [
-   "b_lower_fuselage_v1_001_: Python proxy not loaded (Part::FeaturePython)",
-   "b_lower_fins_001_: Python proxy not loaded (Part::FeaturePython)",
-   "planesParallel_001: Python proxy not loaded (App::FeaturePython)",
-   "planesParallel_001_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_001: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_001_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_lower_fins_001_001: Python proxy not loaded (Part::FeaturePython)",
-   "planeCoincident_002: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_002_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_lower_fins_001_002: Python proxy not loaded (Part::FeaturePython)",
-   "planeCoincident_003: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_003_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_lower_fins_001_003: Python proxy not loaded (Part::FeaturePython)",
-   "b_upper_retainer_001_: Python proxy not loaded (Part::FeaturePython)",
-   "b_mid_fuselage_001_: Python proxy not loaded (Part::FeaturePython)",
-   "planeCoincident_006: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_006_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_007: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_007_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_upper_fin_001_: Python proxy not loaded (Part::FeaturePython)",
-   "planeCoincident_009: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_009_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_010: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_010_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_011: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_011_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_upper_fin_001_001: Python proxy not loaded (Part::FeaturePython)",
-   "planeCoincident_012: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_012_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_013: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_013_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_014: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_014_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_upper_fin_001_002: Python proxy not loaded (Part::FeaturePython)",
-   "planeCoincident_016: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_016_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_015: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_015_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_017: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_017_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_upper_fin_001_003: Python proxy not loaded (Part::FeaturePython)",
-   "planeCoincident_018: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_018_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_019: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_019_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_020: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_020_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_rear_transition_001_: Python proxy not loaded (Part::FeaturePython)",
-   "b_carbon_rod_001_: Python proxy not loaded (Part::FeaturePython)",
-   "b_carbon_rod_001_001: Python proxy not loaded (Part::FeaturePython)",
-   "centerOfMass_001: Python proxy not loaded (App::FeaturePython)",
-   "centerOfMass_001_mirror: Python proxy not loaded (App::FeaturePython)",
-   "centerOfMass_002: Python proxy not loaded (App::FeaturePython)",
-   "centerOfMass_002_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_carbon_rod_001_002: Python proxy not loaded (Part::FeaturePython)",
-   "centerOfMass_003: Python proxy not loaded (App::FeaturePython)",
-   "centerOfMass_003_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_carbon_rod_001_003: Python proxy not loaded (Part::FeaturePython)",
-   "centerOfMass_004: Python proxy not loaded (App::FeaturePython)",
-   "centerOfMass_004_mirror: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_001: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_001_mirror: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_002: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_002_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_004: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_004_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_005: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_005_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_008: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_008_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_021: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_021_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_022: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_022_mirror: Python proxy not loaded (App::FeaturePython)",
-   "centerOfMass_005: Python proxy not loaded (App::FeaturePython)",
-   "centerOfMass_005_mirror: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_003: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_003_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_low_chute_ret_001_: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_004: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_004_mirror: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_005: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_005_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_023: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_023_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_parachute_fuselage_seat_v2_001_: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_006: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_006_mirror: Python proxy not loaded (App::FeaturePython)",
-   "centerOfMass_006: Python proxy not loaded (App::FeaturePython)",
-   "centerOfMass_006_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_sede_presa_elettrica_sup_001_: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_007: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_007_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_024: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_024_mirror: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_008: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_008_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_lower_closure_v2_001_: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_009: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_009_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_025: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_025_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_alluminium_rod_001_: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_010: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_010_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_026: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_026_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_alluminium_rod_001_001: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_011: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_011_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_mid_closure_001_: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_012: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_012_mirror: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_013: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_013_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_027: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_027_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_alluminium_rod_001_002: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_014: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_014_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_028: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_028_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_alluminium_rod_001_003: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_015: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_015_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_upper_closure_001_: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_016: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_016_mirror: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_017: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_017_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_029: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_029_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_nose_cone_001_: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_018: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_018_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_030: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_030_mirror: Python proxy not loaded (App::FeaturePython)",
-   "axisParallel_001: Python proxy not loaded (App::FeaturePython)",
-   "axisParallel_001_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_fuselage_001_: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_019: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_019_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_031: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_031_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planesParallel_002: Python proxy not loaded (App::FeaturePython)",
-   "planesParallel_002_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_fuselage_001_001: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_020: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_020_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planesParallel_003: Python proxy not loaded (App::FeaturePython)",
-   "planesParallel_003_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_032: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_032_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_fuselage_001_002: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_021: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_021_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planesParallel_004: Python proxy not loaded (App::FeaturePython)",
-   "planesParallel_004_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_033: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_033_mirror: Python proxy not loaded (App::FeaturePython)",
-   "b_fuselage_001_003: Python proxy not loaded (Part::FeaturePython)",
-   "axisCoincident_022: Python proxy not loaded (App::FeaturePython)",
-   "axisCoincident_022_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planesParallel_005: Python proxy not loaded (App::FeaturePython)",
-   "planesParallel_005_mirror: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_034: Python proxy not loaded (App::FeaturePython)",
-   "planeCoincident_034_mirror: Python proxy not loaded (App::FeaturePython)"
-  ]
+  "load_errors": []
  },
  {
   "file": "components/carbon_rod/carbon_rod.FCStd",
@@ -1114,271 +946,6 @@
   "load_errors": []
  },
  {
-  "file": "components/e-bay/lower_closure.FCStd",
-  "sketches": [
-   {
-    "name": "Sketch",
-    "label": "Sketch",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch001",
-    "label": "Sketch001",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 0
-   },
-   {
-    "name": "Sketch002",
-    "label": "Sketch002",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch003",
-    "label": "Sketch003",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch004",
-    "label": "Sketch004",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch005",
-    "label": "Sketch005",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch006",
-    "label": "Sketch006",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch007",
-    "label": "Sketch007",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch008",
-    "label": "Sketch008",
-    "solve": 0,
-    "dof": 7,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 10
-   },
-   {
-    "name": "Sketch009",
-    "label": "Sketch009",
-    "solve": 0,
-    "dof": 2,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 3
-   },
-   {
-    "name": "Sketch010",
-    "label": "Sketch010",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch011",
-    "label": "Sketch011",
-    "solve": 0,
-    "dof": 1,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 4
-   },
-   {
-    "name": "Sketch012",
-    "label": "Sketch012",
-    "solve": 0,
-    "dof": 3,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch013",
-    "label": "Sketch013",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 3
-   },
-   {
-    "name": "Sketch014",
-    "label": "Sketch014",
-    "solve": 0,
-    "dof": 2,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch015",
-    "label": "Sketch015",
-    "solve": 0,
-    "dof": 2,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   }
-  ],
-  "bodies": [
-   {
-    "name": "Body",
-    "label": "Body",
-    "stored": {
-     "volume": 61473.34,
-     "bbox": [
-      -30.0,
-      -30.0,
-      -20.0,
-      30.0,
-      30.0,
-      15.0
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      -0.26,
-      0.0,
-      0.467
-     ],
-     "cyl_diameters": [
-      2.0,
-      3.1,
-      3.2,
-      4.8,
-      5.25,
-      6.0,
-      7.0,
-      39.56,
-      55.8,
-      60.0
-     ]
-    },
-    "recomputed": {
-     "volume": 61473.34,
-     "bbox": [
-      -30.0,
-      -30.0,
-      -20.0,
-      30.0,
-      30.0,
-      15.0
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      -0.26,
-      0.0,
-      0.467
-     ],
-     "cyl_diameters": [
-      2.0,
-      3.1,
-      3.2,
-      4.8,
-      5.25,
-      6.0,
-      7.0,
-      39.56,
-      55.8,
-      60.0
-     ]
-    }
-   }
-  ],
-  "recompute_errors": [],
-  "load_errors": []
- },
- {
   "file": "components/e-bay/lower_closure_v2.FCStd",
   "sketches": [
    {
@@ -2191,19 +1758,19 @@
   "load_errors": []
  },
  {
-  "file": "components/logo/logo.FCStd",
+  "file": "components/logo/logo_flat.FCStd",
   "sketches": [
    {
     "name": "Sketch",
     "label": "Sketch",
     "solve": 0,
-    "dof": 0,
-    "fully": true,
+    "dof": 1,
+    "fully": false,
     "conflicting": [],
     "redundant": [],
     "partially_redundant": [],
     "malformed": [],
-    "geo": 11
+    "geo": 9
    },
    {
     "name": "Sketch001",
@@ -2215,19 +1782,19 @@
     "redundant": [],
     "partially_redundant": [],
     "malformed": [],
-    "geo": 4
+    "geo": 9
    },
    {
     "name": "Sketch002",
     "label": "Sketch002",
     "solve": 0,
-    "dof": 0,
-    "fully": true,
+    "dof": 2,
+    "fully": false,
     "conflicting": [],
     "redundant": [],
     "partially_redundant": [],
     "malformed": [],
-    "geo": 4
+    "geo": 7
    },
    {
     "name": "Sketch003",
@@ -2239,453 +1806,65 @@
     "redundant": [],
     "partially_redundant": [],
     "malformed": [],
-    "geo": 7
+    "geo": 8
    },
    {
     "name": "Sketch004",
     "label": "Sketch004",
     "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch005",
-    "label": "Sketch005",
-    "solve": 0,
     "dof": 1,
     "fully": false,
     "conflicting": [],
     "redundant": [],
     "partially_redundant": [],
     "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch006",
-    "label": "Sketch006",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch007",
-    "label": "Sketch007",
-    "solve": 0,
-    "dof": 1,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch008",
-    "label": "Sketch008",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 3
-   },
-   {
-    "name": "Sketch009",
-    "label": "Sketch009",
-    "solve": 0,
-    "dof": 1,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch010",
-    "label": "Sketch010",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch011",
-    "label": "Sketch011",
-    "solve": 0,
-    "dof": 1,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch012",
-    "label": "Sketch012",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
+    "geo": 14
    }
   ],
   "bodies": [
    {
     "name": "Body",
-    "label": "main_body",
+    "label": "Body",
     "stored": {
-     "volume": 484.36,
+     "volume": 468040.59,
      "bbox": [
-      -4.5,
-      -24.0,
-      0.0,
-      4.5,
-      36.0,
-      1.345
+      -100.996,
+      -103.512,
+      -10.0,
+      100.996,
+      103.512,
+      10.0
      ],
      "valid": true,
      "solids": 1,
      "com": [
-      0.0,
-      4.085,
-      0.604
+      -0.0,
+      1.689,
+      -3.934
      ],
      "cyl_diameters": [
-      59.0,
-      60.0,
-      61.389
+      122.778
      ]
     },
     "recomputed": {
-     "volume": 484.36,
+     "volume": 468040.59,
      "bbox": [
-      -4.5,
-      -24.0,
-      0.0,
-      4.5,
-      36.0,
-      1.345
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      0.0,
-      4.085,
-      0.604
-     ],
-     "cyl_diameters": [
-      59.0,
-      60.0,
-      61.389
-     ]
-    }
-   },
-   {
-    "name": "Body001",
-    "label": "lower_right_wing",
-    "stored": {
-     "volume": 125.73,
-     "bbox": [
-      6.5,
-      -30.0,
-      0.713,
-      15.0,
-      -4.0,
-      5.098
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      10.62,
-      -17.695,
-      2.585
-     ],
-     "cyl_diameters": [
-      59.0,
-      60.0
-     ]
-    },
-    "recomputed": {
-     "volume": 125.73,
-     "bbox": [
-      6.5,
-      -30.0,
-      0.713,
-      15.0,
-      -4.0,
-      5.098
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      10.62,
-      -17.695,
-      2.585
-     ],
-     "cyl_diameters": [
-      59.0,
-      60.0
-     ]
-    }
-   },
-   {
-    "name": "Body002",
-    "label": "mid_right_wing",
-    "stored": {
-     "volume": 124.48,
-     "bbox": [
-      6.5,
-      -24.19,
-      0.713,
-      22.361,
-      8.5,
+      -100.996,
+      -103.512,
+      -10.0,
+      100.996,
+      103.512,
       10.0
      ],
      "valid": true,
      "solids": 1,
      "com": [
-      14.389,
-      -7.78,
-      4.713
+      -0.0,
+      1.689,
+      -3.934
      ],
      "cyl_diameters": [
-      59.0,
-      60.0
-     ]
-    },
-    "recomputed": {
-     "volume": 124.48,
-     "bbox": [
-      6.5,
-      -24.19,
-      0.713,
-      22.361,
-      8.5,
-      10.0
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      14.389,
-      -7.78,
-      4.713
-     ],
-     "cyl_diameters": [
-      59.0,
-      60.0
-     ]
-    }
-   },
-   {
-    "name": "Body003",
-    "label": "upper_right_wing",
-    "stored": {
-     "volume": 127.92,
-     "bbox": [
-      6.5,
-      -14.69,
-      0.713,
-      22.361,
-      19.995,
-      10.0
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      15.164,
-      2.222,
-      5.163
-     ],
-     "cyl_diameters": [
-      59.0,
-      60.0
-     ]
-    },
-    "recomputed": {
-     "volume": 127.92,
-     "bbox": [
-      6.5,
-      -14.69,
-      0.713,
-      22.361,
-      19.995,
-      10.0
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      15.164,
-      2.222,
-      5.163
-     ],
-     "cyl_diameters": [
-      59.0,
-      60.0
-     ]
-    }
-   },
-   {
-    "name": "Body004",
-    "label": "Body004",
-    "stored": {
-     "volume": 125.73,
-     "bbox": [
-      6.5,
-      -30.0,
-      0.713,
-      15.0,
-      -4.0,
-      5.098
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      10.62,
-      -17.695,
-      2.585
-     ],
-     "cyl_diameters": [
-      59.0,
-      60.0
-     ]
-    },
-    "recomputed": {
-     "volume": 125.73,
-     "bbox": [
-      6.5,
-      -30.0,
-      0.713,
-      15.0,
-      -4.0,
-      5.098
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      10.62,
-      -17.695,
-      2.585
-     ],
-     "cyl_diameters": [
-      59.0,
-      60.0
-     ]
-    }
-   },
-   {
-    "name": "Body005",
-    "label": "Body005",
-    "stored": {
-     "volume": 124.48,
-     "bbox": [
-      6.5,
-      -24.19,
-      0.713,
-      22.361,
-      8.5,
-      10.0
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      14.389,
-      -7.78,
-      4.713
-     ],
-     "cyl_diameters": [
-      59.0,
-      60.0
-     ]
-    },
-    "recomputed": {
-     "volume": 124.48,
-     "bbox": [
-      6.5,
-      -24.19,
-      0.713,
-      22.361,
-      8.5,
-      10.0
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      14.389,
-      -7.78,
-      4.713
-     ],
-     "cyl_diameters": [
-      59.0,
-      60.0
-     ]
-    }
-   },
-   {
-    "name": "Body006",
-    "label": "Body006",
-    "stored": {
-     "volume": 127.92,
-     "bbox": [
-      6.5,
-      -14.69,
-      0.713,
-      22.361,
-      19.995,
-      10.0
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      15.164,
-      2.222,
-      5.163
-     ],
-     "cyl_diameters": [
-      59.0,
-      60.0
-     ]
-    },
-    "recomputed": {
-     "volume": 127.92,
-     "bbox": [
-      6.5,
-      -14.69,
-      0.713,
-      22.361,
-      19.995,
-      10.0
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      15.164,
-      2.222,
-      5.163
-     ],
-     "cyl_diameters": [
-      59.0,
-      60.0
+      122.778
      ]
     }
    }
@@ -2694,7 +1873,7 @@
   "load_errors": []
  },
  {
-  "file": "components/logo/logo_red.FCStd",
+  "file": "components/logo/logo_inserts.FCStd",
   "sketches": [
    {
     "name": "Sketch",
@@ -3199,19 +2378,19 @@
   "load_errors": []
  },
  {
-  "file": "components/logo.FCStd",
+  "file": "components/logo/logo_projected.FCStd",
   "sketches": [
    {
     "name": "Sketch",
     "label": "Sketch",
     "solve": 0,
-    "dof": 1,
-    "fully": false,
+    "dof": 0,
+    "fully": true,
     "conflicting": [],
     "redundant": [],
     "partially_redundant": [],
     "malformed": [],
-    "geo": 9
+    "geo": 11
    },
    {
     "name": "Sketch001",
@@ -3223,19 +2402,19 @@
     "redundant": [],
     "partially_redundant": [],
     "malformed": [],
-    "geo": 9
+    "geo": 4
    },
    {
     "name": "Sketch002",
     "label": "Sketch002",
     "solve": 0,
-    "dof": 2,
-    "fully": false,
+    "dof": 0,
+    "fully": true,
     "conflicting": [],
     "redundant": [],
     "partially_redundant": [],
     "malformed": [],
-    "geo": 7
+    "geo": 4
    },
    {
     "name": "Sketch003",
@@ -3247,11 +2426,23 @@
     "redundant": [],
     "partially_redundant": [],
     "malformed": [],
-    "geo": 8
+    "geo": 7
    },
    {
     "name": "Sketch004",
     "label": "Sketch004",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 1
+   },
+   {
+    "name": "Sketch005",
+    "label": "Sketch005",
     "solve": 0,
     "dof": 1,
     "fully": false,
@@ -3259,53 +2450,429 @@
     "redundant": [],
     "partially_redundant": [],
     "malformed": [],
-    "geo": 14
+    "geo": 2
+   },
+   {
+    "name": "Sketch006",
+    "label": "Sketch006",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch007",
+    "label": "Sketch007",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch008",
+    "label": "Sketch008",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 3
+   },
+   {
+    "name": "Sketch009",
+    "label": "Sketch009",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch010",
+    "label": "Sketch010",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch011",
+    "label": "Sketch011",
+    "solve": 0,
+    "dof": 1,
+    "fully": false,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
+   },
+   {
+    "name": "Sketch012",
+    "label": "Sketch012",
+    "solve": 0,
+    "dof": 0,
+    "fully": true,
+    "conflicting": [],
+    "redundant": [],
+    "partially_redundant": [],
+    "malformed": [],
+    "geo": 2
    }
   ],
   "bodies": [
    {
     "name": "Body",
-    "label": "Body",
+    "label": "main_body",
     "stored": {
-     "volume": 468040.59,
+     "volume": 484.36,
      "bbox": [
-      -100.996,
-      -103.512,
-      -10.0,
-      100.996,
-      103.512,
-      10.0
+      -4.5,
+      -24.0,
+      0.0,
+      4.5,
+      36.0,
+      1.345
      ],
      "valid": true,
      "solids": 1,
      "com": [
-      -0.0,
-      1.689,
-      -3.934
+      0.0,
+      4.085,
+      0.604
      ],
      "cyl_diameters": [
-      122.778
+      59.0,
+      60.0,
+      61.389
      ]
     },
     "recomputed": {
-     "volume": 468040.59,
+     "volume": 484.36,
      "bbox": [
-      -100.996,
-      -103.512,
-      -10.0,
-      100.996,
-      103.512,
+      -4.5,
+      -24.0,
+      0.0,
+      4.5,
+      36.0,
+      1.345
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      0.0,
+      4.085,
+      0.604
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0,
+      61.389
+     ]
+    }
+   },
+   {
+    "name": "Body001",
+    "label": "lower_right_wing",
+    "stored": {
+     "volume": 125.73,
+     "bbox": [
+      6.5,
+      -30.0,
+      0.713,
+      15.0,
+      -4.0,
+      5.098
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.62,
+      -17.695,
+      2.585
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 125.73,
+     "bbox": [
+      6.5,
+      -30.0,
+      0.713,
+      15.0,
+      -4.0,
+      5.098
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.62,
+      -17.695,
+      2.585
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body002",
+    "label": "mid_right_wing",
+    "stored": {
+     "volume": 124.48,
+     "bbox": [
+      6.5,
+      -24.19,
+      0.713,
+      22.361,
+      8.5,
       10.0
      ],
      "valid": true,
      "solids": 1,
      "com": [
-      -0.0,
-      1.689,
-      -3.934
+      14.389,
+      -7.78,
+      4.713
      ],
      "cyl_diameters": [
-      122.778
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 124.48,
+     "bbox": [
+      6.5,
+      -24.19,
+      0.713,
+      22.361,
+      8.5,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.389,
+      -7.78,
+      4.713
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body003",
+    "label": "upper_right_wing",
+    "stored": {
+     "volume": 127.92,
+     "bbox": [
+      6.5,
+      -14.69,
+      0.713,
+      22.361,
+      19.995,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.164,
+      2.222,
+      5.163
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 127.92,
+     "bbox": [
+      6.5,
+      -14.69,
+      0.713,
+      22.361,
+      19.995,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.164,
+      2.222,
+      5.163
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body004",
+    "label": "Body004",
+    "stored": {
+     "volume": 125.73,
+     "bbox": [
+      6.5,
+      -30.0,
+      0.713,
+      15.0,
+      -4.0,
+      5.098
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.62,
+      -17.695,
+      2.585
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 125.73,
+     "bbox": [
+      6.5,
+      -30.0,
+      0.713,
+      15.0,
+      -4.0,
+      5.098
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      10.62,
+      -17.695,
+      2.585
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body005",
+    "label": "Body005",
+    "stored": {
+     "volume": 124.48,
+     "bbox": [
+      6.5,
+      -24.19,
+      0.713,
+      22.361,
+      8.5,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.389,
+      -7.78,
+      4.713
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 124.48,
+     "bbox": [
+      6.5,
+      -24.19,
+      0.713,
+      22.361,
+      8.5,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      14.389,
+      -7.78,
+      4.713
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    }
+   },
+   {
+    "name": "Body006",
+    "label": "Body006",
+    "stored": {
+     "volume": 127.92,
+     "bbox": [
+      6.5,
+      -14.69,
+      0.713,
+      22.361,
+      19.995,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.164,
+      2.222,
+      5.163
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
+     ]
+    },
+    "recomputed": {
+     "volume": 127.92,
+     "bbox": [
+      6.5,
+      -14.69,
+      0.713,
+      22.361,
+      19.995,
+      10.0
+     ],
+     "valid": true,
+     "solids": 1,
+     "com": [
+      15.164,
+      2.222,
+      5.163
+     ],
+     "cyl_diameters": [
+      59.0,
+      60.0
      ]
     }
    }
@@ -3602,10 +3169,10 @@
     }
    }
   ],
-  "recompute_errors": [],
-  "load_errors": [
-   "Fin: Python proxy not loaded (Part::FeaturePython)"
-  ]
+  "recompute_errors": [
+   "Sketch (Sketch): Invalid"
+  ],
+  "load_errors": []
  },
  {
   "file": "components/lower_fuselage_w_motor_mount/lower_fuselage_v1.FCStd",
@@ -4278,279 +3845,6 @@
    }
   ],
   "recompute_errors": [],
-  "load_errors": [
-   "NoseCone: Python proxy not loaded (Part::FeaturePython)"
-  ]
- },
- {
-  "file": "components/parachute_fuselage_seat/parachute_fuselage_seat.FCStd",
-  "sketches": [
-   {
-    "name": "Sketch",
-    "label": "Sketch",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch001",
-    "label": "Sketch001",
-    "solve": 0,
-    "dof": 11,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 12
-   },
-   {
-    "name": "Sketch002",
-    "label": "Sketch002",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch003",
-    "label": "Sketch003",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch004",
-    "label": "Sketch004",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch005",
-    "label": "Sketch005",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch006",
-    "label": "Sketch006",
-    "solve": 0,
-    "dof": 1,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch007",
-    "label": "Sketch007",
-    "solve": 0,
-    "dof": 8,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 6
-   },
-   {
-    "name": "Sketch008",
-    "label": "Sketch008",
-    "solve": 0,
-    "dof": 7,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 8
-   },
-   {
-    "name": "Sketch009",
-    "label": "Sketch009",
-    "solve": 0,
-    "dof": 1,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 3
-   },
-   {
-    "name": "Sketch010",
-    "label": "Sketch010",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 3
-   },
-   {
-    "name": "Sketch011",
-    "label": "Sketch011",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch012",
-    "label": "Sketch012",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch013",
-    "label": "Sketch013",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 3
-   },
-   {
-    "name": "Sketch014",
-    "label": "Sketch014",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch015",
-    "label": "sede_viti_sup_2",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   }
-  ],
-  "bodies": [
-   {
-    "name": "Body",
-    "label": "Body",
-    "stored": {
-     "volume": 138565.83,
-     "bbox": [
-      -30.0,
-      -30.0,
-      -0.0,
-      30.0,
-      30.0,
-      242.5
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      -0.132,
-      -0.121,
-      134.075
-     ],
-     "cyl_diameters": [
-      2.0,
-      2.1,
-      2.9,
-      5.2,
-      6.0,
-      7.0,
-      8.612,
-      39.856,
-      41.656,
-      56.0,
-      58.0,
-      60.0
-     ]
-    },
-    "recomputed": {
-     "volume": 138565.83,
-     "bbox": [
-      -30.0,
-      -30.0,
-      -0.0,
-      30.0,
-      30.0,
-      242.5
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      -0.132,
-      -0.121,
-      134.075
-     ],
-     "cyl_diameters": [
-      2.0,
-      2.1,
-      2.9,
-      5.2,
-      6.0,
-      7.0,
-      8.612,
-      39.856,
-      41.656,
-      56.0,
-      58.0,
-      60.0
-     ]
-    }
-   }
-  ],
-  "recompute_errors": [
-   "Chamfer001 (Chamfer001): Invalid"
-  ],
   "load_errors": []
  },
  {
@@ -5025,179 +4319,6 @@
   "load_errors": []
  },
  {
-  "file": "components/parachute_fuselage_seat/upper_closure.FCStd",
-  "sketches": [
-   {
-    "name": "Sketch",
-    "label": "Sketch",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch001",
-    "label": "Sketch001",
-    "solve": 0,
-    "dof": 7,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 8
-   },
-   {
-    "name": "Sketch002",
-    "label": "Sketch002",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 3
-   },
-   {
-    "name": "Sketch003",
-    "label": "Sketch003",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch004",
-    "label": "Sketch004",
-    "solve": 0,
-    "dof": 7,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 8
-   },
-   {
-    "name": "Sketch005",
-    "label": "Sketch005",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 3
-   },
-   {
-    "name": "Sketch006",
-    "label": "Sketch006",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch007",
-    "label": "Sketch007",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch008",
-    "label": "Sketch008",
-    "solve": 0,
-    "dof": 5,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 17
-   }
-  ],
-  "bodies": [
-   {
-    "name": "Body",
-    "label": "Body",
-    "stored": {
-     "volume": 25315.41,
-     "bbox": [
-      -27.448,
-      -27.9,
-      0.0,
-      27.448,
-      27.9,
-      26.0
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      0.0,
-      -1.205,
-      12.744
-     ],
-     "cyl_diameters": [
-      2.0,
-      3.1,
-      6.0,
-      41.7,
-      55.8
-     ]
-    },
-    "recomputed": {
-     "volume": 25315.41,
-     "bbox": [
-      -27.448,
-      -27.9,
-      0.0,
-      27.448,
-      27.9,
-      26.0
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      0.0,
-      -1.205,
-      12.744
-     ],
-     "cyl_diameters": [
-      2.0,
-      3.1,
-      6.0,
-      41.7,
-      55.8
-     ]
-    }
-   }
-  ],
-  "recompute_errors": [
-   "Sketch004 (Sketch004): Invalid"
-  ],
-  "load_errors": []
- },
- {
   "file": "components/rear_transition/rear_transition.FCStd",
   "sketches": [
    {
@@ -5460,9 +4581,7 @@
    }
   ],
   "recompute_errors": [],
-  "load_errors": [
-   "Transition: Python proxy not loaded (Part::FeaturePython)"
-  ]
+  "load_errors": []
  },
  {
   "file": "components/upper_fins/upper_fin.FCStd",
@@ -5519,7 +4638,7 @@
      "solids": 1,
      "com": [
       51.3,
-      0.0,
+      -0.0,
       11.744
      ],
      "cyl_diameters": [
@@ -5528,10 +4647,10 @@
     }
    }
   ],
-  "recompute_errors": [],
-  "load_errors": [
-   "Fin: Python proxy not loaded (Part::FeaturePython)"
-  ]
+  "recompute_errors": [
+   "Sketch (Sketch): Invalid"
+  ],
+  "load_errors": []
  },
  {
   "file": "components/upper_motor_retainer/upper_retainer.FCStd",
@@ -5770,151 +4889,6 @@
    }
   ],
   "recompute_errors": [],
-  "load_errors": []
- },
- {
-  "file": "components/wall.FCStd",
-  "sketches": [
-   {
-    "name": "Sketch",
-    "label": "Sketch",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch001",
-    "label": "Sketch001",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 1
-   },
-   {
-    "name": "Sketch002",
-    "label": "Sketch002",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 4
-   },
-   {
-    "name": "Sketch003",
-    "label": "Sketch003",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch004",
-    "label": "Sketch004",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 2
-   },
-   {
-    "name": "Sketch005",
-    "label": "Sketch005",
-    "solve": 0,
-    "dof": 3,
-    "fully": false,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 4
-   },
-   {
-    "name": "Sketch006",
-    "label": "Sketch006",
-    "solve": 0,
-    "dof": 0,
-    "fully": true,
-    "conflicting": [],
-    "redundant": [],
-    "partially_redundant": [],
-    "malformed": [],
-    "geo": 8
-   }
-  ],
-  "bodies": [
-   {
-    "name": "Body",
-    "label": "Body",
-    "stored": {
-     "volume": 12064.0,
-     "bbox": [
-      -30.0,
-      -30.0,
-      -7.5,
-      30.0,
-      0.0,
-      102.5
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      -0.0,
-      -18.971,
-      47.5
-     ],
-     "cyl_diameters": [
-      56.0,
-      58.0,
-      60.0
-     ]
-    },
-    "recomputed": {
-     "volume": 12064.0,
-     "bbox": [
-      -30.0,
-      -30.0,
-      -7.5,
-      30.0,
-      0.0,
-      102.5
-     ],
-     "valid": true,
-     "solids": 1,
-     "com": [
-      -0.0,
-      -18.971,
-      47.5
-     ],
-     "cyl_diameters": [
-      56.0,
-      58.0,
-      60.0
-     ]
-    }
-   }
-  ],
-  "recompute_errors": [
-   "Sketch005 (Sketch005): Invalid"
-  ],
   "load_errors": []
  },
  {
