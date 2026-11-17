@@ -59,7 +59,7 @@ The 5 mm tubes look like the screw-joint rings between printed sections.
 
 ## Phase 2 — Proposal (documents only, no CAD changes)
 - [x] 2.1 *(done 2026-11-17 → `docs/proposal/parameters.md`, reviewed with Lorenzo; mechanism (a); final approval in 2.5)* Master parameters: list of aliases (e.g. `body_od`, `body_wall`, `coupler_od`, `fit_slide_d=0.2`, `m2_insert_hole`, `m2_clear`, `rod_d`, `fin_t`, `motor_d`…), units, source part, ork counterpart. Decide mechanism: (a) single `parameters.FCStd` spreadsheet referenced by cross-document expressions vs (b) per-part sheet synced by script. Recommendation: (a). Files: `docs/proposal/parameters.md`
-- [ ] 2.2 Naming conventions: files (`snake_case`, English, no version suffix — git holds versions), bodies, features (`Pad_body`, `Pocket_m2_holes`…), sketches (`SK_<purpose>`), constraints (`<alias-like name>`). Files: `docs/proposal/conventions.md`
+- [ ] 2.2 *(draft 2026-11-17 → `docs/proposal/conventions.md`; English everywhere, decided by Lorenzo)* Naming conventions: files (`snake_case`, English, no version suffix — git holds versions), bodies, features (`Pad_body`, `Pocket_m2_holes`…), sketches (`SK_<purpose>`), constraints (`<alias-like name>`). Files: `docs/proposal/conventions.md`
 - [ ] 2.3 Repo structure proposal: per-part folders, `exports/` for STEP/3MF, `archive/` for legacy, `parameters.FCStd` location, LFS fix (`*.FCStd`, install git-lfs or drop LFS). File moves/renames listed as a checklist (known so far: `components/logo.FCStd` → `components/logo/`; misnamed `parachute_fuselage_seat_v2.3mf` actually holds `lower_closure_v2`, and `parachute_fuselage_seat.3mf` holds the v2 seat — see `docs/inventory/file_status.md`) (each a separate, approved step; A2plus `sourceFile` paths must be updated). Files: `docs/proposal/repo_structure.md`
 - [ ] 2.4 `.ork` ↔ CAD mismatch table: lengths, Ø, fin geometry & thickness (ork 3 mm), transition, materials, missing motor mount/motor/recovery/mass overrides, motor Ø 29 vs 35 mm. Files: `docs/proposal/ork_vs_cad.md`
 - [ ] 2.5 ⏸ **Review with Lorenzo**: approve parameter list, conventions, structure, which .ork fixes to apply. Commit.
@@ -105,8 +105,8 @@ For each part (one checklist block per part, added to this file when the part st
 ---
 
 ## Status
-- **Current phase:** 2 — Proposal. 2.1 done.
-- **Next step:** 2.2 naming conventions (`docs/proposal/conventions.md`).
+- **Current phase:** 2 — Proposal. 2.1 done, 2.2 drafted.
+- **Next step:** Lorenzo reviews `docs/proposal/conventions.md` (esp. proposed file names), then 2.3 repo structure.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -141,4 +141,5 @@ For each part (one checklist block per part, added to this file when the part st
 - **Later same session:** Lorenzo confirmed Ø2.6 = M2 insert hole (Ø3.1 holes are a mistake → backlog), Ø3.5 = M3 clearance (screw securing the aluminium bar in `lower_closure_v2`), 6.15×9.6 = rounded slot for `presa_elettrica` (deployment system, to be redesigned later), Ø7/7.2 bosses, `parachute_fuselage_seat/upper_closure` legacy. **1.7 closed.** Fastener sizes added to CLAUDE.md.
 - **Later same session:** `rear_transition` Pocket002 = screw hole for the lower motor retainer; `upper_closure` Pocket002 (Ø3.2) = M3 for the aluminium bar (other end). Open question 3 → option (a). 2.1 drafted: `docs/proposal/parameters.md` (aliases for body, fits, fasteners, tubes, motor mount; CAD vs `.ork` outer-shape table; v1 deviations kept as literals/separate aliases so Phase 3 does not change geometry).
 - **2.1 review:** sliding fit = 0.2 on Ø (CLAUDE.md updated); lower motor retainer will use M2 + insert; aluminium bar 100 = commercial stock (may change with e-bay redesign); 8 screws per joint every 45° (v1: 2 holes × 4), coupler ring 5, coupling 7.5, screws at 7.5/2; parachute bay length open until deployment redesign.
-- **Left:** 2.2–2.5.
+- **2.2:** Lorenzo chose English for all names. Draft `docs/proposal/conventions.md`: rules, proposed English file names, feature/sketch/constraint patterns, Italian→English glossary.
+- **Left:** review 2.2, then 2.3–2.5.

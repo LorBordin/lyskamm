@@ -1,0 +1,94 @@
+# Naming conventions — proposal (Phase 2.2)
+
+Status: **draft for review** (2026-11-17). Language decided by Lorenzo: **English everywhere** (files, bodies,
+features, sketches, constraints, parameters, docs, commits). Renames are applied part by part in Phase 3, each
+as an approved step. Nothing is renamed by this document.
+
+## General rules
+
+- `snake_case`, ASCII only, English. No spaces or accents.
+- No version suffixes (`_v1`, `_v2`, `_001`): git keeps the history. A part that replaces another takes its name; the old one goes to `archive/` (Phase 2.3).
+- Abbreviations allowed only from the list below.
+
+| Abbr. | Meaning | | Abbr. | Meaning |
+|---|---|---|---|---|
+| `d` | diameter | | `od` / `id` | outer / inner diameter |
+| `r` | radius | | `len` | axial length |
+| `t` | thickness | | `deg` | angle in degrees |
+| `m2`, `m3` | metric screw size | | `upper` / `lower` | towards the nose / towards the tail |
+
+## Files
+
+- `<part_name>.FCStd` in `components/<part_name>/` (folder structure decided in 2.3).
+- Exports keep the source name: `<part_name>.step`, `<part_name>.3mf`. A `.3mf` holding several parts is named after the print job and listed in its folder's notes.
+- Proposed English names for the current files (applied in 2.3 / Phase 3, to be confirmed there):
+
+| Current | Proposed |
+|---|---|
+| `pistone` | `piston` |
+| `presa_elettrica` | `connector_insert` |
+| `sede_presa_elettrica_sup` | `upper_connector_seat` |
+| `alluminium_rod` | `aluminium_rod` (spelling) |
+| `low_chute_ret` | `lower_chute_retainer` |
+| `upper_retainer` | `upper_motor_retainer` |
+| `lower_fuselage_v1` | `lower_fuselage` |
+| `parachute_fuselage_seat_v2` | `parachute_bay` |
+| `lower_closure_v2` | `lower_closure` (after the v1 file is archived) |
+| `fuselage` (e-bay) | `ebay_fuselage` |
+| `fuselage_w_logo` | `ebay_fuselage_logo` |
+| `logo/logo_red` | `logo/logo_inserts` (the printed PLA inserts) |
+| `logo/logo` | `logo/logo_projected` |
+| `components/logo.FCStd` | `logo/logo_flat` |
+
+## Inside a part file
+
+FreeCAD objects have an internal **Name** (fixed, e.g. `Pocket007`) and a **Label** (editable). We only change
+Labels; expressions should reference objects by Label (`<<label>>`) only where needed.
+
+| Object | Pattern | Examples |
+|---|---|---|
+| Body | part name (one Body per file). Multi-body files: one Body per printed piece, named by function. | `mid_closure`; logo: `main_body`, `upper_left_wing` |
+| Additive feature | `<Type>_<purpose>` | `Pad_body`, `Pad_coupling`, `Revolution_shell` |
+| Subtractive feature | `<Type>_<purpose>` | `Pocket_m2_inserts`, `Pocket_rod_holes`, `Hole_m3_bar` |
+| Pattern / dress-up | `<Type>_<what it patterns/finishes>` | `PolarPattern_m2_inserts`, `Fillet_connector_slot`, `Chamfer_lower_edge` |
+| Sketch | `SK_<purpose>` — same purpose as its feature | `SK_m2_inserts` → `Pocket_m2_inserts` |
+| Datum plane / line | `DP_<purpose>`, `DL_<purpose>` | `DP_m2_inserts` |
+| Rocket-WB feature | keep type name (`NoseCone`, `Fin`, `Transition`) | |
+
+- Numbered repeats only when they are really separate (`Pocket_m2_inserts_upper`, `_lower`), never `_1`, `_2` if
+  a pattern can do the job.
+
+## Sketch constraints
+
+- Every **driving dimension** that matters gets a name.
+- If the value comes from `parameters.FCStd`, the constraint is named **exactly like the alias**
+  (`m2_insert_d`, `screw_axial`, `body_od`) and its expression is `parameters#Params.<alias>`.
+- Part-local dimensions get a descriptive name (`slot_w`, `boss_len`). Unnamed constraints are allowed only for
+  trivial geometry (e.g. symmetric construction lines).
+- Target: every sketch fully constrained (DoF = 0), checked by `scripts/cad_inventory_fc.py`.
+
+## Parameters (`parameters.FCStd`)
+
+- Spreadsheet `Params`. Aliases follow the table in `parameters.md`.
+- Columns: A = alias name, B = value / formula (the cell with the alias), C = unit, D = description / used in.
+
+## Italian → English glossary (for renaming v1 features)
+
+| Italian (v1) | English | | Italian (v1) | English |
+|---|---|---|---|---|
+| `sede_viti` / `sede_vite` | `m2_inserts` / `m2_holes` (by function) | | `tondo` / `tondi` | `rod` / `rods` |
+| `sede_tondo(_alluminio)` | `rod_seat` / `bar_seat` | | `inserto_tondo` | `rod_boss` |
+| `sede_presa_elettrica` | `connector_slot` | | `sezione_cavi` | `cable_passage` |
+| `anello` (`anelllo`) | `ring` | | `rinforzo` | `reinforcement` |
+| `chiusura` | `cap` | | `congiunzione` / `accoppiamento` | `coupling` |
+| `incastro` | `socket` | | `tasca` | `pocket` |
+| `tubo_motore` | `motor_tube` | | `centraggio_motore` | `motor_centering_ring` |
+| `blocco_motore` | `motor_stop` | | `tubo_interno_paracadute` | `chute_inner_tube` |
+| `fusoliera` | `fuselage` | | `pistone` | `piston` |
+| `sup` / `superiore` | `upper` | | `inf` / `inferiore` | `lower` |
+| `interno` / `esterno` (`ensterno`) | `inner` / `outer` | | `fin_can` | `fin_can` |
+
+## Assembly
+
+- A2plus constraint labels are generated by the workbench; leave them. Imported part labels follow the file name
+  (`mid_closure_001` is acceptable there). Revisited if the assembly moves to the built-in workbench (open question 4).
