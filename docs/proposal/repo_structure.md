@@ -25,7 +25,6 @@ lyskamm/
 │   ├── lower_fins/               lower_fins
 │   ├── rear_transition/          rear_transition
 │   └── logo/                     logo_flat, logo_projected, logo_inserts (+ logo_*.step pieces)
-├── archive/                      # legacy files, same sub-path as before (e.g. archive/components/wall.FCStd)
 ├── launch_pad/                   # deferred, untouched
 ├── docs/  inventory/, proposal/
 └── scripts/
@@ -37,8 +36,8 @@ Decisions in this layout:
   `exports/` folder would add moves and break `scripts/print_settings.py` paths for no real gain.
 - **`parameters.FCStd` at the repo root.** Parts reference it with a relative path (`../../parameters.FCStd`
   from a part folder), so it must not move after Phase 3 starts.
-- **`archive/` instead of deleting.** Git already keeps history, but a visible folder keeps old designs easy to
-  look at. Files in `archive/` are not inventoried, not parametrized, not in the assembly.
+- **Legacy files are deleted** (Lorenzo, 2026-11-17). Git keeps them: `git log --all -- <path>` finds them and
+  `git checkout <commit> -- <path>` brings one back. `docs/inventory/file_status.md` records what was removed.
 - Folders use the snake_case rule too: `e-bay` → `ebay`, `parachute_fuselage_seat` → `parachute_bay`,
   `lower_fuselage_w_motor_mount` → `lower_fuselage`.
 
@@ -72,14 +71,14 @@ Each line is one approved step (one commit). After every step: regenerate `docs/
 | # | From | To | Why |
 |---|---|---|---|
 | A1 | `.gitattributes` | new content above | Drop LFS (if approved) |
-| A2 | `components/wall.FCStd` | `archive/components/wall.FCStd` | Legacy test |
-| A3 | `components/e-bay/lower_closure.{FCStd,step}` | `archive/components/e-bay/` | Replaced by v2 |
-| A4 | `components/parachute_fuselage_seat/parachute_fuselage_seat.{FCStd,step}` | `archive/components/parachute_fuselage_seat/` | Replaced by v2 |
-| A5 | `components/parachute_fuselage_seat/upper_closure.{FCStd,step,3mf}` | `archive/components/parachute_fuselage_seat/` | Old widget of v1 seat |
+| A2 | `components/wall.FCStd` | delete | Legacy test |
+| A3 | `components/e-bay/lower_closure.{FCStd,step}` | delete | Replaced by v2 |
+| A4 | `components/parachute_fuselage_seat/parachute_fuselage_seat.{FCStd,step}` | delete | Replaced by v2 |
+| A5 | `components/parachute_fuselage_seat/upper_closure.{FCStd,step,3mf}` | delete | Old widget of v1 seat |
 | A6 | `components/parachute_fuselage_seat/parachute_fuselage_seat.3mf` | `…/parachute_fuselage_seat_v2.3mf` (temporary name until B) | It is the print of **v2** |
-| A7 | `components/parachute_fuselage_seat/parachute_fuselage_seat_v2.3mf` (holds `lower_closure_v2`, Dec 2025) | `archive/…` | Older duplicate; the current print of `lower_closure_v2` is `e-bay/lower_closure.3mf` (Jan 2026) |
-| A8 | `components/lower_chute_retainer/low_chute_ret_test.3mf` (holds v1 `parachute_fuselage_seat`) | `archive/…` | Old test print |
-| A9 | `components/upper_motor_retainer/upper_retainer` (no extension) | `archive/…` | Older STEP export (2025-10-03) of `upper_retainer`; `.step` is newer (2025-10-15) |
+| A7 | `components/parachute_fuselage_seat/parachute_fuselage_seat_v2.3mf` (holds `lower_closure_v2`, Dec 2025) | delete | Older duplicate; the current print of `lower_closure_v2` is `e-bay/lower_closure.3mf` (Jan 2026) |
+| A8 | `components/lower_chute_retainer/low_chute_ret_test.3mf` (holds v1 `parachute_fuselage_seat`) | delete | Old test print |
+| A9 | `components/upper_motor_retainer/upper_retainer` (no extension) | delete | Older STEP export (2025-10-03) of `upper_retainer`; `.step` is newer (2025-10-15) |
 | A10 | `components/logo.FCStd` | `components/logo/logo_flat.FCStd` | Lorenzo's request |
 | A11 | `components/logo/logo.FCStd`, `logo_red.{FCStd,step}` | `logo_projected.FCStd`, `logo_inserts.{FCStd,step}` | English names |
 | A12 | `components/e-bay/fuselage_w_logo_v2.{FCStd,step}` | `components/ebay/ebay_fuselage_logo_fitcheck.*` (with B) | Fit-check file, keep |
@@ -114,8 +113,9 @@ each part's Phase 3 rework:
 `.step` and `.3mf` files are renamed with their `.FCStd`. Note: a `.3mf` keeps the old object names inside
 (e.g. `lower_closure_v2.step`) until it is re-exported — harmless.
 
-## Questions for review
+## Review answers (2026-11-17)
 
-1. Drop LFS (recommended) or install it?
-2. `archive/` folder, or just delete legacy files (git keeps them)?
-3. OK to keep exports next to their source?
+1. LFS: explained; recommendation = drop. ❓ awaiting Lorenzo's OK.
+2. Legacy files: **delete** (no `archive/`).
+3. Exports next to their source: **OK**.
+4. Group B: Lorenzo will install A2plus (and the Rocket workbench) in FreeCAD 1.1.3.

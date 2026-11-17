@@ -106,7 +106,7 @@ For each part (one checklist block per part, added to this file when the part st
 
 ## Status
 - **Current phase:** 2 — Proposal. 2.1, 2.2 done; 2.3 drafted.
-- **Next step:** Lorenzo reviews `docs/proposal/repo_structure.md` (LFS, archive vs delete, exports location), then 2.4 `.ork` vs CAD.
+- **Next step:** Lorenzo's OK on dropping LFS (explained) → close 2.3 → 2.4 `.ork` vs CAD. In parallel: Lorenzo installs A2plus + Rocket WB in FreeCAD 1.1.3; then verify (copies, no save) that the assembly and the 4 Rocket parts load and recompute identically.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -115,7 +115,7 @@ For each part (one checklist block per part, added to this file when the part st
   5. Git LFS: install and fix `.gitattributes`, or drop LFS? Finding: LFS never actually used (no pointers in history, `*.fcstd` pattern wrong case, git-lfs not installed); recommendation in `repo_structure.md`: drop it.
   6. `.ork` vs CAD: which is the source of truth for outer dimensions?
   7. Delete or ignore the untracked `init` file; commit `.mcp.json`?
-  8. **Rocket workbench and A2plus are not installed in FreeCAD 1.1.3** (only FreeCADMCP is). Without Rocket, `nose_cone`, `lower_fins`, `upper_fin`, `rear_transition` cannot recompute their base feature; without A2plus the assembly cannot be solved/updated. Install both, or replace those features (blocks Phase 3)?
+  8. **(Lorenzo will install both, 2026-11-17)** **Rocket workbench and A2plus are not installed in FreeCAD 1.1.3** (only FreeCADMCP is). Without Rocket, `nose_cone`, `lower_fins`, `upper_fin`, `rear_transition` cannot recompute their base feature; without A2plus the assembly cannot be solved/updated. Install both, or replace those features (blocks Phase 3)?
   9. The MCP `execute_code_headless` cannot find `freecadcmd` (FreeCAD is an AppImage). Configure `--freecadcmd` in `.mcp.json`, or keep running the AppImage's `freecadcmd` via shell?
   10. ~~Shared dims~~ — resolved (`MEANINGS` in `scripts/shared_dims.py`).
   11. Features already failing in FreeCAD 1.1.3 recompute (copies only): `e-bay/fuselage` Chamfer, `lower_fuselage_v1` Sketch014, `mid_fuselage` Sketch011, `wall` Sketch005, `launch_pad` Sketch001 … — fix during Phase 3.0?
@@ -143,4 +143,5 @@ For each part (one checklist block per part, added to this file when the part st
 - **2.1 review:** sliding fit = 0.2 on Ø (CLAUDE.md updated); lower motor retainer will use M2 + insert; aluminium bar 100 = commercial stock (may change with e-bay redesign); 8 screws per joint every 45° (v1: 2 holes × 4), coupler ring 5, coupling 7.5, screws at 7.5/2; parachute bay length open until deployment redesign.
 - **2.2:** Lorenzo chose English for all names. Draft `docs/proposal/conventions.md`: rules, proposed English file names, feature/sketch/constraint patterns, Italian→English glossary.
 - **2.2 approved.** 2.3 drafted: target layout (subsystem folders `ebay/`, `parachute_bay/`, `logo/`; `parameters.FCStd` at root; exports next to source; `archive/`), LFS findings, move checklist split into A (safe now) and B (assembly parts, blocked by A2plus). Found: `e-bay/lower_closure.3mf` = current print of `lower_closure_v2`; `low_chute_ret_test.3mf` = v1 seat test; extensionless `upper_retainer` = older STEP export.
-- **Left:** review 2.3, then 2.4–2.5.
+- **2.3 review:** legacy files will be **deleted** (no `archive/`); exports stay next to source; LFS explained to Lorenzo, recommendation drop (awaiting OK); Lorenzo will install A2plus + Rocket WB (unblocks group B renames and Phase 3).
+- **Left:** LFS OK, then 2.4–2.5.
