@@ -34,7 +34,7 @@ MEANINGS = {
     5: "Outer Ø of carbon tubes and aluminium bar (5/3 tubes); many Pad/Pocket lengths are coincidental",
     3: "Inner Ø of carbon tubes / aluminium bar; also fin root thickness; other uses coincidental",
     23.428: "Radius from rocket axis to carbon-tube centres (23.4279)",
-    3.1: "MISTAKE: oversized M2 insert holes (should be 2.6): low_chute_ret Pocket004–007, upper_retainer sede_viti_*. Through-holes rear_transition Pocket002 (and upper_closure Pocket002 Ø3.2): purpose open",
+    3.1: "MISTAKE: oversized M2 insert holes (should be 2.6): low_chute_ret Pocket004–007, upper_retainer sede_viti_*. Not a mistake: rear_transition Pocket002 (through) = screw for the lower motor retainer; upper_closure Pocket002 Ø3.2 = M3 screw securing the aluminium bar (other end)",
     2.2: "M2 screw clearance hole Ø (outer part, e.g. fuselages)",
     2.6: "M2 heat-set insert hole Ø (correct value)",
     3.75: "Axial distance of radial M2 holes from the part's end face",
