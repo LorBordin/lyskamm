@@ -60,8 +60,8 @@ The 5 mm tubes look like the screw-joint rings between printed sections.
 ## Phase 2 — Proposal (documents only, no CAD changes)
 - [x] 2.1 *(done 2026-11-17 → `docs/proposal/parameters.md`, reviewed with Lorenzo; mechanism (a); final approval in 2.5)* Master parameters: list of aliases (e.g. `body_od`, `body_wall`, `coupler_od`, `fit_slide_d=0.2`, `m2_insert_hole`, `m2_clear`, `rod_d`, `fin_t`, `motor_d`…), units, source part, ork counterpart. Decide mechanism: (a) single `parameters.FCStd` spreadsheet referenced by cross-document expressions vs (b) per-part sheet synced by script. Recommendation: (a). Files: `docs/proposal/parameters.md`
 - [x] 2.2 *(approved 2026-11-17 → `docs/proposal/conventions.md`; English everywhere)* Naming conventions: files (`snake_case`, English, no version suffix — git holds versions), bodies, features (`Pad_body`, `Pocket_m2_holes`…), sketches (`SK_<purpose>`), constraints (`<alias-like name>`). Files: `docs/proposal/conventions.md`
-- [ ] 2.3 *(draft 2026-11-17 → `docs/proposal/repo_structure.md`)* Repo structure proposal: per-part folders, `exports/` for STEP/3MF, `archive/` for legacy, `parameters.FCStd` location, LFS fix (`*.FCStd`, install git-lfs or drop LFS). File moves/renames listed as a checklist (known so far: `components/logo.FCStd` → `components/logo/`; misnamed `parachute_fuselage_seat_v2.3mf` actually holds `lower_closure_v2`, and `parachute_fuselage_seat.3mf` holds the v2 seat — see `docs/inventory/file_status.md`) (each a separate, approved step; A2plus `sourceFile` paths must be updated). Files: `docs/proposal/repo_structure.md`
-- [ ] 2.4 `.ork` ↔ CAD mismatch table: lengths, Ø, fin geometry & thickness (ork 3 mm), transition, materials, missing motor mount/motor/recovery/mass overrides, motor Ø 29 vs 35 mm. Files: `docs/proposal/ork_vs_cad.md`
+- [x] 2.3 *(approved 2026-11-17 → `docs/proposal/repo_structure.md`; LFS dropped — A1 done; legacy files deleted, not archived)* Repo structure proposal: per-part folders, `exports/` for STEP/3MF, `archive/` for legacy, `parameters.FCStd` location, LFS fix (`*.FCStd`, install git-lfs or drop LFS). File moves/renames listed as a checklist (known so far: `components/logo.FCStd` → `components/logo/`; misnamed `parachute_fuselage_seat_v2.3mf` actually holds `lower_closure_v2`, and `parachute_fuselage_seat.3mf` holds the v2 seat — see `docs/inventory/file_status.md`) (each a separate, approved step; A2plus `sourceFile` paths must be updated). Files: `docs/proposal/repo_structure.md`
+- [ ] 2.4 *(draft 2026-11-17 → `docs/proposal/ork_vs_cad.md`)* `.ork` ↔ CAD mismatch table: lengths, Ø, fin geometry & thickness (ork 3 mm), transition, materials, missing motor mount/motor/recovery/mass overrides, motor Ø 29 vs 35 mm. Files: `docs/proposal/ork_vs_cad.md`
 - [ ] 2.5 ⏸ **Review with Lorenzo**: approve parameter list, conventions, structure, which .ork fixes to apply. Commit.
 
 ## Phase 3 — Parametrization (part by part, geometry must not change)
@@ -105,20 +105,20 @@ For each part (one checklist block per part, added to this file when the part st
 ---
 
 ## Status
-- **Current phase:** 2 — Proposal. 2.1, 2.2 done; 2.3 drafted.
-- **Next step:** Lorenzo's OK on dropping LFS (explained) → close 2.3 → 2.4 `.ork` vs CAD. In parallel: Lorenzo installs A2plus + Rocket WB in FreeCAD 1.1.3; then verify (copies, no save) that the assembly and the 4 Rocket parts load and recompute identically.
+- **Current phase:** 2 — Proposal. 2.1–2.3 done; 2.4 drafted.
+- **Next step:** Lorenzo reviews `docs/proposal/ork_vs_cad.md` (5 questions at the end; measure section lengths, check lower-fin overhang), then 2.5 overall review.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
   3. ~~Master parameters mechanism~~ — resolved: (a) single `parameters.FCStd` (spreadsheet `Params`) with cross-document expressions.
   4. Keep A2plus, or migrate the assembly to FreeCAD's built-in Assembly workbench (later, separate decision)?
   5. Git LFS: install and fix `.gitattributes`, or drop LFS? Finding: LFS never actually used (no pointers in history, `*.fcstd` pattern wrong case, git-lfs not installed); recommendation in `repo_structure.md`: drop it.
-  6. `.ork` vs CAD: which is the source of truth for outer dimensions?
+  6. `.ork` vs CAD: which is the source of truth for outer dimensions? Proposed in `ork_vs_cad.md`: CAD for geometry, weighed masses for mass, `.ork` follows.
   7. Delete or ignore the untracked `init` file; commit `.mcp.json`?
-  8. **(Lorenzo will install both, 2026-11-17)** **Rocket workbench and A2plus are not installed in FreeCAD 1.1.3** (only FreeCADMCP is). Without Rocket, `nose_cone`, `lower_fins`, `upper_fin`, `rear_transition` cannot recompute their base feature; without A2plus the assembly cannot be solved/updated. Install both, or replace those features (blocks Phase 3)?
+  8. ~~Rocket WB + A2plus missing~~ — installed by Lorenzo (2026-11-17), verified headless on copies: all Python objects load; `nose_cone` and `rear_transition` recompute identically; assembly loads (32 parts, no errors). ⚠ `lower_fins`/`upper_fin`: the Rocket `Fin` now regenerates +0.75 % volume and `Sketch` (attached to `Face10` of the fin) becomes Invalid → fix in Phase 3.0.
   9. The MCP `execute_code_headless` cannot find `freecadcmd` (FreeCAD is an AppImage). Configure `--freecadcmd` in `.mcp.json`, or keep running the AppImage's `freecadcmd` via shell?
   10. ~~Shared dims~~ — resolved (`MEANINGS` in `scripts/shared_dims.py`).
-  11. Features already failing in FreeCAD 1.1.3 recompute (copies only): `e-bay/fuselage` Chamfer, `lower_fuselage_v1` Sketch014, `mid_fuselage` Sketch011, `wall` Sketch005, `launch_pad` Sketch001 … — fix during Phase 3.0?
+  11. Features already failing in FreeCAD 1.1.3 recompute (copies only): `lower_fins`/`upper_fin` Sketch (on `Face10`, after Rocket WB install); `e-bay/fuselage` Chamfer, `lower_fuselage_v1` Sketch014, `mid_fuselage` Sketch011, `wall` Sketch005, `launch_pad` Sketch001 … — fix during Phase 3.0?
   12. ~~Mass estimate~~ — resolved: weighed masses only; Bambu Studio for new parts.
 
 ## Session log
@@ -144,4 +144,5 @@ For each part (one checklist block per part, added to this file when the part st
 - **2.2:** Lorenzo chose English for all names. Draft `docs/proposal/conventions.md`: rules, proposed English file names, feature/sketch/constraint patterns, Italian→English glossary.
 - **2.2 approved.** 2.3 drafted: target layout (subsystem folders `ebay/`, `parachute_bay/`, `logo/`; `parameters.FCStd` at root; exports next to source; `archive/`), LFS findings, move checklist split into A (safe now) and B (assembly parts, blocked by A2plus). Found: `e-bay/lower_closure.3mf` = current print of `lower_closure_v2`; `low_chute_ret_test.3mf` = v1 seat test; extensionless `upper_retainer` = older STEP export.
 - **2.3 review:** legacy files will be **deleted** (no `archive/`); exports stay next to source; LFS explained to Lorenzo, recommendation drop (awaiting OK); Lorenzo will install A2plus + Rocket WB (unblocks group B renames and Phase 3).
-- **Left:** LFS OK, then 2.4–2.5.
+- **Later:** LFS dropped (`.gitattributes` → binary markers; commit 051414f). Lorenzo installed A2plus + Rocket WB → verified (see open question 8). 2.4 drafted: `docs/proposal/ork_vs_cad.md`. Findings: fin count is 4+4 in CAD (Rocket `FinCount=3` unused — corrected in `parameters.md`); lower fins overhang ≈19 mm past the lower fuselage onto the transition vs 5 mm forward in `.ork` (CP!); `.ork` has no mass overrides; assembly has overlapping outer surfaces (parachute bay vs mid fuselage ≈15 mm) so it is not reliable for positions; lengths disagree (nominal 860.5 / assembly 875.5 / measured 871 / `.ork` 864).
+- **Left:** review 2.4, then 2.5.

@@ -80,7 +80,7 @@ Values that must agree between CAD and `.ork`. Mismatches are only listed here; 
 | `transition_aft_d` | 40 | 42 | ⚠ mismatch |
 | `transition_k` | 0.5 (power) | 0.5 ✔ | |
 | `transition_t` | 3 | 2 | ⚠ mismatch |
-| `fin_count` | 3 | 4 | ⚠ mismatch (both fin sets) |
+| `fin_count` | 4 | 4 ✔ | 4 + 4 single-fin parts in the assembly (the Rocket `FinCount = 3` property is unused, `FinSet = false`). |
 | `fin_t` | 3 | 3 ✔ | Root and tip. |
 | `lower_fin_root` / `tip` / `sweep` / `height` | 63.5 / 32 / 21 / 50 | 60 / 30 / 20 / 50 | ⚠ mismatch |
 | `upper_fin_root` / `tip` / `sweep` / `height` | 95 / 41 / 50 / 50 | 90 / 40 / 50 / 50 (freeform) | ⚠ mismatch |
