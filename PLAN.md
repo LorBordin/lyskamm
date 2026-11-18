@@ -90,12 +90,49 @@ For each part (one checklist block per part, added to this file when the part st
 - [ ] d. Verify geometry unchanged: volume/bbox/CoM equal to baseline (tolerance 1e-6).
 - [ ] e. 🔧 Update the part in the A2plus assembly, solve, check interferences/fits with neighbours. ⏸ Lorenzo checks → commit.
 - [ ] f. Re-export STEP/3MF only if Lorenzo asks.
-#### Part 1 — `components/e-bay/fuselage`
-- [x] a. Baseline (2026-11-18, stored shape = recomputed in 1.1.3, scratch copy): Body tip `Chamfer`, 1 valid solid, vol **18786.308720 mm³**, bbox (−30, 0, 0)–(30, 30, 105), CoM (0.000966, 18.662062, 52.500357). Rebuild 0.3 s, no Invalid features, no `Missing` external geometry. Contents: `Sketch`…`Sketch004`, `Pad`, `Pocket`, `Pocket001` (`sede_viti_1`), `Pocket002` (`sede_viti_2`), `PolarPattern`, `Chamfer`, `DatumPlane`/`001`/`002`.
-- [ ] b. Rename sketches/features per convention.
-- [ ] c. Name driving constraints, bind to `Params` aliases.
-- [ ] d. Verify geometry unchanged vs baseline.
-- [ ] e. Update in A2plus assembly.
+#### Per-part progress (a–e)
+Done 2026-11-18 (Lorenzo chose a batch run: labels + bindings for all parts, asking only on unclear points). Every part:
+saved from the GUI, one commit each; checked against a plain 1.1.3 recompute of the untouched file (vol/CoM within
+~1e-9 relative, no Invalid features, every bound value unchanged); final fresh headless reopen of all parts:
+`parameters.FCStd` loads via `../../parameters.FCStd`, no Invalid features. Parts never resaved in 3.0 show
+1.0 → 1.1.3 drift of ≤ 0.01 mm³ (nose_cone, closures, upper_retainer, rear_transition) — recorded in their commits.
+`e-bay/fuselage` baseline: vol 18786.308720 mm³, CoM (0.000966, 18.662062, 52.500357).
+
+| Part | a | b labels | c bindings | d | e A2plus | Notes |
+|---|---|---|---|---|---|---|
+| e-bay/fuselage | ✅ | ✅ | ✅ 19 | ✅ | ☐ | SK_shell DoF 4 → 0 |
+| e-bay/fuselage_w_logo | ✅ | ✅ shell only | ✅ 19 | ✅ | ☐ | logo bodies keep labels (logo is local) |
+| mid_fuselage | ✅ | ✅ | ✅ 26 | ✅ | ☐ | |
+| lower_fuselage_v1 | ✅ | ✅ | ✅ 21 | ✅ | ☐ | Sketch021 redundant #30 deleted (sketch was Invalid on plain recompute); DoF 12 → 13 |
+| rear_transition | ✅ | ✅ | ✅ 21 | ✅ | ☐ | `Pocket_fin_slot_fillers_trim` removes no material |
+| upper_retainer | ✅ | ✅ | ✅ 21 | ✅ | ☐ | |
+| low_chute_ret | ✅ | ✅ | ✅ 24 | ✅ | ☐ | |
+| parachute_fuselage_seat_v2 | ✅ | ✅ | ✅ 13 | ✅ | ☐ | |
+| sede_presa_elettrica_sup | ✅ | ✅ | ✅ 3 | ✅ | ☐ | deployment system, mostly local |
+| pistone | ✅ | ✅ (Body → `piston`) | ✅ 2 | ✅ | ☐ | not in assembly |
+| e-bay/lower_closure_v2 | ✅ | ✅ except `Pocket009`/`Sketch016` | ✅ 19 | ✅ | ☐ | Pocket009 purpose: Lorenzo to check |
+| e-bay/mid_closure | ✅ | ✅ | ✅ 22 | ✅ | ☐ | |
+| e-bay/upper_closure | ✅ | ✅ | ✅ 21 | ✅ | ☐ | key pattern: Transform body → `Pad003` only (bool diff 0) |
+| e-bay/presa_elettrica | ✅ | ✅ | — | ✅ | ☐ | local dims only |
+| nose_cone | ✅ | ✅ | ✅ 10 | ✅ | ☐ | |
+| upper_fin / lower_fins | ✅ | ✅ | ✅ 2 each | ✅ | ☐ | Fin root/TTW thickness = `fin_t` |
+| carbon_rod / alluminium_rod | ✅ | ✅ | ✅ 3 each | ✅ | ☐ | |
+
+Rules applied: v1 deviations stay literals (Ø3.1 inserts, 5.15/5.25/5.75 rod/bar holes, 7.2/7.25 bosses, 3.2 M3,
+nose Ø2.1 holes + 1.0 chamfer); local dims (connector, deployment, 41.x Ø) stay literals; repeated dims: one
+named constraint per sketch, duplicates bound to the same alias unnamed.
+**Still open in Phase 3:** close DoF in the sketches listed below (only trivial ones were closed); clean up `Missing`
+external geometry (mid_fuselage, lower_fuselage_v1); step e (A2plus update) for all parts.
+Sketches with DoF > 0 (2026-11-18): fuselage_w_logo logo Sketch010/012/014/016 (1); mid_fuselage SK_rod_bosses 5,
+SK_fin_slots 2, SK_m2_holes_upper_67_5 1, SK_end_padding_lower 1; lower_fuselage_v1 SK_motor_centering 1, SK_fin_slot 2,
+SK_fin_slot_lower 1, SK_transition_lugs 1, SK_transition_fit 3, SK_transition_fit_trim 1, SK_reinforcement_lower 7,
+SK_shell_reinforcement_rods 11, SK_shell_reinforcement_fins 13; rear_transition SK_rod_bosses 3, SK_motor_tube_ribs 2,
+SK_fin_slot_fillers 2, SK_fin_slot_fillers_trim 1; upper_retainer SK_rod_bosses 4, SK_fin_slot_fillers 1; low_chute_ret
+SK_connector_slot 7, SK_screw_eye_cable_holes 6; parachute_fuselage_seat_v2 SK_rod_bosses 8, SK_cable_passage 2,
+SK_connector_seat 8, SK_connector_seat_stop 9, SK_connector_slot 7, SK_connector_pins 2; sede_presa_elettrica_sup SK_seat 5,
+SK_connector_recess 3, SK_extraction_notches 1; pistone SK_body 15, SK_cavity 2; lower_closure_v2 SK_connector_slot 7,
+SK_connector_pins 2, SK_keys 1, SK_key_trim 3, SK_m2_inserts_22_5/67_5 2; mid_closure SK_keys 2, SK_key_trim 1,
+SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
 
 - [ ] 3.99 Smoke test: change `fit_slide` 0.15 → 0.20 in a scratch copy (not saved), confirm all dependent parts update; discard.
 
@@ -128,8 +165,8 @@ For each part (one checklist block per part, added to this file when the part st
 ---
 
 ## Status
-- **Current phase:** 3 — 3.0 and 3.1 (`parameters.FCStd`) done 2026-11-18.
-- **Next step:** Phase 3 per-part loop, first part `components/e-bay/fuselage`: a (baseline) done → b rename proposal.
+- **Current phase:** 3 — 3.0, 3.1 done; per-part labels + bindings (b–d) done for all 18 parts 2026-11-18, awaiting Lorenzo's check in FreeCAD.
+- **Next step:** Lorenzo checks the parts; then `lower_closure_v2` Pocket009 label, DoF closing, `Missing` external geometry cleanup, step e (A2plus update), 3.99 smoke test.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -181,4 +218,10 @@ For each part (one checklist block per part, added to this file when the part st
 - **Bug found:** opening/closing a sketch in `mid_fuselage` froze FreeCAD. Not the migration fixes: `PolarPattern007` patterned the whole body (≈48 s per rebuild). Changed to pattern only `Pad005` → identical solid, rebuild 5.5 s; Lorenzo confirmed sketches close normally.
 - **Learned:** checks after a CAD change must include rebuild time from the first sketch and the sketches' external geometry (`Missing` flags), not only Invalid features + volume. FreeCAD restarts kill the MCP RPC server (Lorenzo restarts it).
 - **Left:** 3.1 `parameters.FCStd` (next session); `Missing` external geometry cleanup per part in Phase 3.
+
+### 2026-11-18 — Session 5 (Phase 3.1 + per-part parametrization)
+- **Done:** 3.1 `parameters.FCStd` (repo root, `Params`, now 44 aliases incl. `key_size`, `key_notch_size`, `m2_csk`, `fin_shell_wall`, `fin_shell_id`); cross-document link tested. `e-bay/fuselage` done step by step with Lorenzo (baseline, labels, bindings). Then, at Lorenzo's request, batch run over the other 17 parts (labels + Params bindings, one commit per part, ask only on unclear points). Lorenzo explained the unclear features (end paddings, transition fit, fin-slot fillers, connector seat stop, extraction notches, screw-eye/cable holes). Q7 resolved (`init` deleted).
+- **Decisions:** Params holds CAD design values; small CAD-vs-measured differences are expected (polish, measurement error). Fin chord/height stay local to the fin parts. v1 deviations stay literals. Key notches on the e-bay shells = alignment V for the closure keys (7.5 key / 7.6 notch).
+- **Issues:** during the propagation test I edited Params cells by stale row numbers (restored before saving); literal expressions on fin flange dims (removed). Rebuild of the whole part takes ≈5–7 s for mid/lower fuselage and rear_transition (as before).
+- **Left:** Lorenzo's check of all parts; lower_closure_v2 Pocket009; DoF closing; Missing external geometry; A2plus update (e); 3.99.
 
