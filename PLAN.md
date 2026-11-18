@@ -88,7 +88,7 @@ For each part (one checklist block per part, added to this file when the part st
 - [ ] b. 🔧 Rename sketches/features per convention. ⏸ Review → apply → ⏸ Lorenzo checks → commit.
 - [ ] c. 🔧 Name driving constraints and bind them to aliases (`=parameters#Params.body_od`), small batches (≤ ~10 constraints per change). Close DoF where needed. ⏸ Review → apply → ⏸ Lorenzo checks → commit.
 - [x] d. Verify geometry unchanged: volume/bbox/CoM equal to baseline (tolerance 1e-6 **relative**). *(closed 2026-11-18 for all parts)*
-- [ ] e. 🔧 Update the part in the A2plus assembly, solve, check interferences/fits with neighbours. ⏸ Lorenzo checks → commit.
+- [ ] e. 🔧 ~~Update the part in the A2plus assembly~~ → *replaced (Q4):* add the part to the new built-in Assembly, check interferences/fits with neighbours. ⏸ Lorenzo checks → commit.
 - [ ] f. Re-export STEP/3MF only if Lorenzo asks.
 #### Per-part progress (a–e)
 Done 2026-11-18 (Lorenzo chose a batch run: labels + bindings for all parts, asking only on unclear points). Every part:
@@ -121,8 +121,7 @@ saved from the GUI, one commit each; checked against a plain 1.1.3 recompute of 
 Rules applied: v1 deviations stay literals (Ø3.1 inserts, 5.15/5.25/5.75 rod/bar holes, 7.2/7.25 bosses, 3.2 M3,
 nose Ø2.1 holes + 1.0 chamfer); local dims (connector, deployment, 41.x Ø) stay literals; repeated dims: one
 named constraint per sketch, duplicates bound to the same alias unnamed.
-**Still open in Phase 3:** close DoF in the sketches listed below (only trivial ones were closed); clean up `Missing`
-external geometry (mid_fuselage, lower_fuselage_v1); step e (A2plus update) for all parts.
+**Still open in Phase 3:** close DoF in the sketches listed below (only trivial ones were closed); ~~clean up `Missing` external geometry~~ (done session 6); step e is **replaced** by building a new assembly in the built-in Assembly workbench (Q4, resolved) — no A2plus update.
 Sketches with DoF > 0 (2026-11-18): fuselage_w_logo logo Sketch010/012/014/016 (1); mid_fuselage SK_rod_bosses 5,
 SK_fin_slots 2, SK_m2_holes_upper_67_5 1, SK_end_padding_lower 1; lower_fuselage_v1 SK_motor_centering 1, SK_fin_slot 2,
 SK_fin_slot_lower 1, SK_transition_lugs 1, SK_transition_fit 3, SK_transition_fit_trim 1,
@@ -166,12 +165,12 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
 
 ## Status
 - **Current phase:** 3 — 3.0, 3.1 done; per-part labels + bindings (b–d) done for all 18 parts and checked by Lorenzo 2026-11-18.
-- **Next step:** Lorenzo checks `mid_fuselage` (committed) and `lower_fuselage_v1` (see session 6) in FreeCAD; then DoF closing, then step e (A2plus update). 3.99 done; `Missing` cleanup done in both parts.
+- **Next step:** (1) scratch trial of the built-in Assembly with 3–4 neighbouring parts (Q4 decided: migrate); (2) DoF closing, one part at a time (start with sketches of 1–2 DoF); (3) build the new assembly (step e replaced), incl. the missing parts. Done: 3.d, 3.99, `Missing` cleanup (both parts checked by Lorenzo).
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
   3. ~~Master parameters mechanism~~ — resolved: (a) single `parameters.FCStd` (spreadsheet `Params`) with cross-document expressions.
-  4. Keep A2plus, or migrate the assembly to FreeCAD's built-in Assembly workbench? **Discussed 2026-11-18 (end of session 6):** Claude recommends built-in Assembly (live links to the part files → no "update from source" step e; maintained by core FreeCAD; A2plus is a community add-on with static copies) but built from scratch, not converted, and only after a scratch trial with a few parts (not yet done). Decision pending; step e is moot if migrating.
+  4. ~~Keep A2plus or migrate?~~ — **resolved 2026-11-18 (Lorenzo): migrate to the built-in Assembly workbench**, built from scratch (live links, no "update from source"), after a scratch trial with 3–4 neighbouring parts (e.g. `mid_fuselage`, `lower_fuselage_v1`, `rear_transition`: links, cross-document `parameters.FCStd`, fit checks, CG). Keep the A2plus assembly untouched until the new one is trusted.
   5. Git LFS: install and fix `.gitattributes`, or drop LFS? Finding: LFS never actually used (no pointers in history, `*.fcstd` pattern wrong case, git-lfs not installed); recommendation in `repo_structure.md`: drop it.
   6. ~~`.ork` vs CAD source of truth~~ — resolved: lengths/body shape = CAD (confirmed by physical measurement); fin dimensions = `.ork` (CAD fins enlarged on purpose for slicing loss); masses = weighed.
   7. ~~Delete or ignore the untracked `init` file; commit `.mcp.json`?~~ — resolved: `init` deleted by Lorenzo (2026-11-18), `.mcp.json` committed.
@@ -234,4 +233,5 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
   - `lower_fuselage_v1`: SK_fin_can → construction circle bound to `fin_shell_id`; SK_shell_lower tangents → `body_od` / `fin_shell_id` diameters; SK_transition_lugs → `DistanceX -3.1`, `DistanceY 20`, `Vertical`; SK_transition_fit_trim → `Pocket005.Edge1`; SK_reinforcement_lower (8 slot-wall links): angle ±45°/±135° + distance 1.55 per wall, Ø`fin_shell_id`, coincident joints; DoF 7 → 0.
   - **Side effect in `lower_fuselage_v1`:** the old sketch had its slot-wall lines off the exact 45° by ≈3e-4° and 3 µm; making them exact removed µm-size sliver faces/edges, so volume 63875.338302 → 63875.289949 (−0.048 mm³, 7.6e-7 relative; CoM +5e-5 mm). `Chamfer_fin_can` had to be re-selected (edge numbering changed; same 8 r29 arcs at z = 5). Rebuild 7.2 s (was 7.1 s).
   - Method note: replacing an external link by `Angle`/`Distance` constraints must use **exact** angles; copying the sketch's current angle locks in the old sloppiness.
-- **Left:** DoF closing; Q4 (A2plus vs built-in Assembly: scratch trial, then decide); step e depends on Q4. Lorenzo checked both parts (OK); 3.d closed.
+- **Decision (end of session):** Lorenzo chose to migrate to the built-in Assembly workbench (Q4 resolved); build from scratch, scratch trial first, A2plus assembly kept untouched meanwhile. Step e of Phase 3 is replaced accordingly.
+- **Left:** scratch trial of built-in Assembly; DoF closing; new assembly. Lorenzo checked both parts (OK); 3.d closed.
