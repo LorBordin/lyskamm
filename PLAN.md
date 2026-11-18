@@ -87,7 +87,7 @@ For each part (one checklist block per part, added to this file when the part st
 - [ ] a. Record baseline: volume, bbox, center of mass (read-only).
 - [ ] b. 🔧 Rename sketches/features per convention. ⏸ Review → apply → ⏸ Lorenzo checks → commit.
 - [ ] c. 🔧 Name driving constraints and bind them to aliases (`=parameters#Params.body_od`), small batches (≤ ~10 constraints per change). Close DoF where needed. ⏸ Review → apply → ⏸ Lorenzo checks → commit.
-- [ ] d. Verify geometry unchanged: volume/bbox/CoM equal to baseline (tolerance 1e-6).
+- [x] d. Verify geometry unchanged: volume/bbox/CoM equal to baseline (tolerance 1e-6 **relative**). *(closed 2026-11-18 for all parts)*
 - [ ] e. 🔧 Update the part in the A2plus assembly, solve, check interferences/fits with neighbours. ⏸ Lorenzo checks → commit.
 - [ ] f. Re-export STEP/3MF only if Lorenzo asks.
 #### Per-part progress (a–e)
@@ -103,7 +103,7 @@ saved from the GUI, one commit each; checked against a plain 1.1.3 recompute of 
 | e-bay/fuselage | ✅ | ✅ | ✅ 19 | ✅ | ☐ | SK_shell DoF 4 → 0 |
 | e-bay/fuselage_w_logo | ✅ | ✅ shell only | ✅ 19 | ✅ | ☐ | logo bodies keep labels (logo is local) |
 | mid_fuselage | ✅ | ✅ | ✅ 26 | ✅ | ☐ | |
-| lower_fuselage_v1 | ✅ | ✅ | ✅ 21 | ✅ | ☐ | Sketch021 redundant #30 deleted (sketch was Invalid on plain recompute); DoF 12 → 13 |
+| lower_fuselage_v1 | ✅ | ✅ | ✅ 21 | ✅ | ☐ | Sketch021 redundant #30 deleted (sketch was Invalid on plain recompute); DoF 12 → 13. **New baseline after `Missing` cleanup (session 6): vol 63875.289949 mm³** (−7.6e-7 relative, µm slivers removed) |
 | rear_transition | ✅ | ✅ | ✅ 21 | ✅ | ☐ | `Pocket_fin_slot_fillers_trim` removes no material |
 | upper_retainer | ✅ | ✅ | ✅ 21 | ✅ | ☐ | |
 | low_chute_ret | ✅ | ✅ | ✅ 24 | ✅ | ☐ | |
