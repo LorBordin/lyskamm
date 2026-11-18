@@ -110,7 +110,7 @@ saved from the GUI, one commit each; checked against a plain 1.1.3 recompute of 
 | parachute_fuselage_seat_v2 | ✅ | ✅ | ✅ 13 | ✅ | ☐ | |
 | sede_presa_elettrica_sup | ✅ | ✅ | ✅ 3 | ✅ | ☐ | deployment system, mostly local |
 | pistone | ✅ | ✅ (Body → `piston`) | ✅ 2 | ✅ | ☐ | not in assembly |
-| e-bay/lower_closure_v2 | ✅ | ✅ except `Pocket009`/`Sketch016` | ✅ 19 | ✅ | ☐ | Pocket009 purpose: Lorenzo to check |
+| e-bay/lower_closure_v2 | ✅ | ✅ | ✅ 19 | ✅ | ☐ | `Pocket_bar_slots` = aluminium bar slots |
 | e-bay/mid_closure | ✅ | ✅ | ✅ 22 | ✅ | ☐ | |
 | e-bay/upper_closure | ✅ | ✅ | ✅ 21 | ✅ | ☐ | key pattern: Transform body → `Pad003` only (bool diff 0) |
 | e-bay/presa_elettrica | ✅ | ✅ | — | ✅ | ☐ | local dims only |
@@ -165,8 +165,8 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
 ---
 
 ## Status
-- **Current phase:** 3 — 3.0, 3.1 done; per-part labels + bindings (b–d) done for all 18 parts 2026-11-18, awaiting Lorenzo's check in FreeCAD.
-- **Next step:** Lorenzo checks the parts; then `lower_closure_v2` Pocket009 label, DoF closing, `Missing` external geometry cleanup, step e (A2plus update), 3.99 smoke test.
+- **Current phase:** 3 — 3.0, 3.1 done; per-part labels + bindings (b–d) done for all 18 parts and checked by Lorenzo 2026-11-18.
+- **Next step:** DoF closing, `Missing` external geometry cleanup, step e (A2plus update), 3.99 smoke test.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -223,5 +223,6 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
 - **Done:** 3.1 `parameters.FCStd` (repo root, `Params`, now 44 aliases incl. `key_size`, `key_notch_size`, `m2_csk`, `fin_shell_wall`, `fin_shell_id`); cross-document link tested. `e-bay/fuselage` done step by step with Lorenzo (baseline, labels, bindings). Then, at Lorenzo's request, batch run over the other 17 parts (labels + Params bindings, one commit per part, ask only on unclear points). Lorenzo explained the unclear features (end paddings, transition fit, fin-slot fillers, connector seat stop, extraction notches, screw-eye/cable holes). Q7 resolved (`init` deleted).
 - **Decisions:** Params holds CAD design values; small CAD-vs-measured differences are expected (polish, measurement error). Fin chord/height stay local to the fin parts. v1 deviations stay literals. Key notches on the e-bay shells = alignment V for the closure keys (7.5 key / 7.6 notch).
 - **Issues:** during the propagation test I edited Params cells by stale row numbers (restored before saving); literal expressions on fin flange dims (removed). Rebuild of the whole part takes ≈5–7 s for mid/lower fuselage and rear_transition (as before).
-- **Left:** Lorenzo's check of all parts; lower_closure_v2 Pocket009; DoF closing; Missing external geometry; A2plus update (e); 3.99.
+- **Later same session:** Lorenzo checked all parts (OK); Pocket009 = aluminium bar slots → labelled.
+- **Left:** DoF closing; Missing external geometry; A2plus update (e); 3.99.
 
