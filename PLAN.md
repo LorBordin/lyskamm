@@ -119,8 +119,8 @@ For each part (one checklist block per part, added to this file when the part st
 ---
 
 ## Status
-- **Current phase:** 2 done (approved 2026-11-17); group A file moves done → next: Phase 3.
-- **Next step:** 3.0 fix 3/4: `mid_fuselage` (Sketch011 → Face36 + Chamfer re-select; vol −2.45 mm³) awaiting Lorenzo OK; then lower_fuselage_v1.
+- **Current phase:** 3 — 3.0 (FreeCAD 1.1.3 migration fixes) done 2026-11-18.
+- **Next step:** 3.1 create `parameters.FCStd` (spreadsheet `Params`, aliases from `docs/proposal/parameters.md`) — propose, wait for OK.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
