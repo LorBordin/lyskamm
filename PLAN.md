@@ -171,7 +171,7 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
   3. ~~Master parameters mechanism~~ — resolved: (a) single `parameters.FCStd` (spreadsheet `Params`) with cross-document expressions.
-  4. Keep A2plus, or migrate the assembly to FreeCAD's built-in Assembly workbench (later, separate decision)?
+  4. Keep A2plus, or migrate the assembly to FreeCAD's built-in Assembly workbench? **Discussed 2026-11-18 (end of session 6):** Claude recommends built-in Assembly (live links to the part files → no "update from source" step e; maintained by core FreeCAD; A2plus is a community add-on with static copies) but built from scratch, not converted, and only after a scratch trial with a few parts (not yet done). Decision pending; step e is moot if migrating.
   5. Git LFS: install and fix `.gitattributes`, or drop LFS? Finding: LFS never actually used (no pointers in history, `*.fcstd` pattern wrong case, git-lfs not installed); recommendation in `repo_structure.md`: drop it.
   6. ~~`.ork` vs CAD source of truth~~ — resolved: lengths/body shape = CAD (confirmed by physical measurement); fin dimensions = `.ork` (CAD fins enlarged on purpose for slicing loss); masses = weighed.
   7. ~~Delete or ignore the untracked `init` file; commit `.mcp.json`?~~ — resolved: `init` deleted by Lorenzo (2026-11-18), `.mcp.json` committed.
@@ -234,4 +234,4 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
   - `lower_fuselage_v1`: SK_fin_can → construction circle bound to `fin_shell_id`; SK_shell_lower tangents → `body_od` / `fin_shell_id` diameters; SK_transition_lugs → `DistanceX -3.1`, `DistanceY 20`, `Vertical`; SK_transition_fit_trim → `Pocket005.Edge1`; SK_reinforcement_lower (8 slot-wall links): angle ±45°/±135° + distance 1.55 per wall, Ø`fin_shell_id`, coincident joints; DoF 7 → 0.
   - **Side effect in `lower_fuselage_v1`:** the old sketch had its slot-wall lines off the exact 45° by ≈3e-4° and 3 µm; making them exact removed µm-size sliver faces/edges, so volume 63875.338302 → 63875.289949 (−0.048 mm³, 7.6e-7 relative; CoM +5e-5 mm). `Chamfer_fin_can` had to be re-selected (edge numbering changed; same 8 r29 arcs at z = 5). Rebuild 7.2 s (was 7.1 s).
   - Method note: replacing an external link by `Angle`/`Distance` constraints must use **exact** angles; copying the sketch's current angle locks in the old sloppiness.
-- **Left:** Lorenzo's check of both parts; DoF closing; step e (A2plus; decide Q4 first).
+- **Left:** DoF closing; Q4 (A2plus vs built-in Assembly: scratch trial, then decide); step e depends on Q4. Lorenzo checked both parts (OK); 3.d closed.
