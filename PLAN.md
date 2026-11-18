@@ -90,6 +90,13 @@ For each part (one checklist block per part, added to this file when the part st
 - [ ] d. Verify geometry unchanged: volume/bbox/CoM equal to baseline (tolerance 1e-6).
 - [ ] e. 🔧 Update the part in the A2plus assembly, solve, check interferences/fits with neighbours. ⏸ Lorenzo checks → commit.
 - [ ] f. Re-export STEP/3MF only if Lorenzo asks.
+#### Part 1 — `components/e-bay/fuselage`
+- [x] a. Baseline (2026-11-18, stored shape = recomputed in 1.1.3, scratch copy): Body tip `Chamfer`, 1 valid solid, vol **18786.308720 mm³**, bbox (−30, 0, 0)–(30, 30, 105), CoM (0.000966, 18.662062, 52.500357). Rebuild 0.3 s, no Invalid features, no `Missing` external geometry. Contents: `Sketch`…`Sketch004`, `Pad`, `Pocket`, `Pocket001` (`sede_viti_1`), `Pocket002` (`sede_viti_2`), `PolarPattern`, `Chamfer`, `DatumPlane`/`001`/`002`.
+- [ ] b. Rename sketches/features per convention.
+- [ ] c. Name driving constraints, bind to `Params` aliases.
+- [ ] d. Verify geometry unchanged vs baseline.
+- [ ] e. Update in A2plus assembly.
+
 - [ ] 3.99 Smoke test: change `fit_slide` 0.15 → 0.20 in a scratch copy (not saved), confirm all dependent parts update; discard.
 
 ## Phase 4 — CLAUDE.md (full)
@@ -122,7 +129,7 @@ For each part (one checklist block per part, added to this file when the part st
 
 ## Status
 - **Current phase:** 3 — 3.0 and 3.1 (`parameters.FCStd`) done 2026-11-18.
-- **Next step:** Phase 3 per-part loop, first part `components/e-bay/fuselage`: add its checklist block, step a (baseline: volume, bbox, CoM, read-only).
+- **Next step:** Phase 3 per-part loop, first part `components/e-bay/fuselage`: a (baseline) done → b rename proposal.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
