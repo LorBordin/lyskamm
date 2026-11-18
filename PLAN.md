@@ -78,7 +78,7 @@ Pre-step:
 
     Progress: ✅ fins, ✅ e-bay fuselages (2026-11-17), ✅ mid_fuselage, ✅ lower_fuselage_v1 (2026-11-18) — all checked by Lorenzo. **3.0 done.**
     **Follow-up 2026-11-18 — sketch close hang in `mid_fuselage`:** closing any sketch *before* `PolarPattern007` froze FreeCAD 1.1.3 (force quit). Cause: `PolarPattern007` was "Transform body" (`TransformMode=1`, no `Originals`) → 4 copies of the whole fuselage fused + refined (≈48 s headless, hangs in GUI); present since the first commit. Fix (approved, checked): `TransformMode=0`, `Originals=[Pad005]` → body identical (Δvol 0.002 mm³, boolean diff 0), full rebuild 5.5 s. `e-bay/upper_closure` `PolarPattern` is also "Transform body" (small part, no hang seen; revisit in its Phase 3 rework).
-    **Known, not fixed (geometry unaffected):** sketches with external geometry flagged `Missing` (links lost in the 1.0 → 1.1 move; frozen copies still drive constraints): `mid_fuselage` Sketch005/006/014/015, `lower_fuselage_v1` Sketch008/011/013/014/015/017/019; `lower_fuselage_v1` Sketch021 redundant constraint #30. Clean up in each part's Phase 3 rework (re-link used ones to the matching edge, delete unused ones). Finder: in `Document.xml`, `ExternalGeo` geometries with `flags & 8` (Missing).
+    **Known, not fixed (geometry unaffected):** sketches with external geometry flagged `Missing` (links lost in the 1.0 → 1.1 move; frozen copies still drive constraints): `mid_fuselage` Sketch005/006/014/015, `lower_fuselage_v1` Sketch008/011/013/014/015/017/019; `lower_fuselage_v1` Sketch021 redundant constraint #30. **Cleaned up 2026-11-18 (session 6)** — see the Session log; Finder below still valid for other parts. Finder: in `Document.xml`, `ExternalGeo` geometries with `flags & 8` (Missing).
     The ≈2 mm³ differences are FreeCAD 1.0 → 1.1 kernel drift (upstream features already differ by up to 0.7 mm³ before any fix). Proposed tolerance for 3.0 only: volume ≤ 0.01 %, CoM ≤ 0.01 mm, plus Lorenzo's visual check. Apply one part at a time (save = resave in 1.1.3), each approved, checked in FreeCAD, committed.
 - [x] 3.1 *(done 2026-11-18: repo root, spreadsheet `Params`, 39 aliases; parts link it as `../../parameters.FCStd` from `components/<subsystem>/`, tested on scratch copies)* 🔧 Create `parameters.FCStd` with the approved aliases. ⏸ Review with Lorenzo → check in FreeCAD → commit.
 
@@ -125,8 +125,8 @@ named constraint per sketch, duplicates bound to the same alias unnamed.
 external geometry (mid_fuselage, lower_fuselage_v1); step e (A2plus update) for all parts.
 Sketches with DoF > 0 (2026-11-18): fuselage_w_logo logo Sketch010/012/014/016 (1); mid_fuselage SK_rod_bosses 5,
 SK_fin_slots 2, SK_m2_holes_upper_67_5 1, SK_end_padding_lower 1; lower_fuselage_v1 SK_motor_centering 1, SK_fin_slot 2,
-SK_fin_slot_lower 1, SK_transition_lugs 1, SK_transition_fit 3, SK_transition_fit_trim 1, SK_reinforcement_lower 7,
-SK_shell_reinforcement_rods 11, SK_shell_reinforcement_fins 13; rear_transition SK_rod_bosses 3, SK_motor_tube_ribs 2,
+SK_fin_slot_lower 1, SK_transition_lugs 1, SK_transition_fit 3, SK_transition_fit_trim 1,
+SK_shell_reinforcement_rods 11, SK_shell_reinforcement_fins 13 (SK_reinforcement_lower was 7, closed to 0 in session 6); rear_transition SK_rod_bosses 3, SK_motor_tube_ribs 2,
 SK_fin_slot_fillers 2, SK_fin_slot_fillers_trim 1; upper_retainer SK_rod_bosses 4, SK_fin_slot_fillers 1; low_chute_ret
 SK_connector_slot 7, SK_screw_eye_cable_holes 6; parachute_fuselage_seat_v2 SK_rod_bosses 8, SK_cable_passage 2,
 SK_connector_seat 8, SK_connector_seat_stop 9, SK_connector_slot 7, SK_connector_pins 2; sede_presa_elettrica_sup SK_seat 5,
@@ -166,7 +166,7 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
 
 ## Status
 - **Current phase:** 3 — 3.0, 3.1 done; per-part labels + bindings (b–d) done for all 18 parts and checked by Lorenzo 2026-11-18.
-- **Next step:** `Missing` external geometry cleanup (`mid_fuselage`, `lower_fuselage_v1`), then DoF closing, then step e (A2plus update). 3.99 done.
+- **Next step:** Lorenzo checks `mid_fuselage` (committed) and `lower_fuselage_v1` (see session 6) in FreeCAD; then DoF closing, then step e (A2plus update). 3.99 done; `Missing` cleanup done in both parts.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -229,3 +229,9 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
 ### 2026-11-18 — Session 6
 - **Done:** 3.99 smoke test (see 3.99). No CAD files changed.
 - **Left:** `Missing` external geometry cleanup; DoF closing; step e (A2plus; decide Q4 first).
+- **`Missing` external geometry cleanup (Lorenzo: do A/B/C autonomously, option 1 for C, check at the end).** Analysis of all 16 flagged links: 7 unused (deleted), 2 with an exact edge match (re-linked), the rest replaced by in-sketch geometry. All via the GUI, `mid_fuselage` commit `04c1fee`; `lower_fuselage_v1` commit below.
+  - `mid_fuselage`: SK_end_padding_upper −4 → `Chamfer001.Edge101`; SK_rod_bosses r27 reference → construction circle Ø54 (`ref_circle_d`); SK_fin_slots slot walls → constraints on the sketch's own lines (parallel to the 45° axis, `slot_half_w` 1.55). Volume/CoM identical, rebuild 5.5 s, DoF unchanged.
+  - `lower_fuselage_v1`: SK_fin_can → construction circle bound to `fin_shell_id`; SK_shell_lower tangents → `body_od` / `fin_shell_id` diameters; SK_transition_lugs → `DistanceX -3.1`, `DistanceY 20`, `Vertical`; SK_transition_fit_trim → `Pocket005.Edge1`; SK_reinforcement_lower (8 slot-wall links): angle ±45°/±135° + distance 1.55 per wall, Ø`fin_shell_id`, coincident joints; DoF 7 → 0.
+  - **Side effect in `lower_fuselage_v1`:** the old sketch had its slot-wall lines off the exact 45° by ≈3e-4° and 3 µm; making them exact removed µm-size sliver faces/edges, so volume 63875.338302 → 63875.289949 (−0.048 mm³, 7.6e-7 relative; CoM +5e-5 mm). `Chamfer_fin_can` had to be re-selected (edge numbering changed; same 8 r29 arcs at z = 5). Rebuild 7.2 s (was 7.1 s).
+  - Method note: replacing an external link by `Angle`/`Distance` constraints must use **exact** angles; copying the sketch's current angle locks in the old sloppiness.
+- **Left:** Lorenzo's check of both parts; DoF closing; step e (A2plus; decide Q4 first).
