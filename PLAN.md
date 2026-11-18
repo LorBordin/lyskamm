@@ -134,7 +134,7 @@ SK_connector_recess 3, SK_extraction_notches 1; pistone SK_body 15, SK_cavity 2;
 SK_connector_pins 2, SK_keys 1, SK_key_trim 3, SK_m2_inserts_22_5/67_5 2; mid_closure SK_keys 2, SK_key_trim 1,
 SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
 
-- [ ] 3.99 Smoke test: change `fit_slide` 0.15 → 0.20 in a scratch copy (not saved), confirm all dependent parts update; discard.
+- [x] 3.99 *(done 2026-11-18, scratch copies in the session scratchpad, repo untouched)* Smoke test: `fit_slide_d` 0.2 → 0.3 mm. Exactly the sliding-fit parts changed (full forced recompute, no Invalid): `lower_closure_v2` −300.8, `mid_closure` −115.8, `upper_closure` −121.5, `low_chute_ret` −128.5, `rear_transition` −26.6, `upper_retainer` −125.4 mm³; all other parts unchanged. Note: set sheet cells **with units** (`"0.3 mm"`), a bare number breaks `body_id - fit_slide_d` (unit mismatch). Headless recompute needs `touch()` on all objects.
 
 ## Phase 4 — CLAUDE.md (full)
 - [ ] 4.1 Expand `CLAUDE.md`: project goal & constraints (no structural glue, M2 + heat-set inserts, ~0.15 mm sliding fit, P1S 0.4 mm hardened nozzle, PETG-CF fins / ASA-CF rest, mm), conventions (from 2.2), repo map, working rules, CAD change protocol.
@@ -166,7 +166,7 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
 
 ## Status
 - **Current phase:** 3 — 3.0, 3.1 done; per-part labels + bindings (b–d) done for all 18 parts and checked by Lorenzo 2026-11-18.
-- **Next step:** DoF closing, `Missing` external geometry cleanup, step e (A2plus update), 3.99 smoke test.
+- **Next step:** `Missing` external geometry cleanup (`mid_fuselage`, `lower_fuselage_v1`), then DoF closing, then step e (A2plus update). 3.99 done.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -226,3 +226,6 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
 - **Later same session:** Lorenzo checked all parts (OK); Pocket009 = aluminium bar slots → labelled.
 - **Left:** DoF closing; Missing external geometry; A2plus update (e); 3.99.
 
+### 2026-11-18 — Session 6
+- **Done:** 3.99 smoke test (see 3.99). No CAD files changed.
+- **Left:** `Missing` external geometry cleanup; DoF closing; step e (A2plus; decide Q4 first).
