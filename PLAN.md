@@ -77,6 +77,8 @@ Pre-step:
     | `lower_fuselage_v1` | chain: `Sketch014`/`Sketch015` supports renumbered; `Chamfer002` (44), `Chamfer` (13), `Chamfer004` (8) stale edges; `Sketch020` support renumbered + constraint 16 redundant in the 1.1 solver | supports → `Face1`, `Face1`, `Chamfer003.Face26`; re-select chamfer edges; delete redundant constraint 16 (PointOnObject, duplicate of 15) | valid; vol −1.93 mm³ (0.003 %), CoM 0.0002 mm |
 
     Progress: ✅ fins, ✅ e-bay fuselages (2026-11-17), ✅ mid_fuselage, ✅ lower_fuselage_v1 (2026-11-18) — all checked by Lorenzo. **3.0 done.**
+    **Follow-up 2026-11-18 — sketch close hang in `mid_fuselage`:** closing any sketch *before* `PolarPattern007` froze FreeCAD 1.1.3 (force quit). Cause: `PolarPattern007` was "Transform body" (`TransformMode=1`, no `Originals`) → 4 copies of the whole fuselage fused + refined (≈48 s headless, hangs in GUI); present since the first commit. Fix (approved, checked): `TransformMode=0`, `Originals=[Pad005]` → body identical (Δvol 0.002 mm³, boolean diff 0), full rebuild 5.5 s. `e-bay/upper_closure` `PolarPattern` is also "Transform body" (small part, no hang seen; revisit in its Phase 3 rework).
+    **Known, not fixed (geometry unaffected):** sketches with external geometry flagged `Missing` (links lost in the 1.0 → 1.1 move; frozen copies still drive constraints): `mid_fuselage` Sketch005/006/014/015, `lower_fuselage_v1` Sketch008/011/013/014/015/017/019; `lower_fuselage_v1` Sketch021 redundant constraint #30. Clean up in each part's Phase 3 rework (re-link used ones to the matching edge, delete unused ones). Finder: in `Document.xml`, `ExternalGeo` geometries with `flags & 8` (Missing).
     The ≈2 mm³ differences are FreeCAD 1.0 → 1.1 kernel drift (upstream features already differ by up to 0.7 mm³ before any fix). Proposed tolerance for 3.0 only: volume ≤ 0.01 %, CoM ≤ 0.01 mm, plus Lorenzo's visual check. Apply one part at a time (save = resave in 1.1.3), each approved, checked in FreeCAD, committed.
 - [ ] 3.1 🔧 Create `parameters.FCStd` with the approved aliases. ⏸ Review with Lorenzo → check in FreeCAD → commit.
 
@@ -120,7 +122,7 @@ For each part (one checklist block per part, added to this file when the part st
 
 ## Status
 - **Current phase:** 3 — 3.0 (FreeCAD 1.1.3 migration fixes) done 2026-11-18.
-- **Next step:** 3.1 create `parameters.FCStd` (spreadsheet `Params`, aliases from `docs/proposal/parameters.md`) — propose, wait for OK.
+- **Next step (new session):** 3.1 create `parameters.FCStd` (spreadsheet `Params`, aliases from `docs/proposal/parameters.md`) — propose, wait for OK.
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -166,3 +168,10 @@ For each part (one checklist block per part, added to this file when the part st
 - **2.5 approved.** Group A of `repo_structure.md` executed, one commit each (A2–A13): legacy files deleted (`wall`, `e-bay/lower_closure` v1, `parachute_fuselage_seat` v1, `parachute_fuselage_seat/upper_closure`, `low_chute_ret_test.3mf`, extensionless `upper_retainer`, `.keep`); parachute seat `.3mf` names fixed; logo files moved/renamed (`logo_flat`, `logo_projected`, `logo_inserts`). Checked first that no file links to them (only the assembly links parts, none in group A). Inventory regenerated (with add-ons installed, Rocket parts now recompute; fins still fail as known).
 - **Left:** Phase 3.
 - **3.0 diagnosis done** (copies only): causes and tested fixes for the 6 failing parts in the 3.0 table; `.mcp.json` committed.
+
+### 2026-11-18 — Session 4 (Phase 3.0 fixes)
+- **Done:** 3.0 fixes applied through the FreeCAD GUI (MCP), each approved, checked by Lorenzo, committed: fins (`e7eec70`), e-bay fuselages (`7391efc`), `mid_fuselage` (`8f27561`), `lower_fuselage_v1` (`979b501`). Timestamp-only re-saves of already committed files discarded.
+- **Bug found:** opening/closing a sketch in `mid_fuselage` froze FreeCAD. Not the migration fixes: `PolarPattern007` patterned the whole body (≈48 s per rebuild). Changed to pattern only `Pad005` → identical solid, rebuild 5.5 s; Lorenzo confirmed sketches close normally.
+- **Learned:** checks after a CAD change must include rebuild time from the first sketch and the sketches' external geometry (`Missing` flags), not only Invalid features + volume. FreeCAD restarts kill the MCP RPC server (Lorenzo restarts it).
+- **Left:** 3.1 `parameters.FCStd` (next session); `Missing` external geometry cleanup per part in Phase 3.
+

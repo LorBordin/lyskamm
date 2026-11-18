@@ -25,6 +25,10 @@ TSP F35 (primary, `scripts/motor_data/TSP_F35.eng`), EXP G115 (later, `scripts/m
   thumbnail): FreeCAD then shows default visibility and parts can look wrong. Prefer saving through the
   open FreeCAD GUI (MCP); if saved headless, restore the GUI entries from the previous git version of the
   file (object names unchanged) before Lorenzo checks it.
+- After a CAD change, check more than "no Invalid features + same volume": also the rebuild time from the
+  first sketch (a slow feature freezes FreeCAD when a sketch is closed, e.g. a "Transform body" pattern) and
+  sketch external geometry flagged `Missing`.
+- If FreeCAD restarts, the MCP RPC server must be started again by Lorenzo.
 - Reading and inspecting files (including parsing `Document.xml` with Python, or opening a
   document in FreeCAD **without saving**) is always allowed.
 
