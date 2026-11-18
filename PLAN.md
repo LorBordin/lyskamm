@@ -66,7 +66,7 @@ The 5 mm tubes look like the screw-joint rings between printed sections.
 
 ## Phase 3 — Parametrization (part by part, geometry must not change)
 Pre-step:
-- [ ] 3.0 FreeCAD 1.0 → 1.1.3 migration check: open each active part in 1.1.3, recompute, compare volume/bbox against Phase 1 baseline. 🔧 Save only with approval (one commit "resave in 1.1.3" per part if needed). Check A2plus works in 1.1.3 (else plan migration to built-in Assembly — separate decision).
+- [x] 3.0 FreeCAD 1.0 → 1.1.3 migration check: open each active part in 1.1.3, recompute, compare volume/bbox against Phase 1 baseline. 🔧 Save only with approval (one commit "resave in 1.1.3" per part if needed). Check A2plus works in 1.1.3 (else plan migration to built-in Assembly — separate decision).
   - **3.0 diagnosis (2026-11-17, copies only; test script `scripts/fc_migration_fix_test.py`).** All active parts load; Rocket WB + A2plus OK. 6 parts have features that fail on recompute; every fix below was tested on copies and gives a valid model:
 
     | Part | Cause | Fix | Result vs stored |
@@ -80,7 +80,7 @@ Pre-step:
     **Follow-up 2026-11-18 — sketch close hang in `mid_fuselage`:** closing any sketch *before* `PolarPattern007` froze FreeCAD 1.1.3 (force quit). Cause: `PolarPattern007` was "Transform body" (`TransformMode=1`, no `Originals`) → 4 copies of the whole fuselage fused + refined (≈48 s headless, hangs in GUI); present since the first commit. Fix (approved, checked): `TransformMode=0`, `Originals=[Pad005]` → body identical (Δvol 0.002 mm³, boolean diff 0), full rebuild 5.5 s. `e-bay/upper_closure` `PolarPattern` is also "Transform body" (small part, no hang seen; revisit in its Phase 3 rework).
     **Known, not fixed (geometry unaffected):** sketches with external geometry flagged `Missing` (links lost in the 1.0 → 1.1 move; frozen copies still drive constraints): `mid_fuselage` Sketch005/006/014/015, `lower_fuselage_v1` Sketch008/011/013/014/015/017/019; `lower_fuselage_v1` Sketch021 redundant constraint #30. Clean up in each part's Phase 3 rework (re-link used ones to the matching edge, delete unused ones). Finder: in `Document.xml`, `ExternalGeo` geometries with `flags & 8` (Missing).
     The ≈2 mm³ differences are FreeCAD 1.0 → 1.1 kernel drift (upstream features already differ by up to 0.7 mm³ before any fix). Proposed tolerance for 3.0 only: volume ≤ 0.01 %, CoM ≤ 0.01 mm, plus Lorenzo's visual check. Apply one part at a time (save = resave in 1.1.3), each approved, checked in FreeCAD, committed.
-- [ ] 3.1 🔧 Create `parameters.FCStd` with the approved aliases. ⏸ Review with Lorenzo → check in FreeCAD → commit.
+- [x] 3.1 *(done 2026-11-18: repo root, spreadsheet `Params`, 39 aliases; parts link it as `../../parameters.FCStd` from `components/<subsystem>/`, tested on scratch copies)* 🔧 Create `parameters.FCStd` with the approved aliases. ⏸ Review with Lorenzo → check in FreeCAD → commit.
 
 Per part, in this order (interfaces outward from the body tube): `e-bay/fuselage` → `mid_fuselage` → `lower_fuselage_v1` → `rear_transition` → `upper_retainer` → `low_chute_ret` → `parachute_fuselage_seat_v2` → `sede_presa_elettrica_sup` → `e-bay/lower_closure_v2` → `mid_closure` → `e-bay/upper_closure` → `nose_cone` → `upper_fin` → `lower_fins` → `carbon_rod` → `alluminium_rod`.
 For each part (one checklist block per part, added to this file when the part starts):
@@ -121,8 +121,8 @@ For each part (one checklist block per part, added to this file when the part st
 ---
 
 ## Status
-- **Current phase:** 3 — 3.0 (FreeCAD 1.1.3 migration fixes) done 2026-11-18.
-- **Next step (new session):** 3.1 create `parameters.FCStd` (spreadsheet `Params`, aliases from `docs/proposal/parameters.md`) — propose, wait for OK.
+- **Current phase:** 3 — 3.0 and 3.1 (`parameters.FCStd`) done 2026-11-18.
+- **Next step:** Phase 3 per-part loop, first part `components/e-bay/fuselage`: add its checklist block, step a (baseline: volume, bbox, CoM, read-only).
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -130,7 +130,7 @@ For each part (one checklist block per part, added to this file when the part st
   4. Keep A2plus, or migrate the assembly to FreeCAD's built-in Assembly workbench (later, separate decision)?
   5. Git LFS: install and fix `.gitattributes`, or drop LFS? Finding: LFS never actually used (no pointers in history, `*.fcstd` pattern wrong case, git-lfs not installed); recommendation in `repo_structure.md`: drop it.
   6. ~~`.ork` vs CAD source of truth~~ — resolved: lengths/body shape = CAD (confirmed by physical measurement); fin dimensions = `.ork` (CAD fins enlarged on purpose for slicing loss); masses = weighed.
-  7. Delete or ignore the untracked `init` file; commit `.mcp.json`?
+  7. ~~Delete or ignore the untracked `init` file; commit `.mcp.json`?~~ — resolved: `init` deleted by Lorenzo (2026-11-18), `.mcp.json` committed.
   8. ~~Rocket WB + A2plus missing~~ — installed by Lorenzo (2026-11-17), verified headless on copies: all Python objects load; `nose_cone` and `rear_transition` recompute identically; assembly loads (32 parts, no errors). ⚠ `lower_fins`/`upper_fin`: the Rocket `Fin` now regenerates +0.75 % volume and `Sketch` (attached to `Face10` of the fin) becomes Invalid → fix in Phase 3.0.
   9. The MCP `execute_code_headless` cannot find `freecadcmd` (FreeCAD is an AppImage). Configure `--freecadcmd` in `.mcp.json`, or keep running the AppImage's `freecadcmd` via shell?
   10. ~~Shared dims~~ — resolved (`MEANINGS` in `scripts/shared_dims.py`).
