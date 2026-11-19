@@ -122,16 +122,11 @@ Rules applied: v1 deviations stay literals (Ø3.1 inserts, 5.15/5.25/5.75 rod/ba
 nose Ø2.1 holes + 1.0 chamfer); local dims (connector, deployment, 41.x Ø) stay literals; repeated dims: one
 named constraint per sketch, duplicates bound to the same alias unnamed.
 **Still open in Phase 3:** close DoF in the sketches listed below (only trivial ones were closed); ~~clean up `Missing` external geometry~~ (done session 6); step e is **replaced** by building a new assembly in the built-in Assembly workbench (Q4, resolved) — no A2plus update.
-Sketches with DoF > 0 (2026-11-18): fuselage_w_logo logo Sketch010/012/014/016 (1); mid_fuselage SK_rod_bosses 5,
-SK_fin_slots 2, SK_m2_holes_upper_67_5 1, SK_end_padding_lower 1; lower_fuselage_v1 SK_motor_centering 1, SK_fin_slot 2,
-SK_fin_slot_lower 1, SK_transition_lugs 1, SK_transition_fit 3, SK_transition_fit_trim 1,
-SK_shell_reinforcement_rods 11, SK_shell_reinforcement_fins 13 (SK_reinforcement_lower was 7, closed to 0 in session 6); rear_transition SK_rod_bosses 3, SK_motor_tube_ribs 2,
-SK_fin_slot_fillers 2, SK_fin_slot_fillers_trim 1; upper_retainer SK_rod_bosses 4, SK_fin_slot_fillers 1; low_chute_ret
-SK_connector_slot 7, SK_screw_eye_cable_holes 6; parachute_fuselage_seat_v2 SK_rod_bosses 8, SK_cable_passage 2,
-SK_connector_seat 8, SK_connector_seat_stop 9, SK_connector_slot 7, SK_connector_pins 2; sede_presa_elettrica_sup SK_seat 5,
-SK_connector_recess 3, SK_extraction_notches 1; pistone SK_body 15, SK_cavity 2; lower_closure_v2 SK_connector_slot 7,
-SK_connector_pins 2, SK_keys 1, SK_key_trim 3, SK_m2_inserts_22_5/67_5 2; mid_closure SK_keys 2, SK_key_trim 1,
-SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
+Sketches with DoF > 0 — **updated 2026-11-19 (session 8): all sketches with ≤ 3 DoF (plus mid_fuselage SK_rod_bosses 5) closed.** Remaining:
+lower_fuselage_v1 SK_shell_reinforcement_rods 11, SK_shell_reinforcement_fins 13; upper_retainer SK_rod_bosses 4;
+low_chute_ret SK_connector_slot 7, SK_screw_eye_cable_holes 6; parachute_fuselage_seat_v2 SK_rod_bosses 8,
+SK_connector_seat 8, SK_connector_seat_stop 9, SK_connector_slot 7; lower_closure_v2 SK_connector_slot 7;
+sede_presa_elettrica_sup SK_seat 5; pistone SK_body 15.
 
 - [x] 3.99 *(done 2026-11-18, scratch copies in the session scratchpad, repo untouched)* Smoke test: `fit_slide_d` 0.2 → 0.3 mm. Exactly the sliding-fit parts changed (full forced recompute, no Invalid): `lower_closure_v2` −300.8, `mid_closure` −115.8, `upper_closure` −121.5, `low_chute_ret` −128.5, `rear_transition` −26.6, `upper_retainer` −125.4 mm³; all other parts unchanged. Note: set sheet cells **with units** (`"0.3 mm"`), a bare number breaks `body_id - fit_slide_d` (unit mismatch). Headless recompute needs `touch()` on all objects.
 
@@ -165,7 +160,7 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
 
 ## Status
 - **Current phase:** 3 — 3.0, 3.1 done; per-part labels + bindings (b–d) done for all 18 parts and checked by Lorenzo 2026-11-18.
-- **Next step:** (1) ~~scratch trial~~ ✅, ~~new assembly~~ ✅ `assemblies/lyskamm_asm.FCStd` (checked by Lorenzo 2026-11-19; small internal parts — pistone, sede_presa_elettrica_sup, presa_elettrica, logo inserts — deferred, Lorenzo: "there'll be time to adjust"); (2) DoF closing, one part at a time (start with sketches of 1–2 DoF); (3) build the new assembly (step e replaced), incl. the missing parts. Done: 3.d, 3.99, `Missing` cleanup (both parts checked by Lorenzo).
+- **Next step:** (1) ~~scratch trial~~ ✅, ~~new assembly~~ ✅ `assemblies/lyskamm_asm.FCStd` (checked by Lorenzo 2026-11-19; small internal parts — pistone, sede_presa_elettrica_sup, presa_elettrica, logo inserts — deferred); (2) DoF closing: small sketches ✅ (session 8, Lorenzo to spot-check in FreeCAD); next the 12 larger sketches listed in Phase 3 (4–15 DoF), one at a time with a proposal each — connector/deployment ones may be better left for their Phase 5 redesign; (3) then Phase 4 (CLAUDE.md). Done: 3.d, 3.99, `Missing` cleanup (both parts checked by Lorenzo).
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -263,3 +258,11 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
   - Checks: all-pairs interference — only the Q16 slivers; stack length 868 mm (tip → tail); save/reopen 4.6 s, relative paths, `parameters.FCStd` auto-loaded, solve 0.02 s, no Invalid. Mass 504.5 g, CG 533.8 mm from nose tip (CAD parts only).
   - **FreeCAD 1.1.3 solver bug:** with the 2 lower aluminium rods fixed to `lower_closure` the solve failed (`Solve failed: vector::_M_range_check: __n (which is 448) >= this->size()`), each joint alone was fine. Re-hosted both rods on `mid_closure` (physically correct too: they screw onto its threaded rod) → solves. If it comes back when adding parts: split into sub-assemblies (e-bay / aft).
 - **Checked by Lorenzo ("perfect"); step e marked done.** Small internal parts deferred. Left: DoF closing; Q15 (logo direction), Q16 (small CAD overlaps) whenever convenient.
+
+### 2026-11-19 — Session 8 (DoF closing, small sketches)
+- **Done:** closed DoF in 34 sketches across 11 parts (one commit per part): mid_fuselage (4, incl. SK_rod_bosses 5 — first batch checked by Lorenzo in FreeCAD), rear_transition 4, lower_fuselage_v1 6, mid_closure 3, upper_closure 2, lower_closure_v2 5, parachute_fuselage_seat_v2 2, upper_retainer 1, fuselage_w_logo 4 (logo trims), sede_presa_elettrica_sup 2, pistone SK_cavity. Lorenzo authorised the batch after the first part ("stop me only if there are problems").
+- **Method:** probe each sketch (temporarily lock each point x/y / radius, see which drops DoF) to find what is free; lock it **at the current value** (named where meaningful: `slot_r_inner/outer`, `trim_outer_d`, `boss_outer_r`, `rib_y_inner/outer`, `filler_depth`, `filler_x_inner`, `slot_depth`, `centering_y_inner`, `fit_trim_d`, `cavity_inner_r`, …) or tie construction geometry to existing points (replacing the `PointOnObject`/`Perpendicular` that became redundant). Checks per part: full forced recompute, vol/CoM vs pre-change recompute, no Invalid, DoF 0, no redundant/conflicting/malformed; saved from the GUI (GuiDocument kept).
+- **Results:** all parts within 1e-13 relative except `parachute_fuselage_seat_v2` (vol 1.5e-9 rel, CoM 3e-8 mm: SK_cable_passage arc centre was 5.4e-8 mm off the axis, now tied to the origin). Rebuild times: mid 5.8 s (was 5.5), lower 7.7 s (was 7.2), rear 6.0 s (no earlier figure). Assembly `lyskamm_asm` re-solves, 30 links OK, not modified.
+- **Gotcha:** `rear_transition` was loaded **partially** (through the assembly links): edits apply in memory but recompute is silently skipped (`Please reload partial document`) and saves are refused. Check `doc.Partial` before editing; `doc.restore()` reloads it fully. Edits were undone and redone on the full document.
+- **Noted, not changed:** `rear_transition` SK_fin_slot_fillers had a pre-existing partially redundant constraint (#9 Symmetric + Tangent both make the end line vertical; harmless). Several outer profile points lie inside the wall and look hand-drawn (e.g. mid_fuselage boss corners r29.62 vs 29.59, upper_retainer filler inner edge x 27.476 < bore r27.9): locked as they are; candidates for a symmetric clean-up in Phase 5.
+- **Left:** Lorenzo spot-checks the parts in FreeCAD; the 12 larger sketches (4–15 DoF).
