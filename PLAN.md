@@ -165,7 +165,7 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
 
 ## Status
 - **Current phase:** 3 — 3.0, 3.1 done; per-part labels + bindings (b–d) done for all 18 parts and checked by Lorenzo 2026-11-18.
-- **Next step:** (1) scratch trial of the built-in Assembly with 3–4 neighbouring parts (Q4 decided: migrate); (2) DoF closing, one part at a time (start with sketches of 1–2 DoF); (3) build the new assembly (step e replaced), incl. the missing parts. Done: 3.d, 3.99, `Missing` cleanup (both parts checked by Lorenzo).
+- **Next step:** (1) ~~scratch trial of the built-in Assembly~~ done 2026-11-19 (passed, see Session log); Lorenzo to check the scratch assembly in the GUI, then decide the layout questions (Q13); (2) DoF closing, one part at a time (start with sketches of 1–2 DoF); (3) build the new assembly (step e replaced), incl. the missing parts. Done: 3.d, 3.99, `Missing` cleanup (both parts checked by Lorenzo).
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -179,6 +179,8 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
   10. ~~Shared dims~~ — resolved (`MEANINGS` in `scripts/shared_dims.py`).
   11. Features already failing in FreeCAD 1.1.3 recompute (copies only): `lower_fins`/`upper_fin` Sketch (on `Face10`, after Rocket WB install); `e-bay/fuselage` Chamfer, `lower_fuselage_v1` Sketch014, `mid_fuselage` Sketch011, `wall` Sketch005, `launch_pad` Sketch001 … — fix during Phase 3.0?
   12. ~~Mass estimate~~ — resolved: weighed masses only; Bambu Studio for new parts.
+  13. ~~New assembly layout~~ — **resolved 2026-11-19 (Lorenzo approved the proposals):** nose tip at origin, axis −Z, `nose_cone` grounded; file `assemblies/lyskamm_asm.FCStd`; joints on part edges (no LCS added to parts); `Mass_g` on each link + `scripts/assembly_cg.py`. Original options (from the 2026-11-19 trial): (a) global frame — trial used rocket axis = +Z toward the nose, origin = `lower_fuselage_v1` origin (grounded); proposal for the real one: nose tip at origin, axis along −Z (positions = OpenRocket's "from nose tip"), ground `nose_cone`; (b) file name/location (`assemblies/lyskamm_asm.FCStd`?); (c) joints on circular edges (TNP-tracked OK in the trial) vs datum/LCS per part (more robust, but adds features to every part); (d) masses as a `Mass_g` property on each link + a CG script (`scripts/assembly_cg.py`).
+  14. MCP addon 0.1.31 (protocol 1) vs server 0.1.32 (protocol 3): update the addon in FreeCAD's `Mod` folder (warning on every call; everything worked so far).
 
 ## Session log
 ### 2026-11-16 — Session 1
@@ -235,3 +237,21 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
   - Method note: replacing an external link by `Angle`/`Distance` constraints must use **exact** angles; copying the sketch's current angle locks in the old sloppiness.
 - **Decision (end of session):** Lorenzo chose to migrate to the built-in Assembly workbench (Q4 resolved); build from scratch, scratch trial first, A2plus assembly kept untouched meanwhile. Step e of Phase 3 is replaced accordingly.
 - **Left:** scratch trial of built-in Assembly; DoF closing; new assembly. Lorenzo checked both parts (OK); 3.d closed.
+
+### 2026-11-19 — Session 7 (built-in Assembly scratch trial)
+- **Done:** scratch trial of the built-in Assembly workbench (Q4) — copies only in the session scratchpad (`asm_trial/`, same folder layout as the repo); **repo `.FCStd` files untouched**. Parts: `rear_transition`, `lower_fuselage_v1`, `upper_retainer`, `mid_fuselage` (`upper_retainer` added because `mid_fuselage` and `lower_fuselage_v1` don't touch).
+- **Setup:** one `Assembly`, `App::Link` to each part's `Body`; `lower_fuselage_v1` grounded; 3 `Fixed` joints on the coaxial r30 circles of the shoulder faces (lower z−20 ↔ rear x0; lower z93 ↔ retainer z0; retainer z5 ↔ mid z97.5).
+- **Results (all OK):**
+  - Stack: total 268 mm = 45 + 113 + 5 + 105 (= section lengths). Spigots sit in their sockets.
+  - Holes: all M2 radial holes coincide (z and angle) at the 3 joints.
+  - Interference (pairwise `common`, 4 s): 0 mm³ for all pairs. Fin slots: lower 45°, upper 45° (in line), `rear_transition` fillers 45°; retainer keys / rod bosses 0°/90°.
+  - Live links: `fit_slide_d` 0.2 → 0.3 in the scratch `parameters.FCStd` → parts update in the assembly (retainer −125.4, rear −26.6 mm³, as in 3.99), placements unchanged, solve 0.02 s. Joint edge refs renumbered by the recompute (`Edge630→634`, `Edge247→293`) and the toponaming tracked them to the right circles. Restored to 0.2.
+  - Save/reopen: links stored relative (`../components/...`); reopening the assembly auto-loads the 4 parts **and** `parameters.FCStd` (through the parts) in 3.2 s; no Invalid; solve 0.02 s.
+  - CG: weighed masses as a `Mass_g` property on each link × CAD CoM → 148.5 g, CG 132.4 mm from the tail end (4 parts only; uniform-density CoM per part).
+- **Gotchas found:**
+  - The 8 × 45° M2 pattern does **not** fix the roll: `mid_fuselage` at 0° had all holes aligned but the retainer keys hit the wall (175 mm³ interference). Fixed with the joint offset yaw 45°. → Always run the interference check, not only the hole check.
+  - `Fixed` joints on circles keep the closest direction: 2 joints needed a flip (GUI "Reverse" / `flipOnePart`).
+  - Joints created from Python need `JointObject.ViewProviderJoint` on their view objects (else an error on close). Use the GUI tools or add them.
+  - The old A2plus assembly puts `lower_fuselage_v1` ≈20.8 mm off: the `rear_transition` spigot sits outside the lower fuselage. One more reason not to copy positions from it.
+- **Left:** Lorenzo checks the scratch assembly in the GUI (`trial_assembly` open); decide Q13 (frame/origin, file name, joint references, CG method); then build the real assembly part by part (step e). DoF closing still open.
+
