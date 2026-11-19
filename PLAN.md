@@ -88,7 +88,7 @@ For each part (one checklist block per part, added to this file when the part st
 - [ ] b. 🔧 Rename sketches/features per convention. ⏸ Review → apply → ⏸ Lorenzo checks → commit.
 - [ ] c. 🔧 Name driving constraints and bind them to aliases (`=parameters#Params.body_od`), small batches (≤ ~10 constraints per change). Close DoF where needed. ⏸ Review → apply → ⏸ Lorenzo checks → commit.
 - [x] d. Verify geometry unchanged: volume/bbox/CoM equal to baseline (tolerance 1e-6 **relative**). *(closed 2026-11-18 for all parts)*
-- [ ] e. 🔧 ~~Update the part in the A2plus assembly~~ → *replaced (Q4):* add the part to the new built-in Assembly, check interferences/fits with neighbours. ⏸ Lorenzo checks → commit.
+- [x] e. 🔧 ~~Update the part in the A2plus assembly~~ → *replaced (Q4):* add the part to the new built-in Assembly, check interferences/fits with neighbours. ⏸ Lorenzo checks → commit. *(done 2026-11-19: `assemblies/lyskamm_asm.FCStd`, 30 parts, checked by Lorenzo; small internal parts deferred)*
 - [ ] f. Re-export STEP/3MF only if Lorenzo asks.
 #### Per-part progress (a–e)
 Done 2026-11-18 (Lorenzo chose a batch run: labels + bindings for all parts, asking only on unclear points). Every part:
@@ -98,25 +98,25 @@ saved from the GUI, one commit each; checked against a plain 1.1.3 recompute of 
 1.0 → 1.1.3 drift of ≤ 0.01 mm³ (nose_cone, closures, upper_retainer, rear_transition) — recorded in their commits.
 `e-bay/fuselage` baseline: vol 18786.308720 mm³, CoM (0.000966, 18.662062, 52.500357).
 
-| Part | a | b labels | c bindings | d | e A2plus | Notes |
+| Part | a | b labels | c bindings | d | e assembly | Notes |
 |---|---|---|---|---|---|---|
-| e-bay/fuselage | ✅ | ✅ | ✅ 19 | ✅ | ☐ | SK_shell DoF 4 → 0 |
-| e-bay/fuselage_w_logo | ✅ | ✅ shell only | ✅ 19 | ✅ | ☐ | logo bodies keep labels (logo is local) |
-| mid_fuselage | ✅ | ✅ | ✅ 26 | ✅ | ☐ | |
-| lower_fuselage_v1 | ✅ | ✅ | ✅ 21 | ✅ | ☐ | Sketch021 redundant #30 deleted (sketch was Invalid on plain recompute); DoF 12 → 13. **New baseline after `Missing` cleanup (session 6): vol 63875.289949 mm³** (−7.6e-7 relative, µm slivers removed) |
-| rear_transition | ✅ | ✅ | ✅ 21 | ✅ | ☐ | `Pocket_fin_slot_fillers_trim` removes no material |
-| upper_retainer | ✅ | ✅ | ✅ 21 | ✅ | ☐ | |
-| low_chute_ret | ✅ | ✅ | ✅ 24 | ✅ | ☐ | |
-| parachute_fuselage_seat_v2 | ✅ | ✅ | ✅ 13 | ✅ | ☐ | |
-| sede_presa_elettrica_sup | ✅ | ✅ | ✅ 3 | ✅ | ☐ | deployment system, mostly local |
-| pistone | ✅ | ✅ (Body → `piston`) | ✅ 2 | ✅ | ☐ | not in assembly |
-| e-bay/lower_closure_v2 | ✅ | ✅ | ✅ 19 | ✅ | ☐ | `Pocket_bar_slots` = aluminium bar slots |
-| e-bay/mid_closure | ✅ | ✅ | ✅ 22 | ✅ | ☐ | |
-| e-bay/upper_closure | ✅ | ✅ | ✅ 21 | ✅ | ☐ | key pattern: Transform body → `Pad003` only (bool diff 0) |
-| e-bay/presa_elettrica | ✅ | ✅ | — | ✅ | ☐ | local dims only |
-| nose_cone | ✅ | ✅ | ✅ 10 | ✅ | ☐ | |
-| upper_fin / lower_fins | ✅ | ✅ | ✅ 2 each | ✅ | ☐ | Fin root/TTW thickness = `fin_t` |
-| carbon_rod / alluminium_rod | ✅ | ✅ | ✅ 3 each | ✅ | ☐ | |
+| e-bay/fuselage | ✅ | ✅ | ✅ 19 | ✅ | ✅ | SK_shell DoF 4 → 0 |
+| e-bay/fuselage_w_logo | ✅ | ✅ shell only | ✅ 19 | ✅ | ✅ | logo bodies keep labels (logo is local) |
+| mid_fuselage | ✅ | ✅ | ✅ 26 | ✅ | ✅ | |
+| lower_fuselage_v1 | ✅ | ✅ | ✅ 21 | ✅ | ✅ | Sketch021 redundant #30 deleted (sketch was Invalid on plain recompute); DoF 12 → 13. **New baseline after `Missing` cleanup (session 6): vol 63875.289949 mm³** (−7.6e-7 relative, µm slivers removed) |
+| rear_transition | ✅ | ✅ | ✅ 21 | ✅ | ✅ | `Pocket_fin_slot_fillers_trim` removes no material |
+| upper_retainer | ✅ | ✅ | ✅ 21 | ✅ | ✅ | |
+| low_chute_ret | ✅ | ✅ | ✅ 24 | ✅ | ✅ | |
+| parachute_fuselage_seat_v2 | ✅ | ✅ | ✅ 13 | ✅ | ✅ | |
+| sede_presa_elettrica_sup | ✅ | ✅ | ✅ 3 | ✅ | ⏸ deferred | deployment system, mostly local |
+| pistone | ✅ | ✅ (Body → `piston`) | ✅ 2 | ✅ | ⏸ deferred | not in assembly |
+| e-bay/lower_closure_v2 | ✅ | ✅ | ✅ 19 | ✅ | ✅ | `Pocket_bar_slots` = aluminium bar slots |
+| e-bay/mid_closure | ✅ | ✅ | ✅ 22 | ✅ | ✅ | |
+| e-bay/upper_closure | ✅ | ✅ | ✅ 21 | ✅ | ✅ | key pattern: Transform body → `Pad003` only (bool diff 0) |
+| e-bay/presa_elettrica | ✅ | ✅ | — | ✅ | ⏸ deferred | local dims only |
+| nose_cone | ✅ | ✅ | ✅ 10 | ✅ | ✅ | |
+| upper_fin / lower_fins | ✅ | ✅ | ✅ 2 each | ✅ | ✅ | Fin root/TTW thickness = `fin_t` |
+| carbon_rod / alluminium_rod | ✅ | ✅ | ✅ 3 each | ✅ | ✅ | |
 
 Rules applied: v1 deviations stay literals (Ø3.1 inserts, 5.15/5.25/5.75 rod/bar holes, 7.2/7.25 bosses, 3.2 M3,
 nose Ø2.1 holes + 1.0 chamfer); local dims (connector, deployment, 41.x Ø) stay literals; repeated dims: one
@@ -165,7 +165,7 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
 
 ## Status
 - **Current phase:** 3 — 3.0, 3.1 done; per-part labels + bindings (b–d) done for all 18 parts and checked by Lorenzo 2026-11-18.
-- **Next step:** (1) ~~scratch trial of the built-in Assembly~~ done 2026-11-19 (passed, see Session log); Lorenzo to check the scratch assembly in the GUI, then decide the layout questions (Q13); (2) DoF closing, one part at a time (start with sketches of 1–2 DoF); (3) build the new assembly (step e replaced), incl. the missing parts. Done: 3.d, 3.99, `Missing` cleanup (both parts checked by Lorenzo).
+- **Next step:** (1) ~~scratch trial~~ ✅, ~~new assembly~~ ✅ `assemblies/lyskamm_asm.FCStd` (checked by Lorenzo 2026-11-19; small internal parts — pistone, sede_presa_elettrica_sup, presa_elettrica, logo inserts — deferred, Lorenzo: "there'll be time to adjust"); (2) DoF closing, one part at a time (start with sketches of 1–2 DoF); (3) build the new assembly (step e replaced), incl. the missing parts. Done: 3.d, 3.99, `Missing` cleanup (both parts checked by Lorenzo).
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -180,6 +180,9 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
   11. Features already failing in FreeCAD 1.1.3 recompute (copies only): `lower_fins`/`upper_fin` Sketch (on `Face10`, after Rocket WB install); `e-bay/fuselage` Chamfer, `lower_fuselage_v1` Sketch014, `mid_fuselage` Sketch011, `wall` Sketch005, `launch_pad` Sketch001 … — fix during Phase 3.0?
   12. ~~Mass estimate~~ — resolved: weighed masses only; Bambu Studio for new parts.
   13. ~~New assembly layout~~ — **resolved 2026-11-19 (Lorenzo approved the proposals):** nose tip at origin, axis −Z, `nose_cone` grounded; file `assemblies/lyskamm_asm.FCStd`; joints on part edges (no LCS added to parts); `Mass_g` on each link + `scripts/assembly_cg.py`. Original options (from the 2026-11-19 trial): (a) global frame — trial used rocket axis = +Z toward the nose, origin = `lower_fuselage_v1` origin (grounded); proposal for the real one: nose tip at origin, axis along −Z (positions = OpenRocket's "from nose tip"), ground `nose_cone`; (b) file name/location (`assemblies/lyskamm_asm.FCStd`?); (c) joints on circular edges (TNP-tracked OK in the trial) vs datum/LCS per part (more robust, but adds features to every part); (d) masses as a `Mass_g` property on each link + a CG script (`scripts/assembly_cg.py`).
+  15. `fuselage_w_logo` orientation: two mirror-image fits (logo toward the nose or toward the tail); assembly uses flip=1 (`asm_build.py`) — Lorenzo to confirm by looking at the logo.
+  16. Carbon rod channel (seat top → `rear_transition` bottom) is 449.5 mm, rod CAD is 450 mm → 0.5 mm overlap with `rear_transition` (real rods cut shorter? or one hole open?). Also: upper fin T-foot vs `mid_fuselage` internal socket 0.04 mm overlap (7.19 mm³/fin); lower alu rod vs `mid_closure` Ø7.25 bore 0.13 mm³. All below print tolerance.
+  17. Pistone launch position — deferred with the other small internal parts (Lorenzo 2026-11-19).
   14. MCP addon 0.1.31 (protocol 1) vs server 0.1.32 (protocol 3): update the addon in FreeCAD's `Mod` folder (warning on every call; everything worked so far).
 
 ## Session log
@@ -254,4 +257,9 @@ SK_bar_seat_lower 2; upper_closure SK_keys 2, SK_key_trim 1.
   - Joints created from Python need `JointObject.ViewProviderJoint` on their view objects (else an error on close). Use the GUI tools or add them.
   - The old A2plus assembly puts `lower_fuselage_v1` ≈20.8 mm off: the `rear_transition` spigot sits outside the lower fuselage. One more reason not to copy positions from it.
 - **Left:** Lorenzo checks the scratch assembly in the GUI (`trial_assembly` open); decide Q13 (frame/origin, file name, joint references, CG method); then build the real assembly part by part (step e). DoF closing still open.
-
+- **New assembly built (same session, Lorenzo approved Q13):** `assemblies/lyskamm_asm.FCStd`, built-in Assembly, 30 `App::Link`s to part `Body`s (all airframe sections, 4+4 fins, 4 carbon rods, 4 aluminium rods), nose tip at origin, axis −Z, `nose_cone` grounded, 29 `Fixed` joints on part edges with offsets; `Mass_g` on every link. Scripts: `scripts/asm_stack_solver.py` (orientation/roll solver), `scripts/asm_build.py` (build), `scripts/assembly_cg.py` (mass/CG). No part file modified.
+  - **Placement derived from geometry, not from A2plus** (A2plus is wrong in several places): per joint both flips × all rolls that align the radial M2 holes, keep zero interference; ties broken by: aluminium rods (100 mm, exact fit uc ↔ mc), lower-closure connector slot ↔ seat cable channel/connector seat (270°), carbon-rod channel seat → rear_transition (continuous, 4 × 90°), retainer keys, rear fin-slot fillers. Result: fins upper and lower in line at 0/90/180/270°, carbon rods at 45°, e-bay rods at 0/180°.
+  - `mid_closure` is reversed vs A2plus (rod holes prove it). `fuselage_w_logo` is modelled with its axis at local z = 30 (offset handled in the link placement). The 2026-11-19 trial had `lower_fuselage_v1` 45° off (holes OK, rods/fins not) — the trial is superseded.
+  - Checks: all-pairs interference — only the Q16 slivers; stack length 868 mm (tip → tail); save/reopen 4.6 s, relative paths, `parameters.FCStd` auto-loaded, solve 0.02 s, no Invalid. Mass 504.5 g, CG 533.8 mm from nose tip (CAD parts only).
+  - **FreeCAD 1.1.3 solver bug:** with the 2 lower aluminium rods fixed to `lower_closure` the solve failed (`Solve failed: vector::_M_range_check: __n (which is 448) >= this->size()`), each joint alone was fine. Re-hosted both rods on `mid_closure` (physically correct too: they screw onto its threaded rod) → solves. If it comes back when adding parts: split into sub-assemblies (e-bay / aft).
+- **Checked by Lorenzo ("perfect"); step e marked done.** Small internal parts deferred. Left: DoF closing; Q15 (logo direction), Q16 (small CAD overlaps) whenever convenient.
