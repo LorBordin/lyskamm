@@ -164,8 +164,8 @@ sede_presa_elettrica_sup SK_seat 5; pistone SK_body 15.
 ---
 
 ## Status
-- **Current phase:** 4 done (full `CLAUDE.md`, README updated, 2026-11-20); 4.4 pending until the setup is declared finished. Phase 3: 9 connector/deployment sketches with open DoF deferred to Phase 5.
-- **Next step:** decide with Lorenzo how to close the setup (4.4: new plan for the Phase 5 redesigns vs. dropping the "read PLAN.md" rule) and which Phase 5 item to plan first (e.g. joint/carbon-rod load path, e-bay, motor adapter). Assembly: small internal parts (pistone, sede_presa_elettrica_sup, presa_elettrica, logo inserts) still deferred.
+- **Current phase:** setup finished — Phases 0–4 done, including 4.4 (2026-11-20). Phase 3: 9 connector/deployment sketches with open DoF moved to project D of the roadmap.
+- **Next step:** continued in `PLAN.md` (Phase 5 roadmap; next: stage 0 — Loads).
 - **Open questions:**
   1. ~~Which `.FCStd` matches `fuselage_w_logo.3mf`~~ — resolved: `e-bay/fuselage_w_logo.FCStd` (added to `EXTRA_ACTIVE`). Active/legacy status of all non-assembly files → `docs/inventory/file_status.md`.
   2. Other known v1 issues besides e-bay and pad interface?
@@ -280,4 +280,4 @@ sede_presa_elettrica_sup SK_seat 5; pistone SK_body 15.
 - **Done:** full `CLAUDE.md` (4.1 design constraints, sources of truth, repo map, conventions, working rules + checks; 4.2 workflows: FreeCAD/MCP, `parameters.FCStd`, `lyskamm_asm`, OpenRocket/`Sim.java`, Bambu Studio, scripts table; 4.2b CAD gotchas). Reviewed with Lorenzo. `README.md` rewritten (current structure and tools).
 - **Decisions (Lorenzo):** PLAN.md is the setup plan → once the setup is finished, update the CLAUDE.md session protocol (new step 4.4). Carbon rods documented as a design constraint: bending stiffness, stress spread away from the 7.5 mm joints (M2 screws ≈3.7 mm from the part end can crack the rigid ASA-CF); held by through holes in every part + closed end holes + fits + screws; part list confirmed. Q16 rod overlap resolved (real rods slightly shorter). Batch approvals cover only that batch. Use `Sim.java`, not `rocket_simulator.py`.
 - **Found:** `~/Applications/FreeCAD.AppImage freecadcmd …` works from the shell (workaround for Q9).
-- **Left:** 4.4; joint/rod load-path discussion added to the Phase 5 backlog.
+- **Left:** ~~4.4~~ done later the same day (roadmap in `PLAN.md`); joint/rod load-path discussion added to the Phase 5 backlog.
