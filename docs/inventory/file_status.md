@@ -21,7 +21,7 @@ Only files whose status is not obvious from the assembly are listed. All 16 part
 | `components/logo/logo.FCStd` → `logo_projected.FCStd` | **active** | Logo projected onto the curved fuselage surface (full size: main body 9.0×60.0). |
 | `components/logo/logo_red.FCStd` → `logo_inserts.FCStd` | **active** | The **printed PLA inserts**: same logo, ≈0.5 mm smaller (main body 8.5×59.0). Its shapes match the `logo_*.step` objects in `fuselage_w_logo.3mf` exactly (450.4 / 111.0 / 106.0 / 112.3 mm³). |
 | `components/wall.FCStd` | **deleted** (A2) | Test of a fuselage with thicker vertical ribs; never used. |
-| `launch_pad/Unnamed.FCStd` | deferred | Early launch-pad concept. Ignored for now; has its own section in `PLAN.md`. |
+| `launch_pad/Unnamed.FCStd` | deferred | Early launch-pad concept. Ignored for now; is now part of project L (launch system) in `PLAN.md`. |
 
 ## Print files (`.3mf`) with misleading names
 
