@@ -1,39 +1,45 @@
 # Lyskamm Rocket Project 🚀
 
-**Lyskamm** is a mid-power rocket prototype that is entirely **3D-printed** and **assembled without glue**.  
-Each component is designed as an independent part that can be easily replaced or upgraded at any time.  
-Assembly is achieved through **mechanical joints and screws**, ensuring modularity and maintainability.
+**Lyskamm** is an amateur rocket that is entirely **3D-printed** and **assembled without glue**.
+Each part is designed to be replaced or upgraded on its own; sections are joined by sliding fits and
+radial M2 screws in heat-set inserts.
 
-## Project Structure
+- Single stage, Ø60 mm, ≈ 870 mm long, 4 upper + 4 lower fins
+- Motors: TSP F35 (Ø29, with adapter) — later EXP G115 (Ø35)
+- 4 carbon rods (Ø5/3) run through the aft airframe for bending stiffness
+- Parachute Ø1 m, deployed at apogee by the altimeter
+- Printed on a Bambu Lab P1S: ASA-CF (airframe), PETG-CF (fins)
 
-``` 
+## Repository
+
+```
 lyskamm/
-├── assemblies/ # Full rocket assembly (OpenRocket, FreeCAD files)
-└──components/ # Individual parts (.FCStd, .STEP, .3MF)
+├── parameters.FCStd     # master parameters (spreadsheet Params), linked by every part
+├── lyskamm.ork          # OpenRocket model (OpenRocket 24.12)
+├── assemblies/
+│   ├── lyskamm_asm.FCStd    # full rocket, FreeCAD built-in Assembly (current)
+│   └── lyskamm.FCStd        # old A2plus assembly (legacy)
+├── components/          # one folder per part or subsystem: .FCStd source + .step + .3mf print file
+├── docs/
+│   ├── inventory/       # CAD/OpenRocket inventory, weighed masses, measured lengths
+│   ├── proposal/        # parameters, naming conventions, repo structure, OpenRocket vs CAD
+│   └── analysis/        # flight simulations
+├── scripts/             # inventory, assembly build/CG, print settings, OpenRocket simulation
+└── launch_pad/          # early concept (separate project)
 ```
 
-## Components
+## Tools
 
-Each component (e.g., fins, nose cone, fuselage, motor block) includes:
-- `.FCStd` — Original FreeCAD design file  
-- `.STEP` — 3D model for CAD interoperability  
-- `.3MF` — File ready for 3D printing (optimized for BambuLab P1S)
+- **FreeCAD 1.1.3** with the Rocket and built-in Assembly workbenches. Open a part or the assembly and
+  `parameters.FCStd` is loaded automatically.
+- **OpenRocket 24.12** for stability and flight performance; headless runs with `scripts/openrocket/Sim.java`
+  (see the file header).
+- **Bambu Studio** for slicing; `scripts/print_settings.py` lists the settings stored in the `.3mf` files.
 
-## Assembly
-
-The rocket is fully modular:
-- **No adhesives required**  
-- **Interlocking joints and screws** ensure secure connections  
-- Components can be replaced individually for testing, iteration, or repair
-
-## Future Development
-
-Planned additions:
-- Experimental motor design studies  
-- Launch and test reports  
-- Performance analysis and simulation data
+Design rules, conventions and workflows are documented in `CLAUDE.md`; the project setup plan and its log are
+in `PLAN.md`.
 
 ## License
 
-This project is released for educational and research purposes.  
+This project is released for educational and research purposes.
 A specific license will be defined in future updates.
