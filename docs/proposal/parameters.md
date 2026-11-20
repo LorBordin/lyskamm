@@ -92,7 +92,7 @@ Note: nose, fins and transition are Rocket-workbench features. Linking their pro
 
 - Electrical connector slot `sede_presa_elettrica` (6.15 × 9.6, rounded) and `presa_elettrica`: part of the deployment system, which will be redesigned. Kept local.
 - Logo geometry: local to `components/logo/`.
-- Launch pad: deferred (own section in `PLAN.md`).
+- Launch pad: project L (launch system) in `PLAN.md`.
 
 ## Review answers (2026-11-17)
 

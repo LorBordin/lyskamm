@@ -36,8 +36,8 @@ lyskamm/
   (see the file header).
 - **Bambu Studio** for slicing; `scripts/print_settings.py` lists the settings stored in the `.3mf` files.
 
-Design rules, conventions and workflows are documented in `CLAUDE.md`; the project setup plan and its log are
-in `PLAN.md`.
+Design rules, conventions and workflows are documented in `CLAUDE.md`; `PLAN.md` holds the roadmap toward the first
+flight; the setup history is in `docs/archive/setup_plan.md`.
 
 ## License
 
